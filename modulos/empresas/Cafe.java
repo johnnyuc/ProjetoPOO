@@ -17,8 +17,7 @@ public class Cafe extends Restauracao {
     float custoMedioCafe;
 
     /**
-     * Construtor da classe, recebe os dados para a inicialização
-     * dos atributos
+     * Construtor da classe, recebe os dados para a inicialização dos atributos
      * @param nome O nome da empresa
      * @param distrito O distrito onde se localiza a empresa
      * @param coordenadas As coordenadas da empresa
@@ -36,34 +35,48 @@ public class Cafe extends Restauracao {
         this.custoMedioCafe= custoMedioCafe;
     }
 
-    /** Método para definir o número médio de cafés que se vendem por dia */
-    public void setCafesDiarios(float cafesDiarios) {
-        this.cafesDiarios = cafesDiarios;
+    /*
+     * Métodos de acesso externo ao número médio de clientes diário
+     */
+    public float getClientesDiarios() {
+        return clientesDiarios;
     }
 
-    /** Método para definir o número médio de clientes diário */
-    public void setClientesDiario(float clientesDiario) {
-        this.clientesDiarios = clientesDiario;
+    /*
+     * Método para definir o número médio de clientes diário
+     */
+    public void setClientesDiarios(float clientesDiarios) {
+        this.clientesDiarios = clientesDiarios;
     }
 
-    /** Método para definir o valor médio de faturação anual por café vendido por dia */
-    public void setCustoMedioCafe(float custoMedioCafe) {
-        this.custoMedioCafe = custoMedioCafe;
-    }
-
-    /** Método de acesso externo ao número médio de cafés que se vendem por dia */
+    /*
+     * Métodos de acesso externo ao número médio de cafés que vendem por dia
+     */
     public float getCafesDiarios() {
         return cafesDiarios;
     }
 
-    /** Método de acesso externo ao número médio de clientes diário */
-    public float getClientesDiario() {
-        return clientesDiarios;
+    /*
+     * Método para definir o número médio de cafés que vendem por dia
+     */
+    public void setCafesDiarios(float cafesDiarios) {
+        this.cafesDiarios = cafesDiarios;
     }
 
-    /** Método de acesso externo ao valor médio de faturação anual por café vendido por dia */
-    public float getFaturacaoAnual() {
+    /*
+     * Métodos de acesso externo ao custo médio de um café
+     * Diz também respeito ao valor médio de faturação anual por café vendido por dia
+     */
+    public float getCustoMedioCafe() {
         return custoMedioCafe;
+    }
+
+    /*
+     * Método para definir o custo médio de um café
+     * Diz também respeito ao valor médio de faturação anual por café vendido por dia
+     */
+    public void setCustoMedioCafe(float custoMedioCafe) {
+        this.custoMedioCafe = custoMedioCafe;
     }
 
     /**

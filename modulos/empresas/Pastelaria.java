@@ -35,6 +35,50 @@ public class Pastelaria extends Restauracao {
         this.custoMedioBolo = custoMedioBolo;
     }
 
+    /*
+     * Métodos de acesso externo ao número médio de bolos vendidos por dia
+     */
+    public float getBolosVendidos() {
+        return bolosVendidos;
+    }
+
+    /*
+     * Método para definir o número médio de bolos vendidos por dia
+     */
+    public void setBolosVendidos(float bolosVendidos) {
+        this.bolosVendidos = bolosVendidos;
+    }
+
+    /*
+     * Métodos de acesso externo ao custo médio de um bolo vendido por dia
+     * Diz também respeito ao valor médio de faturação anual por bolo vendido por dia
+     */
+    public float getCustoMedioBolo() {
+        return custoMedioBolo;
+    }
+
+    /*
+     * Método para definir o custo médio de um bolo vendido por dia
+     * Diz também respeito ao valor médio de faturação anual por bolo vendido por dia
+     */
+    public void setCustoMedioBolo(float custoMedioBolo) {
+        this.custoMedioBolo = custoMedioBolo;
+    }
+
+    /*
+     * Métodos de acesso externo ao número médio de clientes diário
+     */
+    public float getClientesDiarios() {
+        return clientesDiarios;
+    }
+
+    /*
+     * Método para definir o número médio de clientes diário
+     */
+    public void setClientesDiarios(float clientesDiarios) {
+        this.clientesDiarios = clientesDiarios;
+    }
+
     /**
      * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
      *
