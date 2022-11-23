@@ -2,3 +2,5 @@
 variáveis com nomes muito extensos e dificulta um pouco a leitura do código.
 * Verificar a estrutura dos packages para ficar conforme o que é pedido.
 * Ter em atenção à convenção para o nome das classes, variáveis e métodos.
+
+* Só a classe Cafe tem getters e setters.

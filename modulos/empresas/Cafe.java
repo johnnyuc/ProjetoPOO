@@ -10,8 +10,9 @@ public class Cafe extends Restauracao {
      */
     float cafesDiarios;
     /**
-     * O valor médio de faturação anual por café vendido por dia
-     * Receita anual = cafesDiarios*custoMedioCafe
+     *  Valor médio de faturação anual por café vendido por dia é o custo médio de um café
+     *  Faturação/Receita anual = cafesDiarios*custoMedioCafe
+     *  (Valor médio de faturação anual por café vendido por dia = 'faturacaoAnual'/cafesDiarios)
      */
     float custoMedioCafe;
 

@@ -21,18 +21,6 @@ public abstract class Empresa{
         this.coordenadas = coordenadas;
     }
 
-    public void setCoordenadas(float[] coordenadas) {
-        this.coordenadas = coordenadas;
-    }
-
-    public void setDistrito(String distrito) {
-        this.distrito = distrito;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     /** Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
      *
      * @return O valor da despesa anual
