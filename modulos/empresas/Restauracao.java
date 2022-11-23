@@ -25,28 +25,28 @@ public abstract class Restauracao extends Empresa {
         this.empregadosMesa = empregadosMesa;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao custo do salário médio anual por empregado de mesa
      */
     public float getSalarioMedioAnual() {
         return salarioMedioAnual;
     }
 
-    /*
+    /**
      * Método para definir o custo do salário médio anual por empregado de mesa
      */
     public void setSalarioMedioAnual(float salarioMedioAnual) {
         this.salarioMedioAnual = salarioMedioAnual;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número de empregados de mesa
      */
     public int getEmpregadosMesa() {
         return empregadosMesa;
     }
 
-    /*
+    /**
      * Método para definir o número de empregados de mesa
      */
     public void setEmpregadosMesa(int empregadosMesa) {

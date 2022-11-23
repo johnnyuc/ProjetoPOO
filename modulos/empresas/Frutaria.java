@@ -25,28 +25,28 @@ public class Frutaria extends Mercearia {
         this.faturacaoAnualProduto = faturacaoAnualProduto;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número de produtos para venda na frutaria
      */
     public int getNumeroProdutos() {
         return numeroProdutos;
     }
 
-    /*
+    /**
      * Método para definir o número de produtos para venda na frutaria
      */
     public void setNumeroProdutos(int numeroProdutos) {
         this.numeroProdutos = numeroProdutos;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao valor médio de faturação anual por produto
      */
     public float getFaturacaoAnualProduto() {
         return faturacaoAnualProduto;
     }
 
-    /*
+    /**
      * Método para definir o valor médio de faturação anual por produto
      */
     public void setFaturacaoAnualProduto(float faturacaoAnualProduto) {
@@ -71,5 +71,24 @@ public class Frutaria extends Mercearia {
     @Override
     public float calcularReceitaAnual() {
         return numeroProdutos*faturacaoAnualProduto;
+    }
+    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
+    @Override
+    public String toString(){
+        String s= "Empresa"+
+                "\nNome                :\t"+this.nome+
+                "\nTipo                :\t"+"Frutaria"+
+                "\nDistrito            :\t"+this.distrito+
+                "\nDespesa Anual       :\t"+calcularDespesaAnual()+
+                "\nReceita Anual       :\t"+calcularReceitaAnual()+
+                "\nLucro               :\t";
+        float lucro= this.calcularLucro();
+        if (lucro>0){
+            s+="Sim";
+        }
+        else{
+            s+="Não";
+        }
+        return s;
     }
 }

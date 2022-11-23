@@ -33,35 +33,35 @@ public abstract class Empresa{
         return nome;
     }
 
-    /*
+    /**
      * Método para definir o nome da empresa
      */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    /*
+    /**
      * Método de acesso externo ao distrito da empresa
      */
     public String getDistrito() {
         return distrito;
     }
 
-    /*
+    /**
      * Método para definir o distrito da empresa
      */
     public void setDistrito(String distrito) {
         this.distrito = distrito;
     }
 
-    /*
+    /**
      * Método de acesso externo às coordenadas da empresa
      */
     public float[] getCoordenadas() {
         return coordenadas;
     }
 
-    /*
+    /**
      * Método para definir as coordenadas da empresa
      */
     public void setCoordenadas(float[] coordenadas) {
@@ -79,4 +79,5 @@ public abstract class Empresa{
      * @return O valor da receita anual
      */
     abstract float calcularReceitaAnual();
+
 }

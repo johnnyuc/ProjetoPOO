@@ -11,7 +11,7 @@ public class Pastelaria extends Restauracao {
      *  (Valor médio de faturação anual por bolo vendido por dia = 'faturacaoAnual'/bolosVendidos)
      */
     float custoMedioBolo;
-    /*
+    /**
      * O número médio de clientes diário
      */
     float clientesDiarios;
@@ -35,21 +35,21 @@ public class Pastelaria extends Restauracao {
         this.custoMedioBolo = custoMedioBolo;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número médio de bolos vendidos por dia
      */
     public float getBolosVendidos() {
         return bolosVendidos;
     }
 
-    /*
+    /**
      * Método para definir o número médio de bolos vendidos por dia
      */
     public void setBolosVendidos(float bolosVendidos) {
         this.bolosVendidos = bolosVendidos;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao custo médio de um bolo vendido por dia
      * Diz também respeito ao valor médio de faturação anual por bolo vendido por dia
      */
@@ -57,7 +57,7 @@ public class Pastelaria extends Restauracao {
         return custoMedioBolo;
     }
 
-    /*
+    /**
      * Método para definir o custo médio de um bolo vendido por dia
      * Diz também respeito ao valor médio de faturação anual por bolo vendido por dia
      */
@@ -65,14 +65,14 @@ public class Pastelaria extends Restauracao {
         this.custoMedioBolo = custoMedioBolo;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número médio de clientes diário
      */
     public float getClientesDiarios() {
         return clientesDiarios;
     }
 
-    /*
+    /**
      * Método para definir o número médio de clientes diário
      */
     public void setClientesDiarios(float clientesDiarios) {
@@ -95,5 +95,25 @@ public class Pastelaria extends Restauracao {
      */
     public float calcularReceitaAnual() {
         return bolosVendidos*custoMedioBolo;
+    }
+
+    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
+    @Override
+    public String toString(){
+        String s= "Empresa"+
+                "\nNome                :\t"+this.nome+
+                "\nTipo                :\t"+"Pastelaria"+
+                "\nDistrito            :\t"+this.distrito+
+                "\nDespesa Anual       :\t"+calcularDespesaAnual()+
+                "\nReceita Anual       :\t"+calcularReceitaAnual()+
+                "\nLucro               :\t";
+        float lucro= this.calcularLucro();
+        if (lucro>0){
+            s+="Sim";
+        }
+        else{
+            s+="Não";
+        }
+        return s;
     }
 }

@@ -35,35 +35,35 @@ public class Cafe extends Restauracao {
         this.custoMedioCafe= custoMedioCafe;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número médio de clientes diário
      */
     public float getClientesDiarios() {
         return clientesDiarios;
     }
 
-    /*
+    /**
      * Método para definir o número médio de clientes diário
      */
     public void setClientesDiarios(float clientesDiarios) {
         this.clientesDiarios = clientesDiarios;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número médio de cafés que vendem por dia
      */
     public float getCafesDiarios() {
         return cafesDiarios;
     }
 
-    /*
+    /**
      * Método para definir o número médio de cafés que vendem por dia
      */
     public void setCafesDiarios(float cafesDiarios) {
         this.cafesDiarios = cafesDiarios;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao custo médio de um café
      * Diz também respeito ao valor médio de faturação anual por café vendido por dia
      */
@@ -71,7 +71,7 @@ public class Cafe extends Restauracao {
         return custoMedioCafe;
     }
 
-    /*
+    /**
      * Método para definir o custo médio de um café
      * Diz também respeito ao valor médio de faturação anual por café vendido por dia
      */
@@ -95,5 +95,25 @@ public class Cafe extends Restauracao {
      */
     public float calcularReceitaAnual() {
         return cafesDiarios*custoMedioCafe;
+    }
+
+    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
+    @Override
+    public String toString(){
+        String s= "Empresa"+
+                "\nNome                :\t"+this.nome+
+                "\nTipo                :\t"+"Cafe"+
+                "\nDistrito            :\t"+this.distrito+
+                "\nDespesa Anual       :\t"+calcularDespesaAnual()+
+                "\nReceita Anual       :\t"+calcularReceitaAnual()+
+                "\nLucro               :\t";
+        float lucro= this.calcularLucro();
+        if (lucro>0){
+            s+="Sim";
+        }
+        else{
+            s+="Não";
+        }
+        return s;
     }
 }

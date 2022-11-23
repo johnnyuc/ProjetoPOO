@@ -47,70 +47,70 @@ public class Local extends Restaurante {
         this.clientesDiarios = clientesDiarios;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número de mesas no interior
      */
     public int getMesasInterior() {
         return mesasInterior;
     }
 
-    /*
+    /**
      * Método para definir o número de mesas no interior
      */
     public void setMesasInterior(int mesasInterior) {
         this.mesasInterior = mesasInterior;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número de mesas na esplanada
      */
     public int getMesasEsplanada() {
         return mesasEsplanada;
     }
 
-    /*
+    /**
      * Método para definir o número de mesas na esplanada
      */
     public void setMesasEsplanada(int mesasEsplanada) {
         this.mesasEsplanada = mesasEsplanada;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao custo da licença de mesa na esplanada
      */
     public float getCustoLicencaMesaEsplanada() {
         return custoLicencaMesaEsplanada;
     }
 
-    /*
+    /**
      * Método para definir o custo da licença de mesa na esplanada
      */
     public void setCustoLicencaMesaEsplanada(float custoLicencaMesaEsplanada) {
         this.custoLicencaMesaEsplanada = custoLicencaMesaEsplanada;
     }
 
-    /*
+    /**
      * Métodos de acesso externo à faturação média por mesa
      */
     public float getFaturacaoMediaMesa() {
         return faturacaoMediaMesa;
     }
 
-    /*
+    /**
      * Método para definir a faturação média por mesa
      */
     public void setFaturacaoMediaMesa(float faturacaoMediaMesa) {
         this.faturacaoMediaMesa = faturacaoMediaMesa;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número médio de clientes diário
      */
     public float getClientesDiarios() {
         return clientesDiarios;
     }
 
-    /*
+    /**
      * Método para definir o número médio de clientes diário
      */
     public void setClientesDiarios(float clientesDiarios) {
@@ -135,5 +135,24 @@ public class Local extends Restaurante {
     @Override
     public float calcularReceitaAnual() {
         return (mesasInterior+mesasEsplanada)*faturacaoMediaMesa*diasFuncionamento;
+    }
+    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
+    @Override
+    public String toString(){
+        String s= "Empresa"+
+                "\nNome                :\t"+this.nome+
+                "\nTipo                :\t"+"Restaurante Local"+
+                "\nDistrito            :\t"+this.distrito+
+                "\nDespesa Anual       :\t"+calcularDespesaAnual()+
+                "\nReceita Anual       :\t"+calcularReceitaAnual()+
+                "\nLucro               :\t";
+        float lucro= this.calcularLucro();
+        if (lucro>0){
+            s+="Sim";
+        }
+        else{
+            s+="Não";
+        }
+        return s;
     }
 }

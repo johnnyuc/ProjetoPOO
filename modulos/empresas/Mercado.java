@@ -93,4 +93,23 @@ public class Mercado extends Mercearia {
     public float calcularReceitaAnual() {
         return areaCorredores*faturacaoAnualM2;
     }
+    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
+    @Override
+    public String toString(){
+        String s= "Empresa"+
+                "\nNome                :\t"+this.nome+
+                "\nTipo                :\t"+"Mercado"+
+                "\nDistrito            :\t"+this.distrito+
+                "\nDespesa Anual       :\t"+calcularDespesaAnual()+
+                "\nReceita Anual       :\t"+calcularReceitaAnual()+
+                "\nLucro               :\t";
+        float lucro= this.calcularLucro();
+        if (lucro>0){
+            s+="Sim";
+        }
+        else{
+            s+="Não";
+        }
+        return s;
+    }
 }

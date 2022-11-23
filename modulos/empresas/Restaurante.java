@@ -20,17 +20,18 @@ public abstract class Restaurante extends Restauracao {
         this.diasFuncionamento = diasFuncionamento;
     }
 
-    /*
+    /**
      * Métodos de acesso externo ao número de dias de funcionamento do estabelecimento por ano
      */
     public int getDiasFuncionamento() {
         return diasFuncionamento;
     }
 
-    /*
+    /**
      * Método para definir o número de dias de funcionamento do estabelecimento por ano
      */
     public void setDiasFuncionamento(int diasFuncionamento) {
         this.diasFuncionamento = diasFuncionamento;
     }
+
 }
