@@ -1,20 +1,50 @@
 package modulos.empresas;
 
 public class Local extends Restaurante {
+    /**
+     * O número de mesas no interior
+     */
     int mesasInterior;
+    /**
+     * O número de mesas no exterior
+     */
     int mesasEsplanada;
+    /**
+     * O custo de licença anual por mesa de esplanada
+     */
     float custoLicencaMesaEsplanada;
+    /**
+     * O valor de faturação média por mesa por dia
+     */
     float faturacaoMediaMesa;
-
+    /**
+     * O número médio de clientes diário
+     */
     float clientesDiarios;
 
-    public Local(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float clientesDiario, float clientes, int diasFuncionamento, int mesasInterior, int mesasEsplanada, float custoLicencaMesaEsplanada, float faturacaoDiaria) {
-        super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa, diasFuncionamento);
+    /**
+     *  Construtor da classe, recebe os dados para a inicialização
+     * @param nome O nome da empresa
+     * @param distrito O distrito onde se localiza a empresa
+     * @param coordenadas As coordenadas da empresa
+     * @param salarioMedioAnual O custo do salário médio anual
+     * @param empregadosMesa O número de empregados de mesa
+     * @param diasFuncionamento O número de dias de funcionamento
+     * @param mesasInterior O número de mesas no interior
+     * @param mesasEsplanada O número de mesas na esplanada
+     * @param custoLicencaMesaEsplanada O custo da licença de mesa na esplanada
+     * @param faturacaoMediaMesa A faturação média por mesa
+     * @param clientesDiarios O número médio de clientes diário
+     */
+    public Local(String nome, String distrito, float[] coordenadas, float salarioMedioAnual,
+                 int empregadosMesa, int diasFuncionamento, int mesasInterior, int mesasEsplanada,
+                 float custoLicencaMesaEsplanada, float faturacaoMediaMesa, float clientesDiarios) {
+        super(nome, distrito, coordenadas, salarioMedioAnual, empregadosMesa, diasFuncionamento);
         this.mesasInterior = mesasInterior;
         this.mesasEsplanada = mesasEsplanada;
         this.custoLicencaMesaEsplanada = custoLicencaMesaEsplanada;
-        this.faturacaoMediaMesa = faturacaoDiaria;
-        this.clientesDiarios= clientesDiario;
+        this.faturacaoMediaMesa = faturacaoMediaMesa;
+        this.clientesDiarios = clientesDiarios;
     }
 
     /**
@@ -24,7 +54,7 @@ public class Local extends Restaurante {
      */
     @Override
     public float calcularDespesaAnual() {
-        return 0;
+        return (empregadosMesa*salarioMedioAnual) + (mesasEsplanada*custoLicencaMesaEsplanada);
     }
 
     /**
@@ -34,6 +64,6 @@ public class Local extends Restaurante {
      */
     @Override
     public float calcularReceitaAnual() {
-        return 0;
+        return (mesasInterior+mesasEsplanada)*faturacaoMediaMesa*diasFuncionamento;
     }
 }

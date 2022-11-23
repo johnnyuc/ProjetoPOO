@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java" />
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,9 +26,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/modulos/empresas/TipologiaCafe.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
