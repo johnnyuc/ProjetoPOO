@@ -3,14 +3,14 @@ package modulos.empresas;
 public class TipologiaRestauranteFastfood extends SubcategoriaRestaurante {
     int mesasInterior;
     float faturacaoMediaMesa;
-    float numeroMedioClientesDriveThru;
+    float clientesDriveThru;
     float faturacaoMediaClienteDriveThru;
 
-    public TipologiaRestauranteFastfood(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float numeroMedioClientesDiario, float clientes, int diasFuncionamento, int mesasInterior, float faturacaoMediaMesa, float numeroMedioClientesDriveThru, float faturacaoMediaClienteDriveThru) {
-        super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa, numeroMedioClientesDiario, clientes, diasFuncionamento);
+    public TipologiaRestauranteFastfood(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float numeroMedioClientesDiario, int diasFuncionamento, int mesasInterior, float faturacaoMediaMesa, float clientesDriveThru, float faturacaoMediaClienteDriveThru) {
+        super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa, diasFuncionamento);
         this.mesasInterior = mesasInterior;
         this.faturacaoMediaMesa = faturacaoMediaMesa;
-        this.numeroMedioClientesDriveThru = numeroMedioClientesDriveThru;
+        this.clientesDriveThru = clientesDriveThru;
         this.faturacaoMediaClienteDriveThru = faturacaoMediaClienteDriveThru;
     }
 
@@ -20,7 +20,7 @@ public class TipologiaRestauranteFastfood extends SubcategoriaRestaurante {
      * @return O valor da despesa anual
      */
     @Override
-    public int calcularDespesaAnual() {
+    public float calcularDespesaAnual() {
         return 0;
     }
 
@@ -30,7 +30,7 @@ public class TipologiaRestauranteFastfood extends SubcategoriaRestaurante {
      * @return O valor da receita anual
      */
     @Override
-    public int calcularReceitaAnual() {
+    public float calcularReceitaAnual() {
         return 0;
     }
 }

@@ -11,12 +11,12 @@ public class TipologiaFrutaria extends CategoriaMercearia {
     }
 
     @Override
-    public int calcularDespesaAnual() {
+    public float calcularDespesaAnual() {
         return 0;
     }
 
     @Override
-    public int calcularReceitaAnual() {
+    public float calcularReceitaAnual() {
         return 0;
     }
 }

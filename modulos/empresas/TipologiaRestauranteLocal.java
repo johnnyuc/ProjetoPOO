@@ -6,12 +6,15 @@ public class TipologiaRestauranteLocal extends SubcategoriaRestaurante {
     float custoLicencaMesaEsplanada;
     float faturacaoMediaMesa;
 
-    public TipologiaRestauranteLocal(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float numeroMedioClientesDiario, float clientes, int diasFuncionamento, int mesasInterior, int mesasEsplanada, float custoLicencaMesaEsplanada, float faturacaoDiaria) {
-        super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa, numeroMedioClientesDiario, clientes, diasFuncionamento);
+    float clientesDiarios;
+
+    public TipologiaRestauranteLocal(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float clientesDiario, float clientes, int diasFuncionamento, int mesasInterior, int mesasEsplanada, float custoLicencaMesaEsplanada, float faturacaoDiaria) {
+        super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa, diasFuncionamento);
         this.mesasInterior = mesasInterior;
         this.mesasEsplanada = mesasEsplanada;
         this.custoLicencaMesaEsplanada = custoLicencaMesaEsplanada;
         this.faturacaoMediaMesa = faturacaoDiaria;
+        this.clientesDiarios= clientesDiario;
     }
 
     /**
@@ -20,7 +23,7 @@ public class TipologiaRestauranteLocal extends SubcategoriaRestaurante {
      * @return O valor da despesa anual
      */
     @Override
-    public int calcularDespesaAnual() {
+    public float calcularDespesaAnual() {
         return 0;
     }
 
@@ -30,7 +33,7 @@ public class TipologiaRestauranteLocal extends SubcategoriaRestaurante {
      * @return O valor da receita anual
      */
     @Override
-    public int calcularReceitaAnual() {
+    public float calcularReceitaAnual() {
         return 0;
     }
 }

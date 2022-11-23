@@ -7,8 +7,11 @@ public class TipologiaPastelaria extends CategoriaRestauracao {
     // onde valorMedioFaturacaoAnualPorBoloVendidoPorDia = custoMedioBolo
     float custoMedioBolo;
 
-    public TipologiaPastelaria(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float numeroMedioClientesDiario, float bolosVendidos, float custoMedioBolo) {
-        super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa, numeroMedioClientesDiario);
+    float clientesDiarios;
+
+    public TipologiaPastelaria(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float clientesDiario, float bolosVendidos, float custoMedioBolo) {
+        super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa);
+        this.clientesDiarios=clientesDiario;
         this.bolosVendidos = bolosVendidos;
         this.custoMedioBolo = custoMedioBolo;
     }
@@ -18,7 +21,7 @@ public class TipologiaPastelaria extends CategoriaRestauracao {
      *
      * @return O valor da despesa anual
      */
-    public int calcularDespesaAnual() {
+    public float calcularDespesaAnual() {
         return 0;
     }
 
@@ -27,7 +30,7 @@ public class TipologiaPastelaria extends CategoriaRestauracao {
      *
      * @return O valor da receita anual
      */
-    public int calcularReceitaAnual() {
+    public float calcularReceitaAnual() {
         return 0;
     }
 }
