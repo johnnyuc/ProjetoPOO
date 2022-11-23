@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java" />
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="classes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/CategoriaRestauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/CategoriaRestauracao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/InterfaceEmpresa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/TipologiaCafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/TipologiaCafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/TipologiaFrutaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/TipologiaFrutaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/TipologiaMercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/TipologiaMercado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/TipologiaPastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/TipologiaPastelaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/TipologiaRestauranteFastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/TipologiaRestauranteFastfood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/TipologiaRestauranteLocal.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/TipologiaRestauranteLocal.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669147366936</updated>
       <workItem from="1669147369573" duration="3400000" />
-      <workItem from="1669204154939" duration="3172000" />
+      <workItem from="1669204154939" duration="2481000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -73,14 +85,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669204335582</updated>
     </task>
-    <task id="LOCAL-00004" summary="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java">
-      <created>1669207365242</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1669207365242</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +105,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="classes, classe empresa e interface empresa" />
     <MESSAGE value="classes" />
-    <MESSAGE value="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="classes" />
   </component>
 </project>

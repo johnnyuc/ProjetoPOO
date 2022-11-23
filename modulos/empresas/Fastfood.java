@@ -1,12 +1,12 @@
 package modulos.empresas;
 
-public class TipologiaRestauranteFastfood extends SubcategoriaRestaurante {
+public class Fastfood extends Restaurante {
     int mesasInterior;
     float faturacaoMediaMesa;
     float clientesDriveThru;
     float faturacaoMediaClienteDriveThru;
 
-    public TipologiaRestauranteFastfood(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float numeroMedioClientesDiario, int diasFuncionamento, int mesasInterior, float faturacaoMediaMesa, float clientesDriveThru, float faturacaoMediaClienteDriveThru) {
+    public Fastfood(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float numeroMedioClientesDiario, int diasFuncionamento, int mesasInterior, float faturacaoMediaMesa, float clientesDriveThru, float faturacaoMediaClienteDriveThru) {
         super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa, diasFuncionamento);
         this.mesasInterior = mesasInterior;
         this.faturacaoMediaMesa = faturacaoMediaMesa;

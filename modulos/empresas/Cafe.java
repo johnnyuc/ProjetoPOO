@@ -1,6 +1,6 @@
 package modulos.empresas;
 
-public class TipologiaCafe extends CategoriaRestauracao {
+public class Cafe extends Restauracao {
     /**
      * O número médio de clientes diário
      */
@@ -26,7 +26,7 @@ public class TipologiaCafe extends CategoriaRestauracao {
      * @param clientesDiario O número médio de clientes diário
      * @param faturacaoAnual O valor médio de faturação anual por café vendido por dia
      */
-    public TipologiaCafe(String nome, String distrito, float[] coordenadas,  float salarioMedioAnual, int empregadosDeMesa, float cafesDiarios, float clientesDiario, float faturacaoAnual) {
+    public Cafe(String nome, String distrito, float[] coordenadas, float salarioMedioAnual, int empregadosDeMesa, float cafesDiarios, float clientesDiario, float faturacaoAnual) {
         super(nome, distrito, coordenadas, salarioMedioAnual, empregadosDeMesa);
         this.cafesDiarios = cafesDiarios;
         this.clientesDiario = clientesDiario;

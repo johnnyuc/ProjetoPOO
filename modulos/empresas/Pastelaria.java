@@ -1,6 +1,6 @@
 package modulos.empresas;
 
-public class TipologiaPastelaria extends CategoriaRestauracao {
+public class Pastelaria extends Restauracao {
     float bolosVendidos;
     // Valor médio de faturação anual por bolo vendido por dia é o custo médio de um bolo
     // Receita anual = numeroMedioBolosDiarios*valorMedioFaturacaoAnualPorBoloVendidoPorDia
@@ -9,7 +9,7 @@ public class TipologiaPastelaria extends CategoriaRestauracao {
 
     float clientesDiarios;
 
-    public TipologiaPastelaria(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float clientesDiario, float bolosVendidos, float custoMedioBolo) {
+    public Pastelaria(String nome, String distrito, float[] coordenadas, float custoSalarioMedioAnual, int numeroEmpregadosDeMesa, float clientesDiario, float bolosVendidos, float custoMedioBolo) {
         super(nome, distrito, coordenadas, custoSalarioMedioAnual, numeroEmpregadosDeMesa);
         this.clientesDiarios=clientesDiario;
         this.bolosVendidos = bolosVendidos;

@@ -1,6 +1,6 @@
 package modulos.empresas;
 
-public abstract class CategoriaRestauracao extends Empresa {
+public abstract class Restauracao extends Empresa {
     /**
      * O custo do salário médio anual por empregado de mesa
      */
@@ -11,7 +11,7 @@ public abstract class CategoriaRestauracao extends Empresa {
     int empregadosDeMesa;
 
 
-    public CategoriaRestauracao(String nome, String distrito, float[] coordenadas, float salarioMedioAnual, int empregadosDeMesa) {
+    public Restauracao(String nome, String distrito, float[] coordenadas, float salarioMedioAnual, int empregadosDeMesa) {
         super(nome, distrito, coordenadas);
         this.salarioMedioAnual = salarioMedioAnual;
         this.empregadosDeMesa = empregadosDeMesa;
