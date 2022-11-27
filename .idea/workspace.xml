@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
-    </list>
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Criação da função GerirEmpresas.maiorReceitaAnual" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +53,7 @@
       <updated>1669147366936</updated>
       <workItem from="1669147369573" duration="3400000" />
       <workItem from="1669204154939" duration="3172000" />
-      <workItem from="1669370889298" duration="5450000" />
+      <workItem from="1669370889298" duration="5604000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -115,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669373175897</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Criação da função GerirEmpresas.maiorReceitaAnual">
+      <created>1669566299708</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669566299708</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +142,7 @@
     <MESSAGE value="Atualizações/Melhoria das classes" />
     <MESSAGE value="Criação da função toString&#10;Criação da classe GerirEmpresas.java" />
     <MESSAGE value="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa" />
+    <MESSAGE value="Criação da função GerirEmpresas.maiorReceitaAnual" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação da função GerirEmpresas.maiorReceitaAnual" />
   </component>
 </project>

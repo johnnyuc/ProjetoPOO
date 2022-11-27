@@ -31,21 +31,18 @@ public class GerirEmpresas {
      * não estava na lista e o programa foi executado adequadamente
      */
     public int adicionarEmpresa(Empresa empresa){
-        int jaExiste= 0;
+        boolean jaExiste= false;
         if(this.empresas!=null){
                 for (int i = 0; i < this.empresas.size(); i++) {
                     if (Objects.equals(this.empresas.get(i).nome, empresa.nome)) {
-                        jaExiste = 1;
-                        break;
+                        jaExiste = true;
+                        return 1;
                     }
                 }
-
-        }
-        if(jaExiste==0){
-            assert this.empresas != null : "Lista inexistente";
             this.empresas.add(empresa);
+            return 0;
         }
-        return jaExiste;
+        return 1;
     }
 
     /** Método utilizado para apagar uma empresa da lista de gestão de empresas
@@ -55,17 +52,16 @@ public class GerirEmpresas {
      * executado adequadamente
      */
     public int apagarEmpresa(String nome){
-        int existe= 1;
         if(this.empresas!=null){
             for(int i=0; i< this.empresas.size(); i++){
                 if(Objects.equals(this.empresas.get(i).nome, nome)){
                     this.empresas.remove(i);
-                    existe=0;
-                    i--;
+                    return 0;
                 }
             }
+            return 1;
         }
-        return existe;
+        return 1;
     }
 
     int maiorReceitaAnual(Class classe) {
