@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Criação da função toString&#10;Criação da classe GerirEmpresas.java">
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_Guidelines.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_Guidelines.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/CategoriaMercearia.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/CategoriaRestauracao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Empresa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/SubcategoriaRestaurante.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/TipologiaCafe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/TipologiaFrutaria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/TipologiaMercado.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/TipologiaPastelaria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/TipologiaRestauranteFastfood.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/TipologiaRestauranteLocal.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/modulos/empresas/Cafe.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/modulos/empresas/Restauracao.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -67,7 +57,7 @@
       <updated>1669147366936</updated>
       <workItem from="1669147369573" duration="3400000" />
       <workItem from="1669204154939" duration="3172000" />
-      <workItem from="1669370889298" duration="1682000" />
+      <workItem from="1669370889298" duration="5450000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -118,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669235620073</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa">
+      <created>1669373175897</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669373175897</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +138,7 @@
     <MESSAGE value="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java" />
     <MESSAGE value="Atualizações/Melhoria das classes" />
     <MESSAGE value="Criação da função toString&#10;Criação da classe GerirEmpresas.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação da função toString&#10;Criação da classe GerirEmpresas.java" />
+    <MESSAGE value="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa" />
   </component>
 </project>

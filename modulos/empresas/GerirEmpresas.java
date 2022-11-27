@@ -67,4 +67,27 @@ public class GerirEmpresas {
         }
         return existe;
     }
+
+    int maiorReceitaAnual(Class classe) {
+        if (this.empresas != null) {
+            String nome = null;
+            float valor = Float.MIN_VALUE;
+            for (int i = 0; i < this.empresas.size(); i++) {
+                if (this.empresas.get(i).getClass().equals(classe)) {
+                    float valor_temp=this.empresas.get(i).calcularReceitaAnual();
+                    if(valor_temp>=valor)
+                    nome= this.empresas.get(i).nome;
+                    valor=valor_temp;
+                }
+            }
+            if(nome!=null){
+                System.out.println("Empresa do tipo"+classe.getSimpleName()+" com a maior receita anual:" +
+                        "\nNome                  :\t"+ nome+
+                        "\nValor da receita anual:\t"+valor);
+                return 0;
+            }
+            return 1;
+        }
+        return 1;
+    }
 }
