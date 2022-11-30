@@ -1,10 +1,12 @@
 package modulos.empresas;
 
 public abstract class Mercearia extends Empresa {
+
     /**
      * O custo anual de limpeza da mercearia (seja ela frutaria ou mercado)
      */
     float custoAnualLimpeza;
+
 
     /**
      *  Construtor da classe, recebe os dados para a inicialização
@@ -18,6 +20,7 @@ public abstract class Mercearia extends Empresa {
         this.custoAnualLimpeza = custoAnualLimpeza;
     }
 
+    // Getters and Setters e Overrides
     /*
      * Métodos de acesso externo ao custo anual de limpeza da mercearia
      */

@@ -1,6 +1,7 @@
 package modulos.empresas;
 
 public class Cafe extends Restauracao {
+
     /**
      * O número médio de cafés que são vendidos por dia
      */
@@ -9,6 +10,7 @@ public class Cafe extends Restauracao {
      *  Valor médio de faturação anual por café vendido por dia
      */
     float faturacaoMediaAnualCafe;
+
 
     /**
      * Construtor da classe, recebe os dados para a inicialização dos atributos
@@ -26,6 +28,39 @@ public class Cafe extends Restauracao {
         this.cafesMedioDiario = cafesMedioDiario;
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
     }
+
+
+    // Métodos
+
+    /**
+     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da receita anual
+     */
+    public float calcularReceitaAnual() {
+        return cafesMedioDiario * faturacaoMediaAnualCafe;
+    }
+
+    /**
+     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da despesa anual
+     */
+    public float calcularDespesaAnual() {
+        return empregadosMesa * salarioMedioAnual;
+    }
+
+    /**
+     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor do lucro anual
+     */
+    public float calcularLucro() {
+        return calcularReceitaAnual() - calcularDespesaAnual();
+    }
+
+
+    // Getters and Setters e Overrides
 
     /**
      * Métodos de acesso externo ao número médio de cafés que vendem por dia
@@ -53,33 +88,6 @@ public class Cafe extends Restauracao {
      */
     public void setFaturacaoMediaAnualCafe(float faturacaoMediaAnualCafe) {
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
-    }
-
-    /**
-     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da despesa anual
-     */
-    public float calcularDespesaAnual() {
-        return empregadosMesa*salarioMedioAnual;
-    }
-
-    /**
-     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da receita anual
-     */
-    public float calcularReceitaAnual() {
-        return cafesMedioDiario * faturacaoMediaAnualCafe;
-    }
-
-    /**
-     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor do lucro anual
-     */
-    public float calcularLucro() {
-        return calcularReceitaAnual()-calcularDespesaAnual();
     }
 
     @Override

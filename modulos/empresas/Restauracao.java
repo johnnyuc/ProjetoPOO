@@ -1,6 +1,7 @@
 package modulos.empresas;
 
 public abstract class Restauracao extends Empresa {
+
     /**
      * O número de empregados de mesa
      */
@@ -14,6 +15,7 @@ public abstract class Restauracao extends Empresa {
      * Este campo é transversal a todas as empresas de restauração, logo foi passado à classe mãe
      */
     float clientesMedioDiario;
+
 
     /**
      * Construtor da classe, recebe os dados para a inicialização dos atributos
@@ -31,6 +33,7 @@ public abstract class Restauracao extends Empresa {
         this.clientesMedioDiario = clientesMedioDiario;
     }
 
+    // Getters and Setters e Overrides
 
     /**
      * Métodos de acesso externo ao número de empregados de mesa

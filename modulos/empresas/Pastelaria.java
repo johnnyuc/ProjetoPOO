@@ -1,6 +1,7 @@
 package modulos.empresas;
 
 public class Pastelaria extends Restauracao {
+
     /**
      * O número médio de bolos vendidos por dia
      */
@@ -9,6 +10,7 @@ public class Pastelaria extends Restauracao {
      *  Valor médio de faturação anual por bolo vendido por dia
      */
     float faturacaoMediaAnualBolo;
+
 
     /**
      * Construtor da classe, recebe os dados para a inicialização dos atributos
@@ -26,6 +28,39 @@ public class Pastelaria extends Restauracao {
         this.bolosMedioDiario = bolosMedioDiario;
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;
     }
+
+
+    // Métodos
+
+    /**
+     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da receita anual
+     */
+    public float calcularReceitaAnual() {
+        return bolosMedioDiario * faturacaoMediaAnualBolo;
+    }
+
+    /**
+     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da despesa anual
+     */
+    public float calcularDespesaAnual() {
+        return empregadosMesa * salarioMedioAnual;
+    }
+
+    /**
+     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor do lucro anual
+     */
+    public float calcularLucro(){
+        return calcularReceitaAnual() - calcularDespesaAnual();
+    }
+
+
+    // Getters and Setters e Overrides
 
     /**
      * Métodos de acesso externo ao número médio de bolos vendidos por dia
@@ -57,26 +92,6 @@ public class Pastelaria extends Restauracao {
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;
     }
 
-
-    /**
-     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da despesa anual
-     */
-    public float calcularDespesaAnual() {
-        return empregadosMesa*salarioMedioAnual;
-    }
-
-    /**
-     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da receita anual
-     */
-    public float calcularReceitaAnual() {
-        return bolosMedioDiario * faturacaoMediaAnualBolo;
-    }
-
-    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
     @Override
     public String toString(){
         String s= "Empresa"+

@@ -1,10 +1,12 @@
 package modulos.empresas;
 
 public abstract class Restaurante extends Restauracao {
+
     /**
      * O número de dias de funcionamento do estabelecimento por ano
      */
     int diasFuncionamento;
+
 
     /**
      *  Construtor da classe, recebe os dados para a inicialização dos atributos
@@ -21,6 +23,9 @@ public abstract class Restaurante extends Restauracao {
         this.diasFuncionamento = diasFuncionamento;
     }
 
+
+    // Getters and Setters e Overrides
+
     /**
      * Métodos de acesso externo ao número de dias de funcionamento do estabelecimento por ano
      */
@@ -34,5 +39,4 @@ public abstract class Restaurante extends Restauracao {
     public void setDiasFuncionamento(int diasFuncionamento) {
         this.diasFuncionamento = diasFuncionamento;
     }
-
 }

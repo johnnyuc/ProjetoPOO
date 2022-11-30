@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Finalização das classes estruturais do programa do package modulos.empresas">
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Refatorização de classes + UML">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" afterDir="false" />
@@ -66,7 +69,7 @@
       <workItem from="1669370889298" duration="5604000" />
       <workItem from="1669756185654" duration="596000" />
       <workItem from="1669833957228" duration="85000" />
-      <workItem from="1669834062189" duration="5998000" />
+      <workItem from="1669834062189" duration="7861000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -131,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669566299708</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refatorização de classes + UML">
+      <created>1669840449409</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669840449409</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +166,7 @@
     <MESSAGE value="Criação da função toString&#10;Criação da classe GerirEmpresas.java" />
     <MESSAGE value="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa" />
     <MESSAGE value="Criação da função GerirEmpresas.maiorReceitaAnual" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação da função GerirEmpresas.maiorReceitaAnual" />
+    <MESSAGE value="Refatorização de classes + UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorização de classes + UML" />
   </component>
 </project>

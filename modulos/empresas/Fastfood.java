@@ -1,6 +1,7 @@
 package modulos.empresas;
 
 public class Fastfood extends Restaurante {
+
     /**
      * O número de mesas no interior
      */
@@ -17,6 +18,7 @@ public class Fastfood extends Restaurante {
      * O valor médio de faturação por cliente de 'drive-thru' (diário)
      */
     float faturacaoMediaClienteDrive;
+
 
     /**
      *  Construtor da classe, recebe os dados para a inicialização
@@ -39,6 +41,39 @@ public class Fastfood extends Restaurante {
         this.clientesMedioDrive = clientesMedioDrive;
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
     }
+
+
+    // Métodos
+
+    /**
+     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da receita anual
+     */
+    public float calcularReceitaAnual() {
+        return ((mesasInterior * faturacaoMediaMesaDiario) + (clientesMedioDrive * faturacaoMediaClienteDrive)) * diasFuncionamento;
+    }
+
+    /**
+     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da despesa anual
+     */
+    public float calcularDespesaAnual() {
+        return empregadosMesa * salarioMedioAnual;
+    }
+
+    /**
+     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor do lucro anual
+     */
+    public float calcularLucro(){
+        return calcularReceitaAnual() - calcularDespesaAnual();
+    }
+
+
+    // Getters and Setters e Overrides
 
     /**
      * Métodos de acesso externo ao número de mesas no interior
@@ -96,27 +131,6 @@ public class Fastfood extends Restaurante {
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
     }
 
-    /**
-     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da despesa anual
-     */
-    @Override
-    public float calcularDespesaAnual() {
-        return empregadosMesa*salarioMedioAnual;
-    }
-
-    /**
-     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da receita anual
-     */
-    @Override
-    public float calcularReceitaAnual() {
-        return ((mesasInterior* faturacaoMediaMesaDiario) + (clientesMedioDrive * faturacaoMediaClienteDrive))
-                *diasFuncionamento;
-    }
-    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
     @Override
     public String toString(){
         String s= "Empresa"+

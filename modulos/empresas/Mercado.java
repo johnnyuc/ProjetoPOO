@@ -1,6 +1,7 @@
 package modulos.empresas;
 
 public class Mercado extends Mercearia {
+
     /**
      * Tipo pode ser "mercado", "supermercado", "hipermercado" (usar min, super, hiper)
      */
@@ -13,6 +14,7 @@ public class Mercado extends Mercearia {
      * A faturação anual por metro quadrado
      */
     float faturacaoMediaAnualM2;
+
 
     /**
      * Construtor da classe, recebe os dados para a inicialização
@@ -31,6 +33,39 @@ public class Mercado extends Mercearia {
         this.areaCorredores = areaCorredores;
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
     }
+
+
+    // Métodos
+
+    /**
+     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da receita anual
+     */
+    public float calcularReceitaAnual() {
+        return areaCorredores* faturacaoMediaAnualM2;
+    }
+
+    /**
+     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da despesa anual
+     */
+    public float calcularDespesaAnual() {
+        return custoAnualLimpeza;
+    }
+
+    /**
+     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor do lucro anual
+     */
+    public float calcularLucro(){
+        return calcularReceitaAnual() - calcularDespesaAnual();
+    }
+
+
+    // Getters and Setters e Overrides
 
     /*
      * Métodos de acesso externo à tipologia de mercado
@@ -74,26 +109,6 @@ public class Mercado extends Mercearia {
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
     }
 
-    /**
-     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da despesa anual
-     */
-    @Override
-    public float calcularDespesaAnual() {
-        return custoAnualLimpeza;
-    }
-
-    /**
-     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da receita anual
-     */
-    @Override
-    public float calcularReceitaAnual() {
-        return areaCorredores* faturacaoMediaAnualM2;
-    }
-    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
     @Override
     public String toString(){
         String s= "Empresa"+
