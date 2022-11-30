@@ -8,37 +8,36 @@ public class Fastfood extends Restaurante {
     /**
      * O valor de faturação média por mesa por dia
      */
-    float faturacaoMediaMesa;
+    float faturacaoMediaMesaDiario;
     /**
      * O número médio de clientes 'drive-thru' diário
      */
-    float clientesDriveThru;
+    float clientesMedioDrive;
     /**
      * O valor médio de faturação por cliente de 'drive-thru' (diário)
      */
-    float faturacaoMediaClienteDriveThru;
+    float faturacaoMediaClienteDrive;
 
     /**
      *  Construtor da classe, recebe os dados para a inicialização
      * @param nome O nome da empresa
      * @param distrito O distrito onde se localiza a empresa
      * @param coordenadas As coordenadas da empresa
-     * @param salarioMedioAnual O custo do salário médio anual
      * @param empregadosMesa O número de empregados de mesa
+     * @param salarioMedioAnual O custo do salário médio anual
+     * @param clientesMedioDiario O número médio de clientes diário
      * @param diasFuncionamento O número de dias de funcionamento
      * @param mesasInterior O número de mesas no interior
-     * @param faturacaoMediaMesa A faturação média por mesa
-     * @param clientesDriveThru O número médio de clientes 'drive-thru' diário
-     * @param faturacaoMediaClienteDriveThru O valor médio de faturação por cliente de 'drive-thru' (diário)
+     * @param faturacaoMediaMesaDiario A faturação média por mesa
+     * @param clientesMedioDrive O número médio de clientes 'drive-thru' diário
+     * @param faturacaoMediaClienteDrive O valor médio de faturação por cliente de 'drive-thru' (diário)
      */
-    public Fastfood(String nome, String distrito, float[] coordenadas, float salarioMedioAnual,
-                    int empregadosMesa, int diasFuncionamento, int mesasInterior, float faturacaoMediaMesa,
-                    float clientesDriveThru, float faturacaoMediaClienteDriveThru) {
-        super(nome, distrito, coordenadas, salarioMedioAnual, empregadosMesa, diasFuncionamento);
+    public Fastfood(String nome, String distrito, float[] coordenadas, int empregadosMesa, float salarioMedioAnual, float clientesMedioDiario, int diasFuncionamento, int mesasInterior, float faturacaoMediaMesaDiario, float clientesMedioDrive, float faturacaoMediaClienteDrive) {
+        super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario, diasFuncionamento);
         this.mesasInterior = mesasInterior;
-        this.faturacaoMediaMesa = faturacaoMediaMesa;
-        this.clientesDriveThru = clientesDriveThru;
-        this.faturacaoMediaClienteDriveThru = faturacaoMediaClienteDriveThru;
+        this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
+        this.clientesMedioDrive = clientesMedioDrive;
+        this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
     }
 
     /**
@@ -58,43 +57,43 @@ public class Fastfood extends Restaurante {
     /**
      * Métodos de acesso externo à faturação média por mesa
      */
-    public float getFaturacaoMediaMesa() {
-        return faturacaoMediaMesa;
+    public float getFaturacaoMediaMesaDiario() {
+        return faturacaoMediaMesaDiario;
     }
 
     /**
      * Método para definir a faturação média por mesa
      */
-    public void setFaturacaoMediaMesa(float faturacaoMediaMesa) {
-        this.faturacaoMediaMesa = faturacaoMediaMesa;
+    public void setFaturacaoMediaMesaDiario(float faturacaoMediaMesaDiario) {
+        this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
     }
 
     /**
      * Métodos de acesso externo ao número médio de clientes 'drive-thru' diário
      */
-    public float getClientesDriveThru() {
-        return clientesDriveThru;
+    public float getClientesMedioDrive() {
+        return clientesMedioDrive;
     }
 
     /**
      * Método para definir o número médio de clientes 'drive-thru' diário
      */
-    public void setClientesDriveThru(float clientesDriveThru) {
-        this.clientesDriveThru = clientesDriveThru;
+    public void setClientesMedioDrive(float clientesMedioDrive) {
+        this.clientesMedioDrive = clientesMedioDrive;
     }
 
     /**
      * Métodos de acesso externo ao valor médio de faturação por cliente de 'drive-thru' (diário)
      */
-    public float getFaturacaoMediaClienteDriveThru() {
-        return faturacaoMediaClienteDriveThru;
+    public float getFaturacaoMediaClienteDrive() {
+        return faturacaoMediaClienteDrive;
     }
 
     /**
      * Método para definir o valor médio de faturação por cliente de 'drive-thru' (diário)
      */
-    public void setFaturacaoMediaClienteDriveThru(float faturacaoMediaClienteDriveThru) {
-        this.faturacaoMediaClienteDriveThru = faturacaoMediaClienteDriveThru;
+    public void setFaturacaoMediaClienteDrive(float faturacaoMediaClienteDrive) {
+        this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
     }
 
     /**
@@ -114,7 +113,7 @@ public class Fastfood extends Restaurante {
      */
     @Override
     public float calcularReceitaAnual() {
-        return ((mesasInterior*faturacaoMediaMesa) + (clientesDriveThru*faturacaoMediaClienteDriveThru))
+        return ((mesasInterior* faturacaoMediaMesaDiario) + (clientesMedioDrive * faturacaoMediaClienteDrive))
                 *diasFuncionamento;
     }
     public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}

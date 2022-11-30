@@ -6,33 +6,32 @@ import java.util.Objects;
 public class GerirEmpresas {
     ArrayList <Empresa> empresas;
 
-    public ArrayList<Empresa> getEmpresas() {
-        return empresas;
-    }
-
-    public void setEmpresas(ArrayList<Empresa> empresas) {
+    /**
+     * Construtor da classe, recebe os dados para a inicialização dos atributos
+     * @param empresas A lista de empresas
+     */
+    public GerirEmpresas(ArrayList <Empresa> empresas){
         this.empresas = empresas;
     }
 
-    public GerirEmpresas(ArrayList <Empresa> empresas){this.empresas=empresas;}
-
     public void imprimirEmpresas(){
-        if(this.empresas!=null){
-            for(int i=0; i< this.empresas.size(); i++){
+        if(this.empresas != null){
+            for(int i = 0; i < this.empresas.size(); i++){
                 System.out.println(this.empresas.get(i).toString());
             }
         }
     }
 
-    /**Método responsável por adicionar uma empresa a lista de gestão de empresas
+    /**
+     * Método responsável por adicionar uma empresa a lista de gestão de empresas
      *
      * @param empresa Empresa a ser adicionada na lista
      * @return 1: se a empresa já está na lista. 0: se a empresa ainda
      * não estava na lista e o programa foi executado adequadamente
      */
     public int adicionarEmpresa(Empresa empresa){
-        boolean jaExiste= false;
-        if(this.empresas!=null){
+        boolean jaExiste = false;
+        if(this.empresas != null){
                 for (int i = 0; i < this.empresas.size(); i++) {
                     if (Objects.equals(this.empresas.get(i).nome, empresa.nome)) {
                         jaExiste = true;
@@ -45,7 +44,8 @@ public class GerirEmpresas {
         return 1;
     }
 
-    /** Método utilizado para apagar uma empresa da lista de gestão de empresas
+    /**
+     * Método utilizado para apagar uma empresa da lista de gestão de empresas
      *
      * @param nome Nome da empresa a ser apagada
      * @return 1: se não existe uma empresa na lista. 0: se existe uma empresa na lista e o programa foi
@@ -85,5 +85,14 @@ public class GerirEmpresas {
             return 1;
         }
         return 1;
+    }
+
+    // Getters and Setters
+    public ArrayList<Empresa> getEmpresas() {
+        return empresas;
+    }
+
+    public void setEmpresas(ArrayList<Empresa> empresas) {
+        this.empresas = empresas;
     }
 }

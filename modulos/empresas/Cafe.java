@@ -2,81 +2,57 @@ package modulos.empresas;
 
 public class Cafe extends Restauracao {
     /**
-     * O número médio de clientes diário
+     * O número médio de cafés que são vendidos por dia
      */
-    float clientesDiarios;
+    float cafesMedioDiario;
     /**
-     * O número médio de cafés que vendem por dia
+     *  Valor médio de faturação anual por café vendido por dia
      */
-    float cafesDiarios;
-    /**
-     *  Valor médio de faturação anual por café vendido por dia é o custo médio de um café
-     *  Faturação/Receita anual = cafesDiarios*custoMedioCafe
-     *  (Valor médio de faturação anual por café vendido por dia = 'faturacaoAnual'/cafesDiarios)
-     */
-    float custoMedioCafe;
+    float faturacaoMediaAnualCafe;
 
     /**
      * Construtor da classe, recebe os dados para a inicialização dos atributos
      * @param nome O nome da empresa
      * @param distrito O distrito onde se localiza a empresa
      * @param coordenadas As coordenadas da empresa
-     * @param salarioMedioAnual O custo do salário médio anual
      * @param empregadosMesa O número de empregados de mesa
-     * @param cafesDiarios O número médio de cafés que se vendem por dia
-     * @param clientesDiarios O número médio de clientes diário
-     * @param custoMedioCafe O valor médio de faturação anual por café vendido por dia
+     * @param salarioMedioAnual O custo do salário médio anual
+     * @param clientesMedioDiario O número médio de clientes diário
+     * @param cafesMedioDiario O número médio de cafés que são vendidos por dia
+     * @param faturacaoMediaAnualCafe O valor médio de faturação anual por café vendido por dia
      */
-    public Cafe(String nome, String distrito, float[] coordenadas, float salarioMedioAnual,
-                int empregadosMesa, float cafesDiarios, float clientesDiarios, float custoMedioCafe) {
-        super(nome, distrito, coordenadas, salarioMedioAnual, empregadosMesa);
-        this.cafesDiarios = cafesDiarios;
-        this.clientesDiarios = clientesDiarios;
-        this.custoMedioCafe= custoMedioCafe;
-    }
-
-    /**
-     * Métodos de acesso externo ao número médio de clientes diário
-     */
-    public float getClientesDiarios() {
-        return clientesDiarios;
-    }
-
-    /**
-     * Método para definir o número médio de clientes diário
-     */
-    public void setClientesDiarios(float clientesDiarios) {
-        this.clientesDiarios = clientesDiarios;
+    public Cafe(String nome, String distrito, float[] coordenadas, int empregadosMesa, float salarioMedioAnual, float clientesMedioDiario, float cafesMedioDiario, float faturacaoMediaAnualCafe) {
+        super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
+        this.cafesMedioDiario = cafesMedioDiario;
+        this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
     }
 
     /**
      * Métodos de acesso externo ao número médio de cafés que vendem por dia
      */
-    public float getCafesDiarios() {
-        return cafesDiarios;
+    public float getCafesMedioDiario() {
+        return cafesMedioDiario;
     }
 
     /**
      * Método para definir o número médio de cafés que vendem por dia
      */
-    public void setCafesDiarios(float cafesDiarios) {
-        this.cafesDiarios = cafesDiarios;
+    public void setCafesMedioDiario(float cafesMedioDiario) {
+        this.cafesMedioDiario = cafesMedioDiario;
     }
 
     /**
-     * Métodos de acesso externo ao custo médio de um café
-     * Diz também respeito ao valor médio de faturação anual por café vendido por dia
+     * Métodos de acesso externo ao valor médio de faturação anual por café vendido por dia
      */
-    public float getCustoMedioCafe() {
-        return custoMedioCafe;
+    public float getFaturacaoMediaAnualCafe() {
+        return faturacaoMediaAnualCafe;
     }
 
     /**
-     * Método para definir o custo médio de um café
-     * Diz também respeito ao valor médio de faturação anual por café vendido por dia
+     * Método para definir o valor médio de faturação anual por café vendido por dia
      */
-    public void setCustoMedioCafe(float custoMedioCafe) {
-        this.custoMedioCafe = custoMedioCafe;
+    public void setFaturacaoMediaAnualCafe(float faturacaoMediaAnualCafe) {
+        this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
     }
 
     /**
@@ -94,10 +70,18 @@ public class Cafe extends Restauracao {
      * @return O valor da receita anual
      */
     public float calcularReceitaAnual() {
-        return cafesDiarios*custoMedioCafe;
+        return cafesMedioDiario * faturacaoMediaAnualCafe;
     }
 
-    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
+    /**
+     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor do lucro anual
+     */
+    public float calcularLucro() {
+        return calcularReceitaAnual()-calcularDespesaAnual();
+    }
+
     @Override
     public String toString(){
         String s= "Empresa"+
