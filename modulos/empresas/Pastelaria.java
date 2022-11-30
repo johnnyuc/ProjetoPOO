@@ -55,7 +55,7 @@ public class Pastelaria extends Restauracao {
      *
      * @return O valor do lucro anual
      */
-    public float calcularLucro(){
+    public float calcularLucro() {
         return calcularReceitaAnual() - calcularDespesaAnual();
     }
 
