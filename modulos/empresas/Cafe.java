@@ -94,7 +94,7 @@ public class Cafe extends Restauracao {
     public String toString(){
         String s= "Empresa"+
                 "\nNome                :\t"+this.nome+
-                "\nTipo                :\t"+"Cafe"+
+                "\nTipo                :\t"+"Café"+
                 "\nDistrito            :\t"+this.distrito+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+

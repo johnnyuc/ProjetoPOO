@@ -8,7 +8,7 @@ public class GerirEmpresas {
     /**
      * Lista de empresas
      */
-    ArrayList <Empresa> empresas;
+    public static ArrayList <Empresa> empresas;
 
 
     /**

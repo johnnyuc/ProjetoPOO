@@ -1,6 +1,6 @@
 package modulos.empresas;
 
-public abstract class Empresa{
+public abstract class Empresa implements java.io.Serializable {
 
     /**
      * O nome da empresa
@@ -11,7 +11,7 @@ public abstract class Empresa{
      * */
     String distrito;
     /**
-     * As coordendas da empresa
+     * As coordendas da empresa (latitude e longitude)
      * */
     float[] coordenadas;
 
@@ -20,7 +20,7 @@ public abstract class Empresa{
      * Construtor da classe, recebe os dados para a inicialização dos atributos
      * @param nome O nome da empresa
      * @param distrito O distrito onde se localiza a empresa
-     * @param coordenadas As coordenadas da empresa
+     * @param coordenadas As coordenadas da empresa (latitude e longitude)
      */
     public Empresa(String nome, String distrito, float[] coordenadas) {
         this.nome = nome;
