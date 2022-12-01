@@ -1,11 +1,11 @@
-package modulos.data;
+package modulos.dados;
 
 import modulos.empresas.*;
 
 import java.io.*;
 import java.util.*;
 
-public class Reader {
+public class Leitor {
 
     /*
      * Base de dados dummy para testes
@@ -19,7 +19,6 @@ public class Reader {
      */
     public static String baseDados = "starthrive.dat";
 
-    // Function to load data from file text using FileReader
     public static ArrayList<Empresa> carregaDadosTxt() {
 
         ArrayList<Empresa> empresas = new ArrayList<>();
@@ -58,9 +57,9 @@ public class Reader {
                         }
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("Skiping data: Erro na conversão de dados numéricos. [" + linha + "]");
+                    System.out.println("Pular dados: Erro na conversão de dados numéricos. [" + linha + "]");
                 } catch (ArrayIndexOutOfBoundsException e) {
-                    System.out.println("Skiping data: Leitura de dados insuficiente. [" + linha + "]");
+                    System.out.println("Pular: Leitura de dados insuficiente. [" + linha + "]");
                 }
             }
             fr.close();

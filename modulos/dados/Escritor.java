@@ -1,11 +1,11 @@
-package modulos.data;
+package modulos.dados;
 
 import modulos.empresas.Empresa;
 
 import java.io.*;
 import java.util.ArrayList;
 
-public class Writer {
+public class Escritor {
 
     /*
      * Base de dados de (objetos) empresas
