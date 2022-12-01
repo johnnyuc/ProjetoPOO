@@ -16,7 +16,7 @@ public class GerirEmpresas {
      * @param empresas A lista de empresas
      */
     public GerirEmpresas(ArrayList <Empresa> empresas){
-        this.empresas = empresas;
+        GerirEmpresas.empresas = empresas;
     }
 
     // Métodos
@@ -25,9 +25,9 @@ public class GerirEmpresas {
      * Método para adicionar imprimir os dados de todas as empresas
      */
     public void imprimirEmpresas(){
-        if(this.empresas != null){
-            for(int i = 0; i < this.empresas.size(); i++){
-                System.out.println(this.empresas.get(i).toString());
+        if(empresas != null){
+            for (Empresa empresa : empresas) {
+                System.out.println(empresa.toString());
             }
         }
     }
@@ -40,15 +40,13 @@ public class GerirEmpresas {
      * não estava na lista e o programa foi executado adequadamente
      */
     public int adicionarEmpresa(Empresa empresa){
-        boolean jaExiste = false;
-        if(this.empresas != null){
-                for (int i = 0; i < this.empresas.size(); i++) {
-                    if (Objects.equals(this.empresas.get(i).nome, empresa.nome)) {
-                        jaExiste = true;
-                        return 1;
-                    }
+        if(empresas != null){
+            for (Empresa value : empresas) {
+                if (Objects.equals(value.nome, empresa.nome)) {
+                    return 1;
                 }
-            this.empresas.add(empresa);
+            }
+            empresas.add(empresa);
             return 0;
         }
         return 1;
@@ -62,10 +60,10 @@ public class GerirEmpresas {
      * executado adequadamente
      */
     public int apagarEmpresa(String nome){
-        if(this.empresas!=null){
-            for(int i=0; i< this.empresas.size(); i++){
-                if(Objects.equals(this.empresas.get(i).nome, nome)){
-                    this.empresas.remove(i);
+        if(empresas!=null){
+            for(int i=0; i< empresas.size(); i++){
+                if(Objects.equals(empresas.get(i).nome, nome)){
+                    empresas.remove(i);
                     return 0;
                 }
             }
@@ -78,14 +76,14 @@ public class GerirEmpresas {
      * Método para a maior receita anual de todas as empresas
      */
     int maiorReceitaAnual(Class classe) {
-        if (this.empresas != null) {
+        if (empresas != null) {
             String nome = null;
             float valor = Float.MIN_VALUE;
-            for (int i = 0; i < this.empresas.size(); i++) {
-                if (this.empresas.get(i).getClass().equals(classe)) {
-                    float valor_temp = this.empresas.get(i).calcularReceitaAnual();
-                    if(valor_temp >= valor)
-                    nome = this.empresas.get(i).nome;
+            for (Empresa empresa : empresas) {
+                if (empresa.getClass().equals(classe)) {
+                    float valor_temp = empresa.calcularReceitaAnual();
+                    if (valor_temp >= valor)
+                        nome = empresa.nome;
                     valor = valor_temp;
                 }
             }
@@ -116,6 +114,6 @@ public class GerirEmpresas {
      * @param empresas lista de empresas geridas
      */
     public void setEmpresas(ArrayList<Empresa> empresas) {
-        this.empresas = empresas;
+        GerirEmpresas.empresas = empresas;
     }
 }
