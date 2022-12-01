@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="mudanças nas funções GerirEmpresas.apagarEmpresa e GerirEmpresas.adicionarEmpresa">
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Leitura e Escrita de dados (txt e object)">
+      <change afterPath="$PROJECT_DIR$/starthrive.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PLAINDATA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/data/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/data/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/data/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/data/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Cafe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Cafe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/GerirEmpresas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/GerirEmpresas.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +45,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2HuucCSdlEuaeo0b1L495T28g67" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -36,15 +56,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/saulopiccirilo/projeto_poo/ProjetoPOO&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/saulopiccirilo/projeto_poo/ProjetoPOO",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,7 +81,10 @@
       <workItem from="1669147369573" duration="3400000" />
       <workItem from="1669204154939" duration="3172000" />
       <workItem from="1669370889298" duration="5604000" />
-      <workItem from="1669573407160" duration="1594000" />
+      <workItem from="1669756185654" duration="596000" />
+      <workItem from="1669833957228" duration="85000" />
+      <workItem from="1669834062189" duration="18230000" />
+      <workItem from="1669853220153" duration="11372000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -121,14 +149,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669566299708</updated>
     </task>
-    <task id="LOCAL-00010" summary="mudanças nas funções GerirEmpresas.apagarEmpresa e GerirEmpresas.adicionarEmpresa">
-      <created>1669574089557</created>
+    <task id="LOCAL-00010" summary="Refatorização de classes + UML">
+      <created>1669840449409</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1669574089557</updated>
+      <updated>1669840449409</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Limpeza das Classes">
+      <created>1669842022901</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669842022901</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Leitura e Escrita de dados (txt e object)">
+      <created>1669844527614</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669844527614</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +195,9 @@
     <MESSAGE value="Criação da função toString&#10;Criação da classe GerirEmpresas.java" />
     <MESSAGE value="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa" />
     <MESSAGE value="Criação da função GerirEmpresas.maiorReceitaAnual" />
-    <MESSAGE value="mudanças nas funções GerirEmpresas.apagarEmpresa e GerirEmpresas.adicionarEmpresa" />
-    <option name="LAST_COMMIT_MESSAGE" value="mudanças nas funções GerirEmpresas.apagarEmpresa e GerirEmpresas.adicionarEmpresa" />
+    <MESSAGE value="Refatorização de classes + UML" />
+    <MESSAGE value="Limpeza das Classes" />
+    <MESSAGE value="Leitura e Escrita de dados (txt e object)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Leitura e Escrita de dados (txt e object)" />
   </component>
 </project>

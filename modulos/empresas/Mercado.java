@@ -1,6 +1,7 @@
 package modulos.empresas;
 
 public class Mercado extends Mercearia {
+
     /**
      * Tipo pode ser "mercado", "supermercado", "hipermercado" (usar min, super, hiper)
      */
@@ -12,7 +13,8 @@ public class Mercado extends Mercearia {
     /**
      * A faturação anual por metro quadrado
      */
-    float faturacaoAnualM2;
+    float faturacaoMediaAnualM2;
+
 
     /**
      * Construtor da classe, recebe os dados para a inicialização
@@ -22,15 +24,48 @@ public class Mercado extends Mercearia {
      * @param custoAnualLimpeza O custo anual de limpeza da mercearia
      * @param tipo A tipologia de mercado (pode ser mini, super, hiper)
      * @param areaCorredores A área em metros quadrados dos corredores
-     * @param faturacaoAnualM2 A faturação anual por metro quadrado
+     * @param faturacaoMediaAnualM2 A faturação anual por metro quadrado
      */
     public Mercado(String nome, String distrito, float[] coordenadas, float custoAnualLimpeza, String tipo,
-                   int areaCorredores, float faturacaoAnualM2) {
+                   int areaCorredores, float faturacaoMediaAnualM2) {
         super(nome, distrito, coordenadas, custoAnualLimpeza);
         this.tipo = tipo;
         this.areaCorredores = areaCorredores;
-        this.faturacaoAnualM2 = faturacaoAnualM2;
+        this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
     }
+
+
+    // Métodos
+
+    /**
+     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da receita anual
+     */
+    public float calcularReceitaAnual() {
+        return areaCorredores* faturacaoMediaAnualM2;
+    }
+
+    /**
+     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da despesa anual
+     */
+    public float calcularDespesaAnual() {
+        return custoAnualLimpeza;
+    }
+
+    /**
+     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor do lucro anual
+     */
+    public float calcularLucro(){
+        return calcularReceitaAnual() - calcularDespesaAnual();
+    }
+
+
+    // Getters and Setters e Overrides
 
     /*
      * Métodos de acesso externo à tipologia de mercado
@@ -63,37 +98,17 @@ public class Mercado extends Mercearia {
     /*
      * Métodos de acesso externo à faturação anual por metro quadrado
      */
-    public float getFaturacaoAnualM2() {
-        return faturacaoAnualM2;
+    public float getFaturacaoMediaAnualM2() {
+        return faturacaoMediaAnualM2;
     }
 
     /*
      * Método para definir a faturação anual por metro quadrado
      */
-    public void setFaturacaoAnualM2(float faturacaoAnualM2) {
-        this.faturacaoAnualM2 = faturacaoAnualM2;
+    public void setFaturacaoMediaAnualM2(float faturacaoMediaAnualM2) {
+        this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
     }
 
-    /**
-     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da despesa anual
-     */
-    @Override
-    public float calcularDespesaAnual() {
-        return custoAnualLimpeza;
-    }
-
-    /**
-     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da receita anual
-     */
-    @Override
-    public float calcularReceitaAnual() {
-        return areaCorredores*faturacaoAnualM2;
-    }
-    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
     @Override
     public String toString(){
         String s= "Empresa"+

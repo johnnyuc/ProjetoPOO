@@ -1,8 +1,30 @@
+//import modulos.gui.*;
+import modulos.data.*;
 import modulos.empresas.*;
+
+import java.io.File;
+
 
 public class Main {
     public static void main(String[] args) {
-        Cafe cafe1= new Cafe("a","a", new float[]{0, 0},0,0,0,0,0);
-        System.out.println(cafe1.getClass().equals(Empresa.class));
+        // Inicialização do programa
+        booting();
+    }
+    public static void booting() {
+        File f = new File("starthrive.dat");
+        if (f.exists()) {
+            System.out.println("Bem-vindo ao StarThrive!");
+            System.out.println("A iniciar a base de dados de objetos...");
+            GerirEmpresas StarThrive = new GerirEmpresas(Reader.carregaDadosDat());
+            StarThrive.imprimirEmpresas();
+        }
+        else {
+            System.out.println("Bem-vindo ao StarThrive!");
+            System.out.println("A criar a base de dados a partir do arquivo de texto...");
+            GerirEmpresas StarThrive = new GerirEmpresas(Reader.carregaDadosTxt());
+            Writer.guardaDadosDat(GerirEmpresas.empresas);
+            StarThrive.imprimirEmpresas();
+        }
     }
 }
+

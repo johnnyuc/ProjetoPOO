@@ -1,6 +1,7 @@
 package modulos.empresas;
 
 public class Frutaria extends Mercearia {
+
     /**
      * O número de produtos para venda na frutaria
      */
@@ -8,7 +9,8 @@ public class Frutaria extends Mercearia {
     /**
      * O valor médio de faturação anual por produto
      */
-    float faturacaoAnualProduto;
+    float faturacaoMediaAnualProduto;
+
 
     /**
      *  Construtor da classe, recebe os dados para a inicialização
@@ -17,13 +19,46 @@ public class Frutaria extends Mercearia {
      * @param coordenadas As coordenadas da empresa
      * @param custoAnualLimpeza O custo anual de limpeza da mercearia
      * @param numeroProdutos O número de produtos para venda na frutaria
-     * @param faturacaoAnualProduto O valor médio de faturação anual por produto
+     * @param faturacaoMediaAnualProduto O valor médio de faturação anual por produto
      */
-    public Frutaria(String nome, String distrito, float[] coordenadas, float custoAnualLimpeza, int numeroProdutos, float faturacaoAnualProduto) {
+    public Frutaria(String nome, String distrito, float[] coordenadas, float custoAnualLimpeza, int numeroProdutos, float faturacaoMediaAnualProduto) {
         super(nome, distrito, coordenadas, custoAnualLimpeza);
         this.numeroProdutos = numeroProdutos;
-        this.faturacaoAnualProduto = faturacaoAnualProduto;
+        this.faturacaoMediaAnualProduto = faturacaoMediaAnualProduto;
     }
+
+
+    // Métodos
+
+    /**
+     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da receita anual
+     */
+    public float calcularReceitaAnual() {
+        return numeroProdutos * faturacaoMediaAnualProduto;
+    }
+
+    /**
+     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor da despesa anual
+     */
+    public float calcularDespesaAnual() {
+        return custoAnualLimpeza;
+    }
+
+    /**
+     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor do lucro anual
+     */
+    public float calcularLucro() {
+        return calcularReceitaAnual() - calcularDespesaAnual();
+    }
+
+
+    // Getters and Setters e Overrides
 
     /**
      * Métodos de acesso externo ao número de produtos para venda na frutaria
@@ -42,37 +77,17 @@ public class Frutaria extends Mercearia {
     /**
      * Métodos de acesso externo ao valor médio de faturação anual por produto
      */
-    public float getFaturacaoAnualProduto() {
-        return faturacaoAnualProduto;
+    public float getFaturacaoMediaAnualProduto() {
+        return faturacaoMediaAnualProduto;
     }
 
     /**
      * Método para definir o valor médio de faturação anual por produto
      */
-    public void setFaturacaoAnualProduto(float faturacaoAnualProduto) {
-        this.faturacaoAnualProduto = faturacaoAnualProduto;
+    public void setFaturacaoMediaAnualProduto(float faturacaoMediaAnualProduto) {
+        this.faturacaoMediaAnualProduto = faturacaoMediaAnualProduto;
     }
 
-    /**
-     * Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da despesa anual
-     */
-    @Override
-    public float calcularDespesaAnual() {
-        return custoAnualLimpeza;
-    }
-
-    /**
-     * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor da receita anual
-     */
-    @Override
-    public float calcularReceitaAnual() {
-        return numeroProdutos*faturacaoAnualProduto;
-    }
-    public float calcularLucro(){return calcularReceitaAnual()-calcularDespesaAnual();}
     @Override
     public String toString(){
         String s= "Empresa"+
