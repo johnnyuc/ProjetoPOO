@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Criação da função GerirEmpresas.maiorReceitaAnual" />
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="mudanças nas funções GerirEmpresas.apagarEmpresa e GerirEmpresas.adicionarEmpresa">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +56,7 @@
       <workItem from="1669147369573" duration="3400000" />
       <workItem from="1669204154939" duration="3172000" />
       <workItem from="1669370889298" duration="5604000" />
+      <workItem from="1669573407160" duration="1594000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -118,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669566299708</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="mudanças nas funções GerirEmpresas.apagarEmpresa e GerirEmpresas.adicionarEmpresa">
+      <created>1669574089557</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669574089557</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +153,7 @@
     <MESSAGE value="Criação da função toString&#10;Criação da classe GerirEmpresas.java" />
     <MESSAGE value="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa" />
     <MESSAGE value="Criação da função GerirEmpresas.maiorReceitaAnual" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação da função GerirEmpresas.maiorReceitaAnual" />
+    <MESSAGE value="mudanças nas funções GerirEmpresas.apagarEmpresa e GerirEmpresas.adicionarEmpresa" />
+    <option name="LAST_COMMIT_MESSAGE" value="mudanças nas funções GerirEmpresas.apagarEmpresa e GerirEmpresas.adicionarEmpresa" />
   </component>
 </project>
