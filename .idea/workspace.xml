@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.1">
-      <change afterPath="$PROJECT_DIR$/modulos/gui/Janelas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/data/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Leitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/data/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Escritor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Generate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/Iniciar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Panel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +77,7 @@
       <workItem from="1669853220153" duration="12152000" />
       <workItem from="1669866080975" duration="81000" />
       <workItem from="1669900042695" duration="6469000" />
-      <workItem from="1669906605208" duration="11358000" />
+      <workItem from="1669906605208" duration="11656000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -194,7 +184,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669908614435</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Interfaces v0.2">
+      <created>1669920017623</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669920017623</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Interfaces v0.2">
+      <created>1669920165859</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669920165859</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +229,7 @@
     <MESSAGE value="Leitura e Escrita de dados (txt e object)&#10;Dummy database&#10;Serialização de objetos Empresa" />
     <MESSAGE value="GerirEmpresas.java" />
     <MESSAGE value="Interfaces v0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.1" />
+    <MESSAGE value="Interfaces v0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.2" />
   </component>
 </project>
