@@ -3,7 +3,7 @@ package modulos.empresas;
 public class Cafe extends Restauracao {
 
     /**
-     * O número médio de cafés que são vendidos por dia
+     * O número médio de cafés vendidos por dia
      */
     float cafesMedioDiario;
     /**
@@ -20,7 +20,7 @@ public class Cafe extends Restauracao {
      * @param empregadosMesa O número de empregados de mesa
      * @param salarioMedioAnual O custo do salário médio anual
      * @param clientesMedioDiario O número médio de clientes diário
-     * @param cafesMedioDiario O número médio de cafés que são vendidos por dia
+     * @param cafesMedioDiario O número médio de cafés vendidos por dia
      * @param faturacaoMediaAnualCafe O valor médio de faturação anual por café vendido por dia
      */
     public Cafe(String nome, String distrito, float[] coordenadas, int empregadosMesa, float salarioMedioAnual, float clientesMedioDiario, float cafesMedioDiario, float faturacaoMediaAnualCafe) {
@@ -89,7 +89,10 @@ public class Cafe extends Restauracao {
     public void setFaturacaoMediaAnualCafe(float faturacaoMediaAnualCafe) {
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
     }
-
+    /**
+     * Método para apresentar todos os atributos de um determinado objeto
+     * @return Uma ‘string’ que contém todos os atributos de um determinado objeto
+     */
     @Override
     public String toString(){
         String s= "Empresa"+

@@ -67,48 +67,51 @@ public class Mercado extends Mercearia {
 
     // Getters and Setters e Overrides
 
-    /*
+    /**
      * Métodos de acesso externo à tipologia de mercado
      */
     public String getTipo() {
         return tipo;
     }
 
-    /*
+    /**
      * Método para definir a tipologia de mercado
      */
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    /*
+    /**
      * Métodos de acesso externo à área em metros quadrados dos corredores
      */
     public int getAreaCorredores() {
         return areaCorredores;
     }
 
-    /*
+    /**
      * Método para definir a área em metros quadrados dos corredores
      */
     public void setAreaCorredores(int areaCorredores) {
         this.areaCorredores = areaCorredores;
     }
 
-    /*
+    /**
      * Métodos de acesso externo à faturação anual por metro quadrado
      */
     public float getFaturacaoMediaAnualM2() {
         return faturacaoMediaAnualM2;
     }
 
-    /*
+    /**
      * Método para definir a faturação anual por metro quadrado
      */
     public void setFaturacaoMediaAnualM2(float faturacaoMediaAnualM2) {
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
     }
-
+    /**
+     * Método para apresentar todos os atributos de um determinado objeto
+     * @return Uma ‘string’ que contém todos os atributos de um determinado objeto
+     */
     @Override
     public String toString(){
         String s= "Empresa"+

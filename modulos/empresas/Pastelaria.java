@@ -91,7 +91,10 @@ public class Pastelaria extends Restauracao {
     public void setFaturacaoMediaAnualBolo(float faturacaoMediaAnualBolo) {
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;
     }
-
+    /**
+     * Método para apresentar todos os atributos de um determinado objeto
+     * @return Uma ‘string’ que contém todos os atributos de um determinado objeto
+     */
     @Override
     public String toString(){
         String s= "Empresa"+

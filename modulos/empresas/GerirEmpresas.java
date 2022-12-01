@@ -74,8 +74,8 @@ public class GerirEmpresas {
         return 1;
     }
 
-    /*
-    * Método para a maior receita anual de todas as empresas
+    /**
+     * Método para a maior receita anual de todas as empresas
      */
     int maiorReceitaAnual(Class classe) {
         if (this.empresas != null) {
@@ -103,10 +103,18 @@ public class GerirEmpresas {
 
     // Getters and Setters e Overrides
 
+    /**
+     * Método de acesso externo às empresas geridas
+     * @return Um array que contém todas as empresas geridas
+     */
     public ArrayList<Empresa> getEmpresas() {
         return empresas;
     }
 
+    /**
+     * Método utilizado para definir a lista de empresas geridas
+     * @param empresas lista de empresas geridas
+     */
     public void setEmpresas(ArrayList<Empresa> empresas) {
         this.empresas = empresas;
     }

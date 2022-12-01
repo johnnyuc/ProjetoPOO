@@ -130,7 +130,10 @@ public class Fastfood extends Restaurante {
     public void setFaturacaoMediaClienteDrive(float faturacaoMediaClienteDrive) {
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
     }
-
+    /**
+     * Método para apresentar todos os atributos de um determinado objeto
+     * @return Uma ‘string’ que contém todos os atributos de um determinado objeto
+     */
     @Override
     public String toString(){
         String s= "Empresa"+

@@ -127,7 +127,10 @@ public class Local extends Restaurante {
     public void setFaturacaoMediaMesaDiario(float faturacaoMediaMesaDiario) {
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
     }
-
+    /**
+     * Método para apresentar todos os atributos de um determinado objeto
+     * @return Uma ‘string’ que contém todos os atributos de um determinado objeto
+     */
     @Override
     public String toString(){
         String s= "Empresa"+
