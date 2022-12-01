@@ -1,4 +1,4 @@
-//import modulos.gui.*;
+import modulos.gui.*;
 import modulos.data.*;
 import modulos.empresas.*;
 
@@ -9,6 +9,8 @@ public class Main {
     public static void main(String[] args) {
         // Inicialização do programa
         booting();
+        // Inicialização da ‘interface’ gráfica
+        run();
     }
     public static void booting() {
         File f = new File("starthrive.dat");
@@ -25,6 +27,10 @@ public class Main {
             Writer.guardaDadosDat(GerirEmpresas.empresas);
             StarThrive.imprimirEmpresas();
         }
+    }
+
+    public static void run() {
+        Interface StarThrive = new Interface();
     }
 }
 

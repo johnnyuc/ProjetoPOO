@@ -41,7 +41,8 @@ public class Reader {
                         String[] data = linha.split("\\s*;\\s*");
 
                         switch (data[0]) {
-                            case "Café" -> empresas.add(new Cafe(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Float.parseFloat(data[8]), Float.parseFloat(data[9])));
+                            case "Café" ->
+                                    empresas.add(new Cafe(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Float.parseFloat(data[8]), Float.parseFloat(data[9])));
                             case "Pastelaria" ->
                                     empresas.add(new Pastelaria(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Float.parseFloat(data[8]), Float.parseFloat(data[9])));
                             case "Fastfood" ->
@@ -52,8 +53,8 @@ public class Reader {
                                     empresas.add(new Frutaria(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), Integer.parseInt(data[6]), Float.parseFloat(data[7])));
                             case "Mercado" ->
                                     empresas.add(new Mercado(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), data[6], Integer.parseInt(data[7]), Float.parseFloat(data[8])));
-                            case default ->
-                                    System.out.println("Tipo de empresa não reconhecido. " + Arrays.toString(data) );
+                            case null, default ->
+                                    System.out.println("Tipo de empresa não reconhecido. " + Arrays.toString(data));
                         }
                     }
                 } catch (NumberFormatException e) {
