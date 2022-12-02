@@ -119,8 +119,8 @@ public class Janelas extends JFrame {
             dados[i][0] = GerirEmpresas.empresas.get(i).getNome();
             dados[i][1] = tipos[GerirEmpresas.empresas.get(i).getTipo()];
             dados[i][2] = GerirEmpresas.empresas.get(i).getDistrito();
-            dados[i][3] = Float.toString(GerirEmpresas.empresas.get(i).calcularReceitaAnual());
-            dados[i][4] = Float.toString(GerirEmpresas.empresas.get(i).calcularDespesaAnual());
+            dados[i][3] = String.format("%.2f",GerirEmpresas.empresas.get(i).calcularReceitaAnual());
+            dados[i][4] = String.format("%.2f",GerirEmpresas.empresas.get(i).calcularDespesaAnual());
             float lucro= GerirEmpresas.empresas.get(i).calcularLucro();
             if(lucro>0){
                 dados[i][5]="Sim";
