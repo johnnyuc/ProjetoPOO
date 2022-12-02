@@ -15,17 +15,22 @@ public class Main {
         if (f.exists()) {
             System.out.println("Bem-vindo ao StarThrive!");
             System.out.println("A iniciar a base de dados de objetos...");
-            GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosDat());
-            StarThrive.imprimirEmpresas();
+            //GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosDat());
+            new GerirEmpresas(Leitor.carregaDadosDat());
+            //StarThrive.imprimirEmpresas();
         }
         else {
             System.out.println("Bem-vindo ao StarThrive!");
             System.out.println("A criar a base de dados a partir do arquivo de texto...");
-            GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosTxt());
+            //GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosTxt());
+            new GerirEmpresas(Leitor.carregaDadosTxt());
             Escritor.guardaDadosDat(GerirEmpresas.empresas);
-            StarThrive.imprimirEmpresas();
+            //StarThrive.imprimirEmpresas();
         }
+
+        // Work in progress
         new Iniciar();
+        new test().setVisible(true);
     }
 }
 
