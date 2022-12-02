@@ -54,12 +54,15 @@ public class Janelas extends JFrame {
         jButton2.setText("Remover empresa");
         jButton2.addActionListener(e->{
             int[] linha = jTable1.getSelectedRows();
-            // Tem que ser no sentido inverso porque quando se apagam múltiplas linhas
-            // a tabela vai mudando de tamanho e as linhas seguintes vão mudando de posição
-            for (int i = linha.length; i >= 0; i--) {
-                GerirEmpresas.apagarEmpresa(jTable1.getModel().getValueAt(i, 0).toString());
-                System.out.println(i);
-                ((DefaultTableModel)jTable1.getModel()).removeRow(i);
+            int option = JOptionPane.showConfirmDialog(null,
+                    "Tem a certeza que pretende remover o(s) elemento(s) selecionado(s)?", "Confirmar", JOptionPane.YES_NO_OPTION);
+            if (option == JOptionPane.YES_OPTION) {
+                // Tem que ser no sentido inverso porque quando se apagam múltiplas linhas
+                // a tabela vai mudando de tamanho e as linhas seguintes vão mudando de posição
+                for (int i = linha.length-1; i >= 0; i--) {
+                    GerirEmpresas.apagarEmpresa(jTable1.getModel().getValueAt(linha[i], 0).toString());
+                    ((DefaultTableModel)jTable1.getModel()).removeRow(linha[i]);
+                }
             }
         });
 
@@ -123,8 +126,8 @@ public class Janelas extends JFrame {
             dados[i][0] = GerirEmpresas.empresas.get(i).getNome();
             dados[i][1] = tipos[GerirEmpresas.empresas.get(i).getTipo()];
             dados[i][2] = GerirEmpresas.empresas.get(i).getDistrito();
-            dados[i][3] = Float.toString(GerirEmpresas.empresas.get(i).calcularReceitaAnual());
-            dados[i][4] = Float.toString(GerirEmpresas.empresas.get(i).calcularDespesaAnual());
+            dados[i][3] = String.format("%.2f €",GerirEmpresas.empresas.get(i).calcularReceitaAnual());
+            dados[i][4] = String.format("%.2f €",GerirEmpresas.empresas.get(i).calcularDespesaAnual());
             float lucro= GerirEmpresas.empresas.get(i).calcularLucro();
             if(lucro>0){
                 dados[i][5]="Sim";

@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.4 (Página principal a 100%, Operações a 20%)">
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.4 (Página principal a 100%, Operações a 40%)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Iniciar.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/Iniciar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/gui/Janelas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/Janelas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Empresa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Iniciar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Iniciar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670010405948</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Interfaces v0.4 (Página principal a 100%, Operações a 40%)">
+      <created>1670014506324</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670014506324</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +292,7 @@
     <MESSAGE value="Interfaces v0.3 (Página principal a 80%)" />
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%), nova base de dados, polimorfismo" />
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%, Operações a 20%)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.4 (Página principal a 100%, Operações a 20%)" />
+    <MESSAGE value="Interfaces v0.4 (Página principal a 100%, Operações a 40%)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.4 (Página principal a 100%, Operações a 40%)" />
   </component>
 </project>
