@@ -22,10 +22,9 @@ public class Escritor {
 
             // Leitura das linhas do ficheiro para carregar os objetos com base nos dados da base de dados (.dat)
             for (Empresa empresa : empresas) {
-                System.out.println("A guardar empresa: " + empresa.getNome());
                 oos.writeObject(empresa);
             }
-
+            System.out.println("Dados escritos com sucesso em " + baseDados);
             fos.close();
         }
         catch (FileNotFoundException e) {

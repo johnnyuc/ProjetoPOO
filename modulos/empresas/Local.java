@@ -40,7 +40,7 @@ public class Local extends Restaurante {
         this.mesasEsplanada = mesasEsplanada;
         this.custoLicencaMesaEsplanada = custoLicencaMesaEsplanada;
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
-        this.tipo=2;
+        this.tipo = 2;
     }
 
 

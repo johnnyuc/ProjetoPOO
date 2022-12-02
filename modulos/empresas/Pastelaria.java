@@ -27,7 +27,7 @@ public class Pastelaria extends Restauracao {
         super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
         this.bolosMedioDiario = bolosMedioDiario;
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;
-        this.tipo= 1;
+        this.tipo = 1;
     }
 
 

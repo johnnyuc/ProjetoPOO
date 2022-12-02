@@ -27,7 +27,7 @@ public class Cafe extends Restauracao {
         super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
         this.cafesMedioDiario = cafesMedioDiario;
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
-        this.tipo= 0;
+        this.tipo = 0;
     }
 
 

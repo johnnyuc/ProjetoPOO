@@ -25,7 +25,7 @@ public class Frutaria extends Mercearia {
         super(nome, distrito, coordenadas, custoAnualLimpeza);
         this.numeroProdutos = numeroProdutos;
         this.faturacaoMediaAnualProduto = faturacaoMediaAnualProduto;
-        this.tipo=4;
+        this.tipo = 4;
     }
 
 
