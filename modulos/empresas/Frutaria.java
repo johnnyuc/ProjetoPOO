@@ -25,6 +25,7 @@ public class Frutaria extends Mercearia {
         super(nome, distrito, coordenadas, custoAnualLimpeza);
         this.numeroProdutos = numeroProdutos;
         this.faturacaoMediaAnualProduto = faturacaoMediaAnualProduto;
+        this.tipo=4;
     }
 
 
@@ -93,9 +94,9 @@ public class Frutaria extends Mercearia {
      */
     @Override
     public String toString(){
-        String s= "Empresa"+
+        String s=
+                "Tipo                  :\t"+"Frutaria"+
                 "\nNome                :\t"+this.nome+
-                "\nTipo                :\t"+"Frutaria"+
                 "\nDistrito            :\t"+this.distrito+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+

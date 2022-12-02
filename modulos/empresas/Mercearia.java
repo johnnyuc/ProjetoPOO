@@ -21,14 +21,14 @@ public abstract class Mercearia extends Empresa {
     }
 
     // Getters and Setters e Overrides
-    /*
+    /**
      * Métodos de acesso externo ao custo anual de limpeza da mercearia
      */
     public float getCustoAnualLimpeza() {
         return custoAnualLimpeza;
     }
 
-    /*
+    /**
      * Método para definir o custo anual de limpeza da mercearia
      */
     public void setCustoAnualLimpeza(float custoAnualLimpeza) {

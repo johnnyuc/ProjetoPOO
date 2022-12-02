@@ -14,6 +14,10 @@ public abstract class Empresa implements java.io.Serializable {
      * As coordendas da empresa (latitude e longitude)
      * */
     float[] coordenadas;
+    /**
+     * A categoria de empresa
+     */
+    int tipo;
 
 
     /**
@@ -36,14 +40,32 @@ public abstract class Empresa implements java.io.Serializable {
      */
     abstract float calcularDespesaAnual();
 
+
     /** Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
      *
      * @return O valor da receita anual
      */
     abstract float calcularReceitaAnual();
+    /** Método utilizado para calcular o lucro de uma determinada empresa a partir dos seus dados,
+     *
+     * @return O valor do lucro
+     */
+    abstract float calcularLucro();
 
 
     // Getters and Setters e Overrides
+    /**
+     * Método de acesso externo à categora da empresa
+     */
+    public int getTipo() {
+        return tipo;
+    }
+    /**
+     * Método para definir a categoria
+     */
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
 
     /**
      * Método de acesso externo ao nome da empresa

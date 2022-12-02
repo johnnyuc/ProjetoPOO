@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="GerirEmpresas.java">
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="ecrã princiapl Interface.Interface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Cafe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Cafe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Fastfood.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Fastfood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Frutaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Frutaria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/GerirEmpresas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/GerirEmpresas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Local.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Local.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Mercado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Mercado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Pastelaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Pastelaria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Interface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669902128204</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ecrã princiapl Interface.Interface">
+      <created>1669912397806</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669912397806</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +235,7 @@
     <MESSAGE value="Leitura e Escrita de dados (txt e object)" />
     <MESSAGE value="Leitura e Escrita de dados (txt e object)&#10;Dummy database&#10;Serialização de objetos Empresa" />
     <MESSAGE value="GerirEmpresas.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="GerirEmpresas.java" />
+    <MESSAGE value="ecrã princiapl Interface.Interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="ecrã princiapl Interface.Interface" />
   </component>
 </project>

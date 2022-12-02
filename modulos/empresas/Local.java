@@ -40,6 +40,7 @@ public class Local extends Restaurante {
         this.mesasEsplanada = mesasEsplanada;
         this.custoLicencaMesaEsplanada = custoLicencaMesaEsplanada;
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
+        this.tipo=2;
     }
 
 
@@ -133,9 +134,9 @@ public class Local extends Restaurante {
      */
     @Override
     public String toString(){
-        String s= "Empresa"+
+        String s=
+                "Tipo                  :\t"+"Local"+
                 "\nNome                :\t"+this.nome+
-                "\nTipo                :\t"+"Restaurante Local"+
                 "\nDistrito            :\t"+this.distrito+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+

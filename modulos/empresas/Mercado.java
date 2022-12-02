@@ -5,7 +5,7 @@ public class Mercado extends Mercearia {
     /**
      * Tipo pode ser "mercado", "supermercado", "hipermercado" (usar min, super, hiper)
      */
-    String tipo;
+    int tipo;
     /**
      * A área em metros quadrados dos corredores (m^2)
      */
@@ -26,12 +26,13 @@ public class Mercado extends Mercearia {
      * @param areaCorredores A área em metros quadrados dos corredores
      * @param faturacaoMediaAnualM2 A faturação anual por metro quadrado
      */
-    public Mercado(String nome, String distrito, float[] coordenadas, float custoAnualLimpeza, String tipo,
+    public Mercado(String nome, String distrito, float[] coordenadas, float custoAnualLimpeza, int tipo,
                    int areaCorredores, float faturacaoMediaAnualM2) {
         super(nome, distrito, coordenadas, custoAnualLimpeza);
         this.tipo = tipo;
         this.areaCorredores = areaCorredores;
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
+        this.tipo=5;
     }
 
 
@@ -70,14 +71,14 @@ public class Mercado extends Mercearia {
     /**
      * Métodos de acesso externo à tipologia de mercado
      */
-    public String getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
     /**
      * Método para definir a tipologia de mercado
      */
-    public void setTipo(String tipo) {
+    public void setTipo(int tipo) {
         this.tipo = tipo;
     }
 
@@ -114,9 +115,9 @@ public class Mercado extends Mercearia {
      */
     @Override
     public String toString(){
-        String s= "Empresa"+
+        String s=
+                "Tipo                  :\t"+"Mercado"+
                 "\nNome                :\t"+this.nome+
-                "\nTipo                :\t"+"Mercado"+
                 "\nDistrito            :\t"+this.distrito+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+

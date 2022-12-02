@@ -27,6 +27,7 @@ public class Cafe extends Restauracao {
         super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
         this.cafesMedioDiario = cafesMedioDiario;
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
+        this.tipo= 0;
     }
 
 
@@ -95,9 +96,9 @@ public class Cafe extends Restauracao {
      */
     @Override
     public String toString(){
-        String s= "Empresa"+
+        String s=
+                "Tipo                  :\t"+"Café"+
                 "\nNome                :\t"+this.nome+
-                "\nTipo                :\t"+"Café"+
                 "\nDistrito            :\t"+this.distrito+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+

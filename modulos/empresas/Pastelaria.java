@@ -27,6 +27,7 @@ public class Pastelaria extends Restauracao {
         super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
         this.bolosMedioDiario = bolosMedioDiario;
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;
+        this.tipo= 1;
     }
 
 
@@ -97,9 +98,9 @@ public class Pastelaria extends Restauracao {
      */
     @Override
     public String toString(){
-        String s= "Empresa"+
+        String s=
+                "Tipo                  :\t"+"Pastelaria"+
                 "\nNome                :\t"+this.nome+
-                "\nTipo                :\t"+"Pastelaria"+
                 "\nDistrito            :\t"+this.distrito+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+
