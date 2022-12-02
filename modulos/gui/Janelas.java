@@ -55,7 +55,7 @@ public class Janelas extends JFrame {
         jButton2.addActionListener(e->{
             int[] linha = jTable1.getSelectedRows();
             for (int j : linha) {
-                System.out.println(jTable1.getModel().getValueAt(j, 0).toString());
+                GerirEmpresas.apagarEmpresa(jTable1.getModel().getValueAt(j, 0).toString());
             }
         });
 
