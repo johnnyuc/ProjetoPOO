@@ -51,6 +51,23 @@ public class GerirEmpresas {
         }
         return 1;
     }
+    /**
+     * Método responsável por adicionar uma empresa a lista de gestão de empresas
+     *
+     * @param nome Nome da empresa
+     * @return Retorna os dados da empresa, caso exista.
+     */
+    public String pesquisarEmpresa(String nome){
+        if(empresas != null){
+            for (Empresa empresa : empresas) {
+                if (empresa.nome.equals(nome)) {
+                    return empresa.toString();
+                }
+            }
+            return null;
+        }
+        return null;
+    }
 
     /**
      * Método utilizado para apagar uma empresa da lista de gestão de empresas
@@ -75,10 +92,9 @@ public class GerirEmpresas {
     /**
      * Método para mostrar a empresa com a maior receita anual
      * @param tipoProcurar Categoria da empresa a procurar
-     * @return 1: se o programa não foi executado adequadamente. 0: se o programa foi
-     * executado adequadamente
+     * @return O nome da empresa e valor da receita anual, caso exista
      */
-    public int maiorReceitaAnual(int tipoProcurar) {
+    public String maiorReceitaAnual(int tipoProcurar) {
         if (empresas != null) {
             String nome = null;
             float valor = Float.MIN_VALUE;
@@ -93,22 +109,20 @@ public class GerirEmpresas {
 
             }
             if(nome != null){
-                System.out.println("Empresa do tipo escolhido com a maior receita anual:" +
+                return "Empresa do tipo escolhido com a maior receita anual:" +
                         "\nNome                  :\t"+ nome+
-                        "\nValor da receita anual:\t€"+valor);
-                return 0;
+                        "\nValor da receita anual:\t€"+valor;
             }
-            return 1;
+            return null;
         }
-        return 1;
+        return null;
     }
     /**
      * Método para mostrar a empresa com a menor despesa anual
      * @param tipoProcurar Categoria da empresa a procurar
-     * @return 1: se o programa não foi executado adequadamente. 0: se o programa foi
-     * executado adequadamente
+     * @return O nome da empresa e valor da receita anual, caso exista
      */
-    public int menorDespesaAnual(int tipoProcurar) {
+    public String menorDespesaAnual(int tipoProcurar) {
         if (empresas != null) {
             String nome = null;
             float valor = Float.MAX_VALUE;
@@ -123,22 +137,20 @@ public class GerirEmpresas {
 
             }
             if(nome != null){
-                System.out.println("Empresa do tipo escolhido com a menor despesa anual:" +
+                return "Empresa do tipo escolhido com a menor despesa anual:" +
                         "\nNome                  :\t"+ nome+
-                        "\nValor da despesa anual:\t€"+valor);
-                return 0;
+                        "\nValor da despesa anual:\t€"+valor;
             }
-            return 1;
+            return null;
         }
-        return 1;
+        return null;
     }
     /**
      * Método para mostrar a empresa com o maior lucro
      * @param tipoProcurar Categoria da empresa a procurar
-     * @return 1: se o programa não foi executado adequadamente. 0: se o programa foi
-     * executado adequadamente
+     * @return O nome da empresa e valor da receita anual, caso exista
      */
-    public int maiorLucroAnual(int tipoProcurar) {
+    public String maiorLucroAnual(int tipoProcurar) {
         if (empresas != null) {
             String nome = null;
             float valor = Float.MIN_VALUE;
@@ -153,22 +165,20 @@ public class GerirEmpresas {
 
             }
             if(nome != null){
-                System.out.println("Empresa do tipo escolhido com o maior lucro:" +
+                return "Empresa do tipo escolhido com o maior lucro:" +
                         "\nNome          :\t"+ nome+
-                        "\nValor do lucro:\t€"+valor);
-                return 0;
+                        "\nValor do lucro:\t€"+valor;
             }
-            return 1;
+            return null;
         }
-        return 1;
+        return null;
     }
     /**
      * Método para mostrar a empresa de Restauração com a maior capacidade de clientes por dia
      * @param tipoProcurar Categoria da empresa a procurar
-     * @return 1: se o programa não foi executado adequadamente. 0: se o programa foi
-     * executado adequadamente
+     * @return 1: O nome da empresa e valor da receita anual, caso exista
      */
-    public int maiorCapacidadeClientes(int tipoProcurar) {
+    public String maiorCapacidadeClientes(int tipoProcurar) {
         if(tipoProcurar<=3) {
             if (empresas != null) {
                 String nome1 = null;
@@ -193,19 +203,19 @@ public class GerirEmpresas {
                     }
                 }
                 if(nome1!=null&&nome2!=null){
-                    System.out.println("Empresa de restauração com a maior capacidade de clientes por dia" +
-                            "\nNome          :\t" + nome1 +
-                            "\nCapacidade de clientes por dia\t" + valor1);
-                    System.out.println("Empresa de restauração com a segunda maior capacidade de clientes por dia" +
-                            "\nNome          :\t" + nome2 +
-                            "\nCapacidade de clientes por dia\t" + valor2);
-                    return 0;
+                       return  "Empresa de restauração com a maior capacidade de clientes por dia" +
+                               "\nNome                          :\t" + nome1 +
+                               "\nCapacidade de clientes por dia:\t" + valor1+
+                               "Empresa de restauração com a segunda maior capacidade de clientes por dia" +
+                               "\nNome                          :\t" + nome2 +
+                               "\nCapacidade de clientes por dia:\t" + valor2;
+
                 }
-                return 1;
+                return null;
             }
-            return 1;
+            return null;
         }
-        return 1;
+        return null;
     }
     // Getters and Setters e Overrides
 
