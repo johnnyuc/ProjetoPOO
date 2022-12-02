@@ -76,7 +76,7 @@ public class GerirEmpresas {
      * @return 1: se não existe uma empresa na lista. 0: se existe uma empresa na lista e o programa foi
      * executado adequadamente
      */
-    public int apagarEmpresa(String nome){
+    public static int apagarEmpresa(String nome){
         if(empresas!=null){
             for(int i=0; i< empresas.size(); i++){
                 if(Objects.equals(empresas.get(i).nome, nome)){
