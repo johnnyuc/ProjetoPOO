@@ -54,8 +54,12 @@ public class Janelas extends JFrame {
         jButton2.setText("Remover empresa");
         jButton2.addActionListener(e->{
             int[] linha = jTable1.getSelectedRows();
-            for (int j : linha) {
-                GerirEmpresas.apagarEmpresa(jTable1.getModel().getValueAt(j, 0).toString());
+            // Tem que ser no sentido inverso porque quando se apagam múltiplas linhas
+            // a tabela vai mudando de tamanho e as linhas seguintes vão mudando de posição
+            for (int i = linha.length; i >= 0; i--) {
+                GerirEmpresas.apagarEmpresa(jTable1.getModel().getValueAt(i, 0).toString());
+                System.out.println(i);
+                ((DefaultTableModel)jTable1.getModel()).removeRow(i);
             }
         });
 
