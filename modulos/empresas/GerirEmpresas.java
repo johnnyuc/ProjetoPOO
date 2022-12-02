@@ -178,7 +178,7 @@ public class GerirEmpresas {
                 for (Empresa empresa : empresas) {
                     if (empresa.tipo == tipoProcurar) {
                         float clientesTemp = ((Restauracao)empresa).clientesMedioDiario;
-                        if (clientesTemp <= valor1) {
+                        if (clientesTemp >= valor1) {
                             //A empresa que antes estava em primeiro, agora passa a segunda
                             nome2= nome1;
                             valor2=valor1;
@@ -186,7 +186,7 @@ public class GerirEmpresas {
                             nome1 = empresa.nome;
                             valor1 = clientesTemp;
                         }
-                        if(!empresa.nome.equals(nome1)&&clientesTemp<=valor2){
+                        if(!empresa.nome.equals(nome1)&&clientesTemp>=valor2){
                             nome2 = empresa.nome;
                             valor2 = clientesTemp;
                         }

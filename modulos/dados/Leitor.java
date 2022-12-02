@@ -51,7 +51,7 @@ public class Leitor {
                             case "Frutaria" ->
                                     empresas.add(new Frutaria(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), Integer.parseInt(data[6]), Float.parseFloat(data[7])));
                             case "Mercado" ->
-                                    empresas.add(new Mercado(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), data[6], Integer.parseInt(data[7]), Float.parseFloat(data[8])));
+                                    empresas.add(new Mercado(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), Integer.parseInt(data[6]), Integer.parseInt(data[7]), Float.parseFloat(data[8])));
                             case null, default ->
                                     System.out.println("Tipo de empresa não reconhecido. " + Arrays.toString(data));
                         }
