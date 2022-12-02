@@ -22,6 +22,7 @@ public class Main {
             //StarThrive.imprimirEmpresas();
             StarThrive.maiorLucroAnual(0);
             StarThrive.maiorReceitaAnual(0);
+
             StarThrive.menorDespesaAnual(0);
             StarThrive.maiorCapacidadeClientes(0);
         }

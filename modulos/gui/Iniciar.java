@@ -1,8 +1,5 @@
 package modulos.gui;
 
-import modulos.dados.Escritor;
-import modulos.empresas.GerirEmpresas;
-
 import java.awt.*;
 import javax.swing.*;
 
@@ -22,13 +19,16 @@ public class Iniciar extends JFrame {
         JScrollPane elementoScroll = new JScrollPane();
         JLabel labelDireitos = new JLabel();
 
+        setResizable(false);
+        setTitle("Bem-vindo ao StarThrive Gestão!");
+        setIconImage(new ImageIcon("starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        labelTitulo.setFont(new Font("Trebuchet MS", Font.BOLD, 36)); // NOI18N
+        labelTitulo.setFont(new Font("Trebuchet MS", Font.BOLD, 36));
         labelTitulo.setText("StarThrive Gestão");
-        labelIcone.setIcon(new ImageIcon("starthrive.png")); // NOI18N
+        labelIcone.setIcon(new ImageIcon("starthrive.png"));
 
-        areaTexto.setEditable(false);
+        areaTexto.setEnabled(false);
         areaTexto.setColumns(20);
         areaTexto.setRows(5);
         areaTexto.setText("\n\n  Bem-vindo ao software da StarThrive. \n\n  Aqui poderá entre outras coisas verificar as empresas que gere \n  bem como adicionar, remover ou editar parâmetros das suas \n  empresas. Além disso poderá verificar a performance delas, \n  através dos botões ao lado.");
@@ -36,7 +36,7 @@ public class Iniciar extends JFrame {
 
         botaoOperacoes.setText("Operações");
         botaoOperacoes.addActionListener(e -> {
-
+            new Janelas(e).setVisible(true);
         });
 
         botaoEstatisticas.setText("Estatísticas");
@@ -44,9 +44,7 @@ public class Iniciar extends JFrame {
         });
 
         botaoSair.setText("Sair");
-        botaoSair.addActionListener(e -> {
-            System.exit(0);
-        });
+        botaoSair.addActionListener(e -> System.exit(0));
 
         labelDireitos.setText("Software desenvolvido por Johnny Fernandes e Saulo Piccirilo");
 
