@@ -3,15 +3,15 @@ import modulos.gui.*;
 import modulos.dados.*;
 import modulos.empresas.*;
 
-import java.io.File;
-
+import java.io.*;
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
         // Inicialização do programa
         booting();
-        // Inicialização da ‘interface’ gráfica
-        run();
+        // Inicialização da GUI
+        display();
     }
     public static void booting() {
         File f = new File("starthrive.dat");
@@ -30,12 +30,24 @@ public class Main {
             System.out.println("A criar a base de dados a partir do arquivo de texto...");
             GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosTxt());
             Escritor.guardaDadosDat(GerirEmpresas.empresas);
-            StarThrive.imprimirEmpresas();
+            //StarThrive.imprimirEmpresas();
         }
     }
 
-    public static void run() {
-        Iniciar StarThrive = new Iniciar();
+    public static void display() {
+
+        try {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Iniciar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
+        new Iniciar().setVisible(true);
     }
 }
 

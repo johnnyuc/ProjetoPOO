@@ -40,7 +40,7 @@ public class Fastfood extends Restaurante {
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
         this.clientesMedioDrive = clientesMedioDrive;
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
-        this.tipo=3;
+        this.tipo = 3;
     }
 
 

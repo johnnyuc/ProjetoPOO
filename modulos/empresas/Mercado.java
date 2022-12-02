@@ -5,7 +5,7 @@ public class Mercado extends Mercearia {
     /**
      * Tipo pode ser "mercado", "supermercado", "hipermercado" (usar min, super, hiper)
      */
-    int tipo;
+    String tipoMercado;
     /**
      * A área em metros quadrados dos corredores (m^2)
      */
@@ -22,17 +22,17 @@ public class Mercado extends Mercearia {
      * @param distrito O distrito onde se localiza a empresa
      * @param coordenadas As coordenadas da empresa
      * @param custoAnualLimpeza O custo anual de limpeza da mercearia
-     * @param tipo A tipologia de mercado (pode ser mini, super, hiper)
+     * @param tipoMercado A tipologia de mercado (pode ser mini, super, hiper)
      * @param areaCorredores A área em metros quadrados dos corredores
      * @param faturacaoMediaAnualM2 A faturação anual por metro quadrado
      */
-    public Mercado(String nome, String distrito, float[] coordenadas, float custoAnualLimpeza, int tipo,
+    public Mercado(String nome, String distrito, float[] coordenadas, float custoAnualLimpeza, String tipoMercado,
                    int areaCorredores, float faturacaoMediaAnualM2) {
         super(nome, distrito, coordenadas, custoAnualLimpeza);
-        this.tipo = tipo;
+        this.tipoMercado = tipoMercado;
         this.areaCorredores = areaCorredores;
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
-        this.tipo=5;
+        this.tipo = 5;
     }
 
 
