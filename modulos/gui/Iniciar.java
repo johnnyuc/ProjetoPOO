@@ -35,13 +35,10 @@ public class Iniciar extends JFrame {
         elementoScroll.setViewportView(areaTexto);
 
         botaoOperacoes.setText("Operações");
-        botaoOperacoes.addActionListener(e -> {
-            new Janelas(e).setVisible(true);
-        });
+        botaoOperacoes.addActionListener(e -> new Janelas(e).setVisible(true));
 
         botaoEstatisticas.setText("Estatísticas");
-        botaoEstatisticas.addActionListener(e -> {
-        });
+        botaoEstatisticas.addActionListener(e -> new Janelas(e).setVisible(true));
 
         botaoSair.setText("Sair");
         botaoSair.addActionListener(e -> System.exit(0));
