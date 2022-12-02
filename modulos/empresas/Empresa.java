@@ -38,19 +38,19 @@ public abstract class Empresa implements java.io.Serializable {
      *
      * @return O valor da despesa anual
      */
-    abstract float calcularDespesaAnual();
+    public abstract float calcularDespesaAnual();
 
 
     /** Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
      *
      * @return O valor da receita anual
      */
-    abstract float calcularReceitaAnual();
+    public abstract float calcularReceitaAnual();
     /** Método utilizado para calcular o lucro de uma determinada empresa a partir dos seus dados,
      *
      * @return O valor do lucro
      */
-    abstract float calcularLucro();
+    public abstract float calcularLucro();
 
 
     // Getters and Setters e Overrides

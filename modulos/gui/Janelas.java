@@ -110,12 +110,21 @@ public class Janelas extends JFrame {
     }
     private Object[][] arrayDadosEmpresas() {
         Object[][] dados = new Object[GerirEmpresas.empresas.size()][5];
+        String[] tipos= {"Café","Pastelaria","Restaurante Local","Restaurante Fast-Food","Frutaria"
+        ,"Mercado"};
         for (int i = 0; i < GerirEmpresas.empresas.size(); i++) {
             dados[i][0] = GerirEmpresas.empresas.get(i).getNome();
-            dados[i][1] = GerirEmpresas.empresas.get(i).getTipo();
+            dados[i][1] = tipos[GerirEmpresas.empresas.get(i).getTipo()];
             dados[i][2] = GerirEmpresas.empresas.get(i).getDistrito();
-            dados[i][3] = 69;
-            dados[i][4] = 69;
+            dados[i][3] = Float.toString(GerirEmpresas.empresas.get(i).calcularReceitaAnual());
+            dados[i][4] = Float.toString(GerirEmpresas.empresas.get(i).calcularDespesaAnual());
+            float lucro= GerirEmpresas.empresas.get(i).calcularLucro();
+            if(lucro>0){
+                dados[i][5]="Sim";
+            }
+            else{
+                dados[i][5]="Não";  
+            }
         }
         return dados;
     }
