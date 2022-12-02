@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         // Inicialização do programa
         booting();
+
         // Inicialização da GUI
         display();
     }
