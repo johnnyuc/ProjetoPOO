@@ -3,9 +3,9 @@ package modulos.gui;
 import java.awt.*;
 import javax.swing.*;
 
-public class Iniciar extends JFrame {
+public class JanelaPrincipal extends JFrame {
 
-    public Iniciar() {
+    public JanelaPrincipal() {
         initComponents();
     }
     private void initComponents() {
@@ -35,10 +35,10 @@ public class Iniciar extends JFrame {
         elementoScroll.setViewportView(areaTexto);
 
         botaoOperacoes.setText("Operações");
-        botaoOperacoes.addActionListener(e -> new Janelas(e).setVisible(true));
+        botaoOperacoes.addActionListener(e -> new JanelaOperacoes(e).setVisible(true));
 
         botaoEstatisticas.setText("Estatísticas");
-        botaoEstatisticas.addActionListener(e -> new Janelas(e).setVisible(true));
+        botaoEstatisticas.addActionListener(e -> new JanelaOperacoes(e).setVisible(true));
 
         botaoSair.setText("Sair");
         botaoSair.addActionListener(e -> System.exit(0));

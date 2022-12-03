@@ -7,15 +7,18 @@ import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.table.*;
 
-public class Janelas extends JFrame {
+public class JanelaOperacoes extends JFrame {
 
-    public Janelas(ActionEvent e) {
+    public JanelaOperacoes(ActionEvent e) {
         if (e.getActionCommand().equals("Operações")) {
             initComponentsOperacoes();
         } else if (e.getActionCommand().equals("Estatísticas")) {
             System.out.println("Estatísticas");
             //initComponentsEstatisticas();
         }
+        setResizable(false);
+        setIconImage(new ImageIcon("starthrive.png").getImage());
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     private void initComponentsOperacoes() {
@@ -28,10 +31,7 @@ public class Janelas extends JFrame {
         JButton jButton4 = new JButton();
         JButton jButton5 = new JButton();
 
-        setResizable(false);
         setTitle("Secção de Operações");
-        setIconImage(new ImageIcon("starthrive.png").getImage());
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         jTable1.setModel(new DefaultTableModel(
                 arrayDadosEmpresas(),
@@ -46,38 +46,38 @@ public class Janelas extends JFrame {
         jScrollPane2.setViewportView(jTable1);
 
         jButton1.setText("Criar empresa");
-        jButton1.addActionListener(e->{
-
-        });
+        jButton1.addActionListener(e-> new JanelaCriaEdita(e).setVisible(true));
 
         jButton2.setText("Remover empresa");
         jButton2.addActionListener(e->{
             int[] linha = jTable1.getSelectedRows();
-            int option = JOptionPane.showConfirmDialog(null,
-                    "Tem a certeza que pretende remover o(s) elemento(s) selecionado(s)?", "Remover", JOptionPane.YES_NO_OPTION);
-            if (option == JOptionPane.YES_OPTION) {
-                // Tem que ser no sentido inverso porque quando se apagam múltiplas linhas
-                // a tabela vai mudando de tamanho e as linhas seguintes vão mudando de posição
-                // Também tem em consideração a posição original da linha através do converRowIndexToModel
-                for (int i = linha.length-1; i >= 0; i--) {
-                    // Remove a empresa com base no seu nome — relembrando que não há duas empresas com o mesmo nome
-                    GerirEmpresas.apagarEmpresa(jTable1.getValueAt(linha[i], 0).toString());
-                    // Remove a linha da tabela com as coordenadas da célula da tabela principal
-                    ((DefaultTableModel)jTable1.getModel()).removeRow(jTable1.convertRowIndexToModel(linha[i]));
+            if (linha.length > 0) {
+                int option = JOptionPane.showConfirmDialog(null,
+                        "Tem a certeza que pretende remover o(s) elemento(s) selecionado(s)?", "Remover", JOptionPane.YES_NO_OPTION);
+                if (option == JOptionPane.YES_OPTION) {
+                    // Tem que ser no sentido inverso porque quando se apagam múltiplas linhas
+                    // a tabela vai mudando de tamanho e as linhas seguintes vão mudando de posição
+                    // Também tem em consideração a posição original da linha através do converRowIndexToModel
+                    for (int i = linha.length-1; i >= 0; i--) {
+                        // Remove a empresa com base no seu nome — relembrando que não há duas empresas com o mesmo nome
+                        GerirEmpresas.apagarEmpresa(jTable1.getValueAt(linha[i], 0).toString());
+                        // Remove a linha da tabela com as coordenadas da célula da tabela principal
+                        ((DefaultTableModel)jTable1.getModel()).removeRow(jTable1.convertRowIndexToModel(linha[i]));
+                    }
                 }
+                Escritor.guardaDadosDat(GerirEmpresas.empresas);
+            } else {
+                JOptionPane.showMessageDialog(null, "Selecione pelo menos uma linha para remover.");
             }
-            Escritor.guardaDadosDat(GerirEmpresas.empresas);
         });
 
         jButton3.setText("Editar empresa");
-        jButton3.addActionListener(e->{
-
-        });
+        jButton3.addActionListener(e-> new JanelaCriaEdita(e).setVisible(true));
 
         jButton4.setText("Pesquisar empresa");
         jButton4.addActionListener(e->{
             String[] opcoes = {"Pesquisar","Lucro", "Todos"};
-            switch (JOptionPane.showOptionDialog(null, "Indique qual o tipo de pesquisa que pretende", "Option", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcoes, null)) {
+            switch (JOptionPane.showOptionDialog(null, "Indique qual o tipo de pesquisa que pretende", "Pesquisar", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcoes, null)) {
                 case 0 -> {
                     String valor = JOptionPane.showInputDialog("Indique o parâmetro de pesquisa");
                     if (valor != null) {
@@ -92,6 +92,7 @@ public class Janelas extends JFrame {
         jButton5.setText("Fechar");
         jButton5.addActionListener(e-> dispose());
 
+        // Gerado pelo NetBeans
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(

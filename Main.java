@@ -29,7 +29,7 @@ public class Main {
         }
         else {
             System.out.println("Bem-vindo ao StarThrive!");
-            System.out.println("A criar a base de dados a partir do arquivo de texto...");
+            System.out.println("A JanelaCriaEdita a base de dados a partir do arquivo de texto...");
             GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosTxt());
             Escritor.guardaDadosDat(GerirEmpresas.empresas);
             //StarThrive.imprimirEmpresas();
@@ -46,10 +46,10 @@ public class Main {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Iniciar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
-        new Iniciar().setVisible(true);
+        new JanelaPrincipal().setVisible(true);
     }
 }
 

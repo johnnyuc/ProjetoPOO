@@ -4,14 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.4 (Página principal a 100%, Operações a 40%)">
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.5 (Página principal a 100%, Operações a 50%)">
+      <change afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Janelas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/Janelas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/dados/Escritor.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Escritor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/dados/Leitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Leitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/Empresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/OperacoesMetodos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/Iniciar.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/Janelas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starthrive.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Escritor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Escritor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Leitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Leitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Empresas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Iniciar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starthrive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/starthrive.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670016056702</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Interfaces v0.5 (Página principal a 100%, Operações a 50%)">
+      <created>1670024504888</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670024504888</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +331,7 @@
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%), nova base de dados, polimorfismo" />
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%, Operações a 20%)" />
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%, Operações a 40%)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.4 (Página principal a 100%, Operações a 40%)" />
+    <MESSAGE value="Interfaces v0.5 (Página principal a 100%, Operações a 50%)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.5 (Página principal a 100%, Operações a 50%)" />
   </component>
 </project>
