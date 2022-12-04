@@ -1,49 +1,59 @@
 package modulos.gui;
 
+import modulos.dados.Escritor;
+import modulos.empresas.*;
+import static modulos.empresas.GerirEmpresas.*;
 
 import java.awt.*;
+import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
 
+
 public class JanelaCriaEdita extends JFrame {
-
-
-    JComboBox<String> jComboBox1 = new JComboBox<>();
-    JLabel jLabel13 = new JLabel();
+    private final JanelaOperacoes janelaMae;
+    private Empresa editar;
+    JComboBox<String> botaoSelecionador = new JComboBox<>();
+    JLabel labelInfo = new JLabel();
     JLabel jLabel1 = new JLabel("Nome da empresa");
-    JTextField jTextField1 = new JTextField("jTextField1");
+    JTextField jTextField1 = new JTextField();
     JLabel jLabel2 = new JLabel("Distrito da empresa");
-    JTextField jTextField2 = new JTextField("jTextField2");
+    JTextField jTextField2 = new JTextField();
     JLabel jLabel3 = new JLabel("Latitude de localização");
-    JTextField jTextField3 = new JTextField("jTextField3");
+    JTextField jTextField3 = new JTextField();
     JLabel jLabel4 = new JLabel("Longitude de localização");
-    JTextField jTextField4 = new JTextField("jTextField4");
+    JTextField jTextField4 = new JTextField();
     JLabel jLabel5 = new JLabel();
-    JTextField jTextField5 = new JTextField("jTextField5");
+    JTextField jTextField5 = new JTextField();
     JLabel jLabel6 = new JLabel();
-    JTextField jTextField6 = new JTextField("jTextField6");
+    JTextField jTextField6 = new JTextField();
     JLabel jLabel7 = new JLabel();
-    JTextField jTextField7 = new JTextField("jTextField7");
+    JTextField jTextField7 = new JTextField();
     JLabel jLabel8 = new JLabel();
-    JTextField jTextField8 = new JTextField("jTextField8");
+    JTextField jTextField8 = new JTextField();
     JLabel jLabel9 = new JLabel();
-    JTextField jTextField9 = new JTextField("jTextField9");
+    JTextField jTextField9 = new JTextField();
     JLabel jLabel10 = new JLabel();
-    JTextField jTextField10 = new JTextField("jTextField10");
+    JTextField jTextField10 = new JTextField();
     JLabel jLabel11 = new JLabel();
-    JTextField jTextField11 = new JTextField("jTextField11");
+    JTextField jTextField11 = new JTextField();
     JLabel jLabel12 = new JLabel();
-    JTextField jTextField12 = new JTextField("jTextField12");
-    JButton jButton1 = new JButton();
-    JButton jButton2 = new JButton();
+    JTextField jTextField12 = new JTextField();
+    JButton botaoGuardar = new JButton();
+    JButton botaoFechar = new JButton();
+    GroupLayout layout = new GroupLayout(getContentPane());
 
-    public JanelaCriaEdita(ActionEvent e) {
-        if (e.getActionCommand().equals("Criar empresa")) {
-            initComponentsCriar();
-        } else if (e.getActionCommand().equals("Editar empresa")) {
-            System.out.println("Editar empresa");
-            //initComponentsEditar();
-        }
+    public JanelaCriaEdita(JanelaOperacoes janelaMae) {
+        initComponentsCriar();
+        this.janelaMae = janelaMae;
+        setResizable(false);
+        setIconImage(new ImageIcon("starthrive.png").getImage());
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+    }
+
+    public JanelaCriaEdita(JanelaOperacoes janelaMae, String nome) {
+        initComponentsEditar(nome);
+        this.janelaMae = janelaMae;
         setResizable(false);
         setIconImage(new ImageIcon("starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -53,164 +63,131 @@ public class JanelaCriaEdita extends JFrame {
 
         setTitle("Adicionar empresa");
 
-        jComboBox1.setModel(new DefaultComboBoxModel<>(new String[] { "Café", "Pastelaria", "Restaurante Fastfood", "Restaurante Local", "Frutaria", "Mercado" }));
-        jLabel13.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
-        jLabel13.setText("Adicionar empresa");
-
-
-        // Defaults
-        jLabel5.setText("Nº Empregados");
-        jTextField5.setVisible(true);
-        jLabel6.setText("Salário Médio Anual");
-        jTextField6.setVisible(true);
-        jLabel7.setText("Média de clientes por dia");
-        jTextField7.setVisible(true);
-        jLabel8.setText("Média de cafés por dia");
-        jLabel8.setVisible(true);
-        jTextField8.setVisible(true);
-        jLabel9.setText("Fat. Média Anual por café");
-        jLabel9.setVisible(true);
-        jTextField9.setVisible(true);
-        jTextField10.setVisible(false);
-        jLabel10.setVisible(false);
-        jTextField11.setVisible(false);
-        jLabel11.setVisible(false);
-        jTextField12.setVisible(false);
-        jLabel12.setVisible(false);
+        botaoSelecionador.setModel(new DefaultComboBoxModel<>(new String[] { "Café", "Pastelaria", "Restaurante Fastfood", "Restaurante Local", "Frutaria", "Mercado" }));
+        labelInfo.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
+        labelInfo.setText("Adicionar empresa");
 
         // On change
-        jComboBox1.addActionListener(e -> {
-            if (jComboBox1.getSelectedItem().equals("Café")) {
-                jLabel5.setText("Nº Empregados");
-                jTextField5.setVisible(true);
-                jLabel6.setText("Salário Médio Anual");
-                jTextField6.setVisible(true);
-                jLabel7.setText("Média de clientes por dia");
-                jTextField7.setVisible(true);
-                jLabel8.setText("Média de cafés por dia");
-                jLabel8.setVisible(true);
-                jTextField8.setVisible(true);
-                jLabel9.setText("Fat. Média Anual por café");
-                jLabel9.setVisible(true);
-                jTextField9.setVisible(true);
-                jTextField10.setVisible(false);
-                jLabel10.setVisible(false);
-                jTextField11.setVisible(false);
-                jLabel11.setVisible(false);
-                jTextField12.setVisible(false);
-                jLabel12.setVisible(false);
+        botaoSelecionador.addActionListener(this::botaoSelecionadorActionPerformed);
+        // Defaults
+        botaoSelecionador.setSelectedIndex(0);
 
-            } else if (jComboBox1.getSelectedItem().equals("Pastelaria")) {
-                jLabel5.setText("Nº Empregados");
-                jTextField5.setVisible(true);
-                jLabel6.setText("Salário Médio Anual");
-                jTextField6.setVisible(true);
-                jLabel7.setText("Média de clientes por dia");
-                jTextField7.setVisible(true);
-                jLabel8.setText("Média de bolos por dia");
-                jLabel8.setVisible(true);
-                jTextField8.setVisible(true);
-                jLabel9.setText("Fat. Média Anual por bolo");
-                jLabel9.setVisible(true);
-                jTextField9.setVisible(true);
-                jLabel10.setVisible(false);
-                jTextField10.setVisible(false);
-                jLabel11.setVisible(false);
-                jTextField11.setVisible(false);
-                jLabel12.setVisible(false);
-                jTextField12.setVisible(false);
+        botaoGuardar.setText("Guardar");
+        botaoGuardar.addActionListener(this::botaoGuardarActionPerformed);
+        botaoFechar.setText("Fechar");
+        botaoFechar.addActionListener(e -> dispose());
 
-            } else if (jComboBox1.getSelectedItem().equals("Restaurante Fastfood")) {
-                jLabel5.setText("Nº Empregados");
-                jTextField5.setVisible(true);
-                jLabel6.setText("Salário Médio Anual");
-                jTextField6.setVisible(true);
-                jLabel7.setText("Média de clientes/dia");
-                jTextField7.setVisible(true);
-                jLabel8.setText("Dias de funcionamento/ano");
-                jLabel8.setVisible(true);
-                jTextField8.setVisible(true);
-                jLabel9.setText("Nº mesas interiores");
-                jLabel9.setVisible(true);
-                jTextField9.setVisible(true);
-                jLabel10.setText("Fat. média por mesa/dia");
-                jLabel10.setVisible(true);
-                jTextField10.setVisible(true);
-                jLabel11.setText("Média de clientes Drive-Thru/dia");
-                jLabel11.setVisible(true);
-                jTextField11.setVisible(true);
-                jLabel12.setText("Fat. média por cliente Drive-Thru");
-                jLabel12.setVisible(true);
-                jTextField12.setVisible(true);
+        gereLayout(layout);
+    }
 
-            } else if (jComboBox1.getSelectedItem().equals("Restaurante Local")) {
-                jLabel5.setText("Nº Empregados");
-                jTextField5.setVisible(true);
-                jLabel6.setText("Salário Médio Anual");
-                jTextField6.setVisible(true);
-                jLabel7.setText("Média de clientes/dia");
-                jTextField7.setVisible(true);
-                jLabel8.setText("Dias de funcionamento/ano");
-                jLabel8.setVisible(true);
-                jTextField8.setVisible(true);
-                jLabel9.setText("Nº mesas interiores");
-                jLabel9.setVisible(true);
-                jTextField9.setVisible(true);
-                jLabel10.setText("Nº mesas exteriores");
-                jLabel10.setVisible(true);
-                jTextField10.setVisible(true);
-                jLabel11.setText("Custo por licença de mesa ext.");
-                jLabel11.setVisible(true);
-                jTextField11.setVisible(true);
-                jLabel12.setText("Fat. média por mesa/dia");
-                jLabel12.setVisible(true);
-                jTextField12.setVisible(true);
+    private void initComponentsEditar(String nome) {
 
-            } else if (jComboBox1.getSelectedItem().equals("Frutaria")) {
-                jLabel5.setText("Custo anual de limpeza");
-                jTextField5.setVisible(true);
-                jLabel6.setText("Nº de produtos para venda");
-                jTextField6.setVisible(true);
-                jLabel7.setText("Fat. média anual por produto");
-                jTextField7.setVisible(true);
-                jTextField8.setVisible(false);
-                jLabel8.setVisible(false);
-                jTextField9.setVisible(false);
-                jLabel9.setVisible(false);
-                jTextField10.setVisible(false);
-                jLabel10.setVisible(false);
-                jTextField11.setVisible(false);
-                jLabel11.setVisible(false);
-                jTextField12.setVisible(false);
-                jLabel12.setVisible(false);
+        setTitle("Editar empresa");
 
-            } else if (jComboBox1.getSelectedItem().equals("Mercado")) {
-                jLabel5.setText("Custo anual de limpeza");
-                jTextField5.setVisible(true);
-                jLabel6.setText("Tipo de mercado");
-                jTextField6.setVisible(true);
-                jLabel7.setText("Área dos corredores (m2)");
-                jTextField7.setVisible(true);
-                jLabel7.setText("Fat. média anual por m2");
-                jTextField8.setVisible(true);
-                jTextField8.setVisible(false);
-                jLabel8.setVisible(false);
-                jTextField9.setVisible(false);
-                jLabel9.setVisible(false);
-                jTextField10.setVisible(false);
-                jLabel10.setVisible(false);
-                jTextField11.setVisible(false);
-                jLabel11.setVisible(false);
-                jTextField12.setVisible(false);
-                jLabel12.setVisible(false);
-            }
-        });
+        botaoSelecionador.setModel(new DefaultComboBoxModel<>(new String[] { "Café", "Pastelaria", "Restaurante Fastfood", "Restaurante Local", "Frutaria", "Mercado" }));
+        labelInfo.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
+        labelInfo.setText("Editar empresa");
+        botaoSelecionador.setSelectedIndex(0);
 
-        jButton1.setText("Guardar");
-        jButton2.setText("Fechar");
+        // On change
+        botaoSelecionador.addActionListener(this::botaoSelecionadorActionPerformed);
 
+        // Defaults e carregamento de dados
+        editar = GerirEmpresas.pesquisarEmpresa(nome);
+        switch (Objects.requireNonNull(editar).getTipo()) {
+            case 0:
+                botaoSelecionador.setSelectedIndex(0);
+                Cafe cafe = (Cafe) editar;
+                jTextField1.setText(cafe.getNome());
+                jTextField2.setText(cafe.getDistrito());
+                jTextField3.setText(String.valueOf(cafe.getCoordenadas()[0]));
+                jTextField4.setText(String.valueOf(cafe.getCoordenadas()[1]));
+                jTextField5.setText(String.valueOf(cafe.getEmpregadosMesa()));
+                jTextField6.setText(String.valueOf(cafe.getSalarioMedioAnual()));
+                jTextField7.setText(String.valueOf(cafe.getClientesMedioDiario()));
+                jTextField8.setText(String.valueOf(cafe.getCafesMedioDiario()));
+                jTextField9.setText(String.valueOf(cafe.getFaturacaoMediaAnualCafe()));
+                break;
+            case 1:
+                botaoSelecionador.setSelectedIndex(1);
+                Pastelaria pastelaria = (Pastelaria) editar;
+                jTextField1.setText(pastelaria.getNome());
+                jTextField2.setText(pastelaria.getDistrito());
+                jTextField3.setText(String.valueOf(pastelaria.getCoordenadas()[0]));
+                jTextField4.setText(String.valueOf(pastelaria.getCoordenadas()[1]));
+                jTextField5.setText(String.valueOf(pastelaria.getEmpregadosMesa()));
+                jTextField6.setText(String.valueOf(pastelaria.getSalarioMedioAnual()));
+                jTextField7.setText(String.valueOf(pastelaria.getClientesMedioDiario()));
+                jTextField8.setText(String.valueOf(pastelaria.getBolosMedioDiario()));
+                jTextField9.setText(String.valueOf(pastelaria.getFaturacaoMediaAnualBolo()));
+                break;
+            case 2:
+                botaoSelecionador.setSelectedIndex(2);
+                Fastfood fastfood = (Fastfood) editar;
+                jTextField1.setText(fastfood.getNome());
+                jTextField2.setText(fastfood.getDistrito());
+                jTextField3.setText(String.valueOf(fastfood.getCoordenadas()[0]));
+                jTextField4.setText(String.valueOf(fastfood.getCoordenadas()[1]));
+                jTextField5.setText(String.valueOf(fastfood.getEmpregadosMesa()));
+                jTextField6.setText(String.valueOf(fastfood.getSalarioMedioAnual()));
+                jTextField7.setText(String.valueOf(fastfood.getClientesMedioDiario()));
+                jTextField8.setText(String.valueOf(fastfood.getDiasFuncionamento()));
+                jTextField9.setText(String.valueOf(fastfood.getMesasInterior()));
+                jTextField10.setText(String.valueOf(fastfood.getFaturacaoMediaMesaDiario()));
+                jTextField11.setText(String.valueOf(fastfood.getClientesMedioDrive()));
+                jTextField12.setText(String.valueOf(fastfood.getFaturacaoMediaClienteDrive()));
+                break;
+            case 3:
+                botaoSelecionador.setSelectedIndex(3);
+                Local local = (Local) editar;
+                jTextField1.setText(local.getNome());
+                jTextField2.setText(local.getDistrito());
+                jTextField3.setText(String.valueOf(local.getCoordenadas()[0]));
+                jTextField4.setText(String.valueOf(local.getCoordenadas()[1]));
+                jTextField5.setText(String.valueOf(local.getEmpregadosMesa()));
+                jTextField6.setText(String.valueOf(local.getSalarioMedioAnual()));
+                jTextField7.setText(String.valueOf(local.getClientesMedioDiario()));
+                jTextField8.setText(String.valueOf(local.getDiasFuncionamento()));
+                jTextField9.setText(String.valueOf(local.getMesasInterior()));
+                jTextField10.setText(String.valueOf(local.getMesasEsplanada()));
+                jTextField11.setText(String.valueOf(local.getCustoLicencaMesaEsplanada()));
+                jTextField12.setText(String.valueOf(local.getFaturacaoMediaMesaDiario()));
+                break;
+            case 4:
+                botaoSelecionador.setSelectedIndex(4);
+                Frutaria frutaria = (Frutaria) editar;
+                jTextField1.setText(frutaria.getNome());
+                jTextField2.setText(frutaria.getDistrito());
+                jTextField3.setText(String.valueOf(frutaria.getCoordenadas()[0]));
+                jTextField4.setText(String.valueOf(frutaria.getCoordenadas()[1]));
+                jTextField5.setText(String.valueOf(frutaria.getCustoAnualLimpeza()));
+                jTextField6.setText(String.valueOf(frutaria.getNumeroProdutos()));
+                jTextField7.setText(String.valueOf(frutaria.getFaturacaoMediaAnualProduto()));
+                break;
+            case 5:
+                botaoSelecionador.setSelectedIndex(5);
+                Mercado mercado = (Mercado) editar;
+                jTextField1.setText(mercado.getNome());
+                jTextField2.setText(mercado.getDistrito());
+                jTextField3.setText(String.valueOf(mercado.getCoordenadas()[0]));
+                jTextField4.setText(String.valueOf(mercado.getCoordenadas()[1]));
+                jTextField5.setText(String.valueOf(mercado.getCustoAnualLimpeza()));
+                jTextField6.setText(String.valueOf(mercado.getAreaCorredores()));
+                jTextField7.setText(String.valueOf(mercado.getFaturacaoMediaAnualM2()));
+                break;
+        }
+
+        botaoSelecionador.setEnabled(false);
+        botaoGuardar.setText("Alterar");
+        botaoGuardar.addActionListener(this::botaoAlterarActionPerformed);
+        botaoFechar.setText("Fechar");
+        botaoFechar.addActionListener(e -> dispose());
+
+        gereLayout(layout);
+    }
+
+    private void gereLayout(GroupLayout layout) {
         // Gerado pelo NetBeans
-        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -218,9 +195,9 @@ public class JanelaCriaEdita extends JFrame {
                                 .addGap(40, 40, 40)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(botaoSelecionador, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel13))
+                                                .addComponent(labelInfo))
                                         .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel8)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -259,13 +236,13 @@ public class JanelaCriaEdita extends JFrame {
                                                 .addComponent(jTextField12, GroupLayout.PREFERRED_SIZE, 220, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel11)
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 450, Short.MAX_VALUE)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(jTextField11, GroupLayout.PREFERRED_SIZE, 220, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addGap(0, 0, Short.MAX_VALUE)
-                                                .addComponent(jButton1)
+                                                .addComponent(botaoGuardar)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jButton2)
+                                                .addComponent(botaoFechar)
                                                 .addGap(40, 40, 40))
                                         .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel10)
@@ -282,8 +259,8 @@ public class JanelaCriaEdita extends JFrame {
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel13))
+                                        .addComponent(botaoSelecionador, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelInfo))
                                 .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -334,11 +311,360 @@ public class JanelaCriaEdita extends JFrame {
                                         .addComponent(jLabel12))
                                 .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jButton1)
-                                        .addComponent(jButton2))
+                                        .addComponent(botaoGuardar)
+                                        .addComponent(botaoFechar))
                                 .addContainerGap(120, Short.MAX_VALUE))
         );
-
         pack();
+    }
+
+    // Definição dos parâmetros para cada categoria de empresa
+    private void botaoSelecionadorActionPerformed(ActionEvent e) {
+        setMinimumSize(new Dimension(520, 300));
+        switch (Objects.requireNonNull(botaoSelecionador.getSelectedItem()).toString()) {
+            case "Café":
+                jLabel5.setText("Nº Empregados");
+                jTextField5.setVisible(true);
+                jLabel6.setText("Salário Médio Anual");
+                jTextField6.setVisible(true);
+                jLabel7.setText("Média de clientes por dia");
+                jTextField7.setVisible(true);
+                jLabel8.setText("Média de cafés por dia");
+                jLabel8.setVisible(true);
+                jTextField8.setVisible(true);
+                jLabel9.setText("Fat. Média Anual por café");
+                jLabel9.setVisible(true);
+                jTextField9.setVisible(true);
+                jTextField10.setVisible(false);
+                jLabel10.setVisible(false);
+                jTextField11.setVisible(false);
+                jLabel11.setVisible(false);
+                jTextField12.setVisible(false);
+                jLabel12.setVisible(false);
+                break;
+            case "Pastelaria":
+                jLabel5.setText("Nº Empregados");
+                jTextField5.setVisible(true);
+                jLabel6.setText("Salário Médio Anual");
+                jTextField6.setVisible(true);
+                jLabel7.setText("Média de clientes por dia");
+                jTextField7.setVisible(true);
+                jLabel8.setText("Média de bolos por dia");
+                jLabel8.setVisible(true);
+                jTextField8.setVisible(true);
+                jLabel9.setText("Fat. Média Anual por bolo");
+                jLabel9.setVisible(true);
+                jTextField9.setVisible(true);
+                jLabel10.setVisible(false);
+                jTextField10.setVisible(false);
+                jLabel11.setVisible(false);
+                jTextField11.setVisible(false);
+                jLabel12.setVisible(false);
+                jTextField12.setVisible(false);
+                break;
+            case "Restaurante Fastfood":
+                jLabel5.setText("Nº Empregados");
+                jTextField5.setVisible(true);
+                jLabel6.setText("Salário Médio Anual");
+                jTextField6.setVisible(true);
+                jLabel7.setText("Média de clientes/dia");
+                jTextField7.setVisible(true);
+                jLabel8.setText("Dias de funcionamento/ano");
+                jLabel8.setVisible(true);
+                jTextField8.setVisible(true);
+                jLabel9.setText("Nº mesas interiores");
+                jLabel9.setVisible(true);
+                jTextField9.setVisible(true);
+                jLabel10.setText("Fat. média por mesa/dia");
+                jLabel10.setVisible(true);
+                jTextField10.setVisible(true);
+                jLabel11.setText("Média de clientes Drive-Thru/dia");
+                jLabel11.setVisible(true);
+                jTextField11.setVisible(true);
+                jLabel12.setText("Fat. média por cliente Drive-Thru");
+                jLabel12.setVisible(true);
+                jTextField12.setVisible(true);
+                break;
+            case "Restaurante Local":
+                jLabel5.setText("Nº Empregados");
+                jTextField5.setVisible(true);
+                jLabel6.setText("Salário Médio Anual");
+                jTextField6.setVisible(true);
+                jLabel7.setText("Média de clientes/dia");
+                jTextField7.setVisible(true);
+                jLabel8.setText("Dias de funcionamento/ano");
+                jLabel8.setVisible(true);
+                jTextField8.setVisible(true);
+                jLabel9.setText("Nº mesas interiores");
+                jLabel9.setVisible(true);
+                jTextField9.setVisible(true);
+                jLabel10.setText("Nº mesas exteriores");
+                jLabel10.setVisible(true);
+                jTextField10.setVisible(true);
+                jLabel11.setText("Custo por licença de mesa ext.");
+                jLabel11.setVisible(true);
+                jTextField11.setVisible(true);
+                jLabel12.setText("Fat. média por mesa/dia");
+                jLabel12.setVisible(true);
+                jTextField12.setVisible(true);
+                break;
+            case "Frutaria":
+                jLabel5.setText("Custo anual de limpeza");
+                jTextField5.setVisible(true);
+                jLabel6.setText("Nº de produtos para venda");
+                jTextField6.setVisible(true);
+                jLabel7.setText("Fat. média anual por produto");
+                jTextField7.setVisible(true);
+                jTextField8.setVisible(false);
+                jLabel8.setVisible(false);
+                jTextField9.setVisible(false);
+                jLabel9.setVisible(false);
+                jTextField10.setVisible(false);
+                jLabel10.setVisible(false);
+                jTextField11.setVisible(false);
+                jLabel11.setVisible(false);
+                jTextField12.setVisible(false);
+                jLabel12.setVisible(false);
+                break;
+            case "Mercado":
+                jLabel5.setText("Custo anual de limpeza");
+                jTextField5.setVisible(true);
+                jLabel6.setText("Tipo de mercado");
+                jTextField6.setVisible(true);
+                jLabel7.setText("Área dos corredores (m2)");
+                jTextField7.setVisible(true);
+                jLabel7.setText("Fat. média anual por m2");
+                jTextField8.setVisible(true);
+                jTextField8.setVisible(false);
+                jLabel8.setVisible(false);
+                jTextField9.setVisible(false);
+                jLabel9.setVisible(false);
+                jTextField10.setVisible(false);
+                jLabel10.setVisible(false);
+                jTextField11.setVisible(false);
+                jLabel11.setVisible(false);
+                jTextField12.setVisible(false);
+                jLabel12.setVisible(false);
+        }
+        // Limpar os campos de texto
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField6.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        jTextField9.setText("");
+        jTextField10.setText("");
+        jTextField11.setText("");
+        jTextField12.setText("");
+    }
+
+    // Método para criar empresa GUI
+    private void botaoGuardarActionPerformed(ActionEvent e) {
+        try {
+            switch (Objects.requireNonNull(botaoSelecionador.getSelectedItem()).toString()) {
+                case "Café":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        empresas.add(new Cafe(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Pastelaria":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        empresas.add(new Pastelaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Restaurante Fastfood":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("") || jTextField10.getText().equals("") || jTextField11.getText().equals("") || jTextField12.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        empresas.add(new Fastfood(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Float.parseFloat(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Restaurante Local":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        empresas.add(new Local(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Frutaria":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        empresas.add(new Frutaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), Integer.parseInt(jTextField6.getText()), Float.parseFloat(jTextField7.getText())));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Mercado":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        empresas.add(new Mercado(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), jTextField6.getText(), Integer.parseInt(jTextField7.getText()), Float.parseFloat(jTextField8.getText())));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                case default, null:
+                    break;
+            }
+        } catch (NumberFormatException erro) {
+            JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null, "Erro. Registo não processado");
+        }
+        Escritor.guardaDadosDat(empresas);
+    }
+    private void botaoAlterarActionPerformed(ActionEvent e) {
+        try {
+            switch (Objects.requireNonNull(botaoSelecionador.getSelectedItem()).toString()) {
+                case "Café":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                    } else {
+                        Cafe cafe = (Cafe) editar;
+                        cafe.setNome(jTextField1.getText());
+                        cafe.setDistrito(jTextField2.getText());
+                        cafe.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                        cafe.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
+                        cafe.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
+                        cafe.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
+                        cafe.setCafesMedioDiario(Float.parseFloat(jTextField8.getText()));
+                        cafe.setFaturacaoMediaAnualCafe(Float.parseFloat(jTextField9.getText()));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Pastelaria":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        Pastelaria pastelaria = (Pastelaria) editar;
+                        pastelaria.setNome(jTextField1.getText());
+                        pastelaria.setDistrito(jTextField2.getText());
+                        pastelaria.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                        pastelaria.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
+                        pastelaria.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
+                        pastelaria.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
+                        pastelaria.setBolosMedioDiario(Float.parseFloat(jTextField8.getText()));
+                        pastelaria.setFaturacaoMediaAnualBolo(Float.parseFloat(jTextField9.getText()));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Restaurante Fastfood":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("") || jTextField10.getText().equals("") || jTextField11.getText().equals("") || jTextField12.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        Fastfood fastfood = (Fastfood) editar;
+                        fastfood.setNome(jTextField1.getText());
+                        fastfood.setDistrito(jTextField2.getText());
+                        fastfood.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                        fastfood.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
+                        fastfood.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
+                        fastfood.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
+                        fastfood.setDiasFuncionamento(Integer.parseInt(jTextField8.getText()));
+                        fastfood.setMesasInterior(Integer.parseInt(jTextField9.getText()));
+                        fastfood.setFaturacaoMediaMesaDiario(Float.parseFloat(jTextField10.getText()));
+                        fastfood.setClientesMedioDrive(Float.parseFloat(jTextField11.getText()));
+                        fastfood.setFaturacaoMediaClienteDrive(Float.parseFloat(jTextField12.getText()));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Restaurante Local":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        Local local = (Local) editar;
+                        local.setNome(jTextField1.getText());
+                        local.setDistrito(jTextField2.getText());
+                        local.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                        local.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
+                        local.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
+                        local.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
+                        local.setDiasFuncionamento(Integer.parseInt(jTextField8.getText()));
+                        local.setMesasInterior(Integer.parseInt(jTextField9.getText()));
+                        local.setMesasEsplanada(Integer.parseInt(jTextField10.getText()));
+                        local.setCustoLicencaMesaEsplanada(Float.parseFloat(jTextField11.getText()));
+                        local.setFaturacaoMediaMesaDiario(Float.parseFloat(jTextField12.getText()));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Frutaria":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        Frutaria frutaria = (Frutaria) editar;
+                        frutaria.setNome(jTextField1.getText());
+                        frutaria.setDistrito(jTextField2.getText());
+                        frutaria.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                        frutaria.setCustoAnualLimpeza(Float.parseFloat(jTextField5.getText()));
+                        frutaria.setNumeroProdutos(Integer.parseInt(jTextField6.getText()));
+                        frutaria.setFaturacaoMediaAnualProduto(Float.parseFloat(jTextField7.getText()));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                    break;
+                case "Mercado":
+                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        botaoSelecionador.setSelectedIndex(0);
+                    } else {
+                        Mercado mercado = (Mercado) editar;
+                        mercado.setNome(jTextField1.getText());
+                        mercado.setDistrito(jTextField2.getText());
+                        mercado.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                        mercado.setCustoAnualLimpeza(Float.parseFloat(jTextField5.getText()));
+                        mercado.setAreaCorredores(Integer.parseInt(jTextField6.getText()));
+                        mercado.setFaturacaoMediaAnualM2(Float.parseFloat(jTextField7.getText()));
+                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                        janelaMae.atualizarLista();
+                        dispose();
+                    }
+                case default, null:
+                    break;
+            }
+        } catch (NumberFormatException erro) {
+            JOptionPane.showMessageDialog(null, "Preencha os campos corretamente");
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null, "Erro. Registo não processado");
+        }
+        Escritor.guardaDadosDat(empresas);
     }
 }

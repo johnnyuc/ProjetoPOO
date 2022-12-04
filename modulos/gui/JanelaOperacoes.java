@@ -4,53 +4,45 @@ import modulos.dados.*;
 import modulos.empresas.*;
 
 import javax.swing.*;
-import java.awt.event.*;
 import javax.swing.table.*;
 
 public class JanelaOperacoes extends JFrame {
 
-    public JanelaOperacoes(ActionEvent e) {
-        if (e.getActionCommand().equals("Operações")) {
-            initComponentsOperacoes();
-        } else if (e.getActionCommand().equals("Estatísticas")) {
-            System.out.println("Estatísticas");
-            //initComponentsEstatisticas();
-        }
+    private final JanelaOperacoes selfInstance;
+    JScrollPane jScrollPane2 = new JScrollPane();
+    JTable tabela = new JTable();
+    JButton botaoCriar = new JButton();
+    JButton botaoRemover = new JButton();
+    JButton botaoEditar = new JButton();
+    JButton botaoPesquisar = new JButton();
+    JButton botaoFechar = new JButton();
+    GroupLayout layout = new GroupLayout(getContentPane());
+
+    public JanelaOperacoes() {
+        initComponentsOperacoes();
+
         setResizable(false);
         setIconImage(new ImageIcon("starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+        selfInstance = this;
     }
 
     private void initComponentsOperacoes() {
 
-        JScrollPane jScrollPane2 = new JScrollPane();
-        JTable jTable1 = new JTable();
-        JButton jButton1 = new JButton();
-        JButton jButton2 = new JButton();
-        JButton jButton3 = new JButton();
-        JButton jButton4 = new JButton();
-        JButton jButton5 = new JButton();
-
         setTitle("Secção de Operações");
+        atualizarLista();
+        tabela.setAutoCreateRowSorter(true);
+        jScrollPane2.setViewportView(tabela);
 
-        jTable1.setModel(new DefaultTableModel(
-                arrayDadosEmpresas(),
-                new String [] {
-                        "Nome", "Tipo de empresa", "Distrito", "Receita Anual", "Despesa Anual", "Lucro"
-                }) {
-            public boolean isCellEditable(int row, int column) {
-                return false;
-            }
-        });
-        jTable1.setAutoCreateRowSorter(true);
-        jScrollPane2.setViewportView(jTable1);
+        // Botão de adicionar empresa
+        botaoCriar.setText("Criar empresa");
+        botaoCriar.addActionListener(e-> new JanelaCriaEdita(selfInstance).setVisible(true));
 
-        jButton1.setText("Criar empresa");
-        jButton1.addActionListener(e-> new JanelaCriaEdita(e).setVisible(true));
-
-        jButton2.setText("Remover empresa");
-        jButton2.addActionListener(e->{
-            int[] linha = jTable1.getSelectedRows();
+        // Botão de remover empresa
+        botaoRemover.setText("Remover empresa");
+        botaoRemover.addActionListener(e->{
+            int[] linha = tabela.getSelectedRows();
             if (linha.length > 0) {
                 int option = JOptionPane.showConfirmDialog(null,
                         "Tem a certeza que pretende remover o(s) elemento(s) selecionado(s)?", "Remover", JOptionPane.YES_NO_OPTION);
@@ -60,10 +52,9 @@ public class JanelaOperacoes extends JFrame {
                     // Também tem em consideração a posição original da linha através do converRowIndexToModel
                     for (int i = linha.length-1; i >= 0; i--) {
                         // Remove a empresa com base no seu nome — relembrando que não há duas empresas com o mesmo nome
-                        GerirEmpresas.apagarEmpresa(jTable1.getValueAt(linha[i], 0).toString());
-                        // Remove a linha da tabela com as coordenadas da célula da tabela principal
-                        ((DefaultTableModel)jTable1.getModel()).removeRow(jTable1.convertRowIndexToModel(linha[i]));
+                        GerirEmpresas.apagarEmpresa(tabela.getValueAt(linha[i], 0).toString());
                     }
+                    atualizarLista();
                 }
                 Escritor.guardaDadosDat(GerirEmpresas.empresas);
             } else {
@@ -71,29 +62,42 @@ public class JanelaOperacoes extends JFrame {
             }
         });
 
-        jButton3.setText("Editar empresa");
-        jButton3.addActionListener(e-> new JanelaCriaEdita(e).setVisible(true));
+        // Botão de editar empresa
+        botaoEditar.setText("Editar empresa");
+        botaoEditar.addActionListener(e-> {
+            int[] linha = tabela.getSelectedRows();
+            if (linha.length == 1) {
+                new JanelaCriaEdita(selfInstance, tabela.getValueAt(linha[0],0).toString()).setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Selecione apenas uma linha para editar.");
+            }
+        });
 
-        jButton4.setText("Pesquisar empresa");
-        jButton4.addActionListener(e->{
+        // Botão de pesquisar empresa
+        botaoPesquisar.setText("Pesquisar empresa");
+        botaoPesquisar.addActionListener(e->{
             String[] opcoes = {"Pesquisar","Lucro", "Todos"};
             switch (JOptionPane.showOptionDialog(null, "Indique qual o tipo de pesquisa que pretende", "Pesquisar", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcoes, null)) {
                 case 0 -> {
                     String valor = JOptionPane.showInputDialog("Indique o parâmetro de pesquisa");
                     if (valor != null) {
-                        sorter(jTable1, valor);
+                        sorter(tabela, valor.toLowerCase());
                     }
                 }
-                case 1 -> sorter(jTable1, "Sim");
-                case 2, default -> sorter(jTable1, "");
+                case 1 -> sorter(tabela, "Sim");
+                case 2, default -> sorter(tabela, "");
             }
         });
 
-        jButton5.setText("Fechar");
-        jButton5.addActionListener(e-> dispose());
+        // Botão de fechar janela
+        botaoFechar.setText("Fechar");
+        botaoFechar.addActionListener(e-> dispose());
 
+       gereLayout(layout);
+    }
+
+    private void gereLayout(GroupLayout layout) {
         // Gerado pelo NetBeans
-        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -103,14 +107,14 @@ public class JanelaOperacoes extends JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(20, 20, 20)
                                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(jButton2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jButton3, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                                                        .addComponent(jButton4, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
+                                                        .addComponent(botaoRemover, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(botaoCriar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(botaoEditar, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                                                        .addComponent(botaoPesquisar, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
                                                 .addGap(0, 0, Short.MAX_VALUE))
                                         .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                                                .addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(botaoFechar, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
                                                 .addGap(55, 55, 55))))
         );
         layout.setVerticalGroup(
@@ -118,23 +122,23 @@ public class JanelaOperacoes extends JFrame {
                         .addComponent(jScrollPane2, GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(40, 40, 40)
-                                .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botaoCriar, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
                                 .addGap(20, 20, 20)
-                                .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botaoRemover, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
                                 .addGap(20, 20, 20)
-                                .addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botaoEditar, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
                                 .addGap(20, 20, 20)
-                                .addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botaoPesquisar, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
                                 .addGap(50, 50, 50)
-                                .addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botaoFechar, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
         pack();
     }
-    private Object[][] arrayDadosEmpresas() {
+
+    private static Object[][] arrayDadosEmpresas() {
         Object[][] dados = new Object[GerirEmpresas.empresas.size()][6];
-        String[] tipos= {"Café","Pastelaria","Restaurante Local","Restaurante Fast-Food","Frutaria"
+        String[] tipos= {"Café","Pastelaria","Restaurante Fastfood","Restaurante Local","Frutaria"
                 ,"Mercado"};
         for (int i = 0; i < GerirEmpresas.empresas.size(); i++) {
             dados[i][0] = GerirEmpresas.empresas.get(i).getNome();
@@ -155,7 +159,20 @@ public class JanelaOperacoes extends JFrame {
 
     private void sorter (JTable table, String string) {
         TableRowSorter<TableModel> sorter = new TableRowSorter<>(table.getModel());
-        sorter.setRowFilter(RowFilter.regexFilter(string));
+        // Para corrigir o case sensitiveness do sorter
+        //Snippet from: https://stackoverflow.com/questions/20325722/how-can-i-perform-a-case-insensitive-filter-on-a-jtable
+        sorter.setRowFilter(RowFilter.regexFilter("(?i)" + string));
         table.setRowSorter(sorter);
     }
+
+    protected void atualizarLista() {
+        this.tabela.setModel(new DefaultTableModel(arrayDadosEmpresas(), new String [] {
+                "Nome", "Tipo de empresa", "Distrito", "Receita Anual", "Despesa Anual", "Lucro"
+        }) {
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        });
+    }
+
 }

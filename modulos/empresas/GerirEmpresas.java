@@ -22,49 +22,18 @@ public class GerirEmpresas {
     // Métodos
 
     /**
-     * Método para adicionar imprimir os dados de todas as empresas
-     */
-    public void imprimirEmpresas(){
-        if(empresas != null){
-            for (Empresa empresa : empresas) {
-                System.out.println(empresa.toString());
-            }
-        }
-    }
-
-    /**
-     * Método responsável por adicionar uma empresa a lista de gestão de empresas
-     *
-     * @param empresa Empresa a ser adicionada na lista
-     * @return 1: se a empresa já está na lista. 0: se a empresa ainda
-     * não estava na lista e o programa foi executado adequadamente
-     */
-    public int adicionarEmpresa(Empresa empresa){
-        if(empresas != null){
-            for (Empresa value : empresas) {
-                if (Objects.equals(value.nome, empresa.nome)) {
-                    return 1;
-                }
-            }
-            empresas.add(empresa);
-            return 0;
-        }
-        return 1;
-    }
-    /**
      * Método responsável por adicionar uma empresa a lista de gestão de empresas
      *
      * @param nome Nome da empresa
      * @return Retorna os dados da empresa, caso exista.
      */
-    public String pesquisarEmpresa(String nome){
+    public static Empresa pesquisarEmpresa(String nome){
         if(empresas != null){
             for (Empresa empresa : empresas) {
                 if (empresa.nome.equals(nome)) {
-                    return empresa.toString();
+                    return empresa;
                 }
             }
-            return null;
         }
         return null;
     }
@@ -73,20 +42,16 @@ public class GerirEmpresas {
      * Método utilizado para apagar uma empresa da lista de gestão de empresas
      *
      * @param nome Nome da empresa a ser apagada
-     * @return 1: se não existe uma empresa na lista. 0: se existe uma empresa na lista e o programa foi
-     * executado adequadamente
      */
-    public static int apagarEmpresa(String nome){
+    public static void apagarEmpresa(String nome){
         if(empresas!=null){
             for(int i=0; i< empresas.size(); i++){
                 if(Objects.equals(empresas.get(i).nome, nome)){
                     empresas.remove(i);
-                    return 0;
+                    return;
                 }
             }
-            return 1;
         }
-        return 1;
     }
 
     /**
@@ -96,27 +61,22 @@ public class GerirEmpresas {
      */
     public String maiorReceitaAnual(int tipoProcurar) {
         if (empresas != null) {
-            String nome = null;
-            float valor = Float.MIN_VALUE;
+            String nome = "";
+            float valor = 0;
             for (Empresa empresa : empresas) {
-                if (empresa.tipo==tipoProcurar){
+                if (empresa.tipo == tipoProcurar) {
                     float receitaTemp = empresa.calcularReceitaAnual();
-                    if (receitaTemp >= valor) {
+                    if (receitaTemp > valor) {
                         nome = empresa.nome;
                         valor = receitaTemp;
                     }
                 }
-
             }
-            if(nome != null){
-                return "Empresa do tipo escolhido com a maior receita anual:" +
-                        "\nNome                  :\t"+ nome+
-                        "\nValor da receita anual:\t€"+valor;
-            }
-            return null;
+            return "Maior receita anual -> \"" + nome + "\" com a receita anual de: " + valor + " €";
         }
-        return null;
+        return "Não existem empresas do tipo escolhido";
     }
+
     /**
      * Método para mostrar a empresa com a menor despesa anual
      * @param tipoProcurar Categoria da empresa a procurar
@@ -124,26 +84,20 @@ public class GerirEmpresas {
      */
     public String menorDespesaAnual(int tipoProcurar) {
         if (empresas != null) {
-            String nome = null;
-            float valor = Float.MAX_VALUE;
+            String nome = "";
+            float valor = 0;
             for (Empresa empresa : empresas) {
-                if (empresa.tipo==tipoProcurar){
+                if (empresa.tipo == tipoProcurar){
                     float despesaTemp = empresa.calcularDespesaAnual();
-                    if (despesaTemp <= valor) {
+                    if (despesaTemp < valor) {
                         nome = empresa.nome;
                         valor = despesaTemp;
                     }
                 }
-
             }
-            if(nome != null){
-                return "Empresa do tipo escolhido com a menor despesa anual:" +
-                        "\nNome                  :\t"+ nome+
-                        "\nValor da despesa anual:\t€"+valor;
-            }
-            return null;
+            return "Menor despesa anual -> \"" + nome + "\" com a receita anual de: " + valor + " €";
         }
-        return null;
+        return "Não existem empresas do tipo escolhido";
     }
     /**
      * Método para mostrar a empresa com o maior lucro
@@ -165,9 +119,7 @@ public class GerirEmpresas {
 
             }
             if(nome != null){
-                return "Empresa do tipo escolhido com o maior lucro:" +
-                        "\nNome          :\t"+ nome+
-                        "\nValor do lucro:\t€"+valor;
+                return "Maior lucro anual -> \"" + nome + "\" com a receita anual de: " + valor + " €";
             }
             return null;
         }
@@ -179,7 +131,7 @@ public class GerirEmpresas {
      * @return 1: O nome da empresa e valor da receita anual, caso exista
      */
     public String maiorCapacidadeClientes(int tipoProcurar) {
-        if(tipoProcurar<=3) {
+        if(tipoProcurar <= 3) {
             if (empresas != null) {
                 String nome1 = null;
                 float valor1 = Float.MIN_VALUE;
@@ -203,12 +155,10 @@ public class GerirEmpresas {
                     }
                 }
                 if(nome1!=null&&nome2!=null){
-                       return  "Empresa de restauração com a maior capacidade de clientes por dia" +
-                               "\nNome                          :\t" + nome1 +
-                               "\nCapacidade de clientes por dia:\t" + valor1+
-                               "Empresa de restauração com a segunda maior capacidade de clientes por dia" +
-                               "\nNome                          :\t" + nome2 +
-                               "\nCapacidade de clientes por dia:\t" + valor2;
+                       return  "\nMaior capacidade de clientes por dia:" +
+                               "\nNome: \"" + nome1 + "\" com capacidade de " + valor1 + " clientes por dia" +
+                               "\n\nSegunda maior capacidade de clientes por dia:" +
+                               "\nNome: \"" + nome2 + "\" com capacidade de " + valor2 + " clientes por dia";
 
                 }
                 return null;

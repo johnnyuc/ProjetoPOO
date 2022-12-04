@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.5 (Página principal a 100%, Operações a 50%)">
-      <change afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.7 (Página principal a 100%, Operações a 70%)">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/dados/Escritor.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Escritor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/dados/Leitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Leitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Empresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/OperacoesMetodos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Iniciar.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Janelas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Escritor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Escritor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Leitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Leitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Empresas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Iniciar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/OperacoesMetodos.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaEstatisticas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
     <setting file="jar://$USER_HOME$/.jdks/openjdk-18.0.2.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/modulos/empresas/Cafe.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/modulos/empresas/Restauracao.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/modulos/empresas/Restauracao.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,27 +62,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/saulopiccirilo/projeto_poo/ProjetoPOO&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "ignore.preview.features.used": "true",
+    "last_opened_file_path": "/Users/saulopiccirilo/projeto_poo/ProjetoPOO",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -101,6 +103,7 @@
       <workItem from="1669906605208" duration="18709000" />
       <workItem from="1669928597634" duration="12117000" />
       <workItem from="1669986535237" duration="15927000" />
+      <workItem from="1670073440100" duration="47005000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -291,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670024504888</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Interfaces v0.7 (Página principal a 100%, Operações a 70%)">
+      <created>1670036528755</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670036528755</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +338,7 @@
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%, Operações a 20%)" />
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%, Operações a 40%)" />
     <MESSAGE value="Interfaces v0.5 (Página principal a 100%, Operações a 50%)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.5 (Página principal a 100%, Operações a 50%)" />
+    <MESSAGE value="Interfaces v0.7 (Página principal a 100%, Operações a 70%)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.7 (Página principal a 100%, Operações a 70%)" />
   </component>
 </project>

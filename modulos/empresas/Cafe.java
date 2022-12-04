@@ -29,6 +29,7 @@ public class Cafe extends Restauracao {
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
         this.tipo = 0;
     }
+    public Cafe() {}
 
 
     // Métodos

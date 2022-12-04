@@ -32,6 +32,8 @@ public abstract class Empresa implements java.io.Serializable {
         this.coordenadas = coordenadas;
     }
 
+    public Empresa() {}
+
     // Métodos
 
     /** Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
