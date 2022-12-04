@@ -1,23 +1,25 @@
 package modulos.gui;
 
+import modulos.empresas.GerirEmpresas;
+
 import java.awt.*;
 import javax.swing.*;
 
 public class JanelaPrincipal extends JFrame {
+    JButton botaoOperacoes = new JButton();
+    JButton botaoEstatisticas = new JButton();
+    JButton botaoSair = new JButton();
+    JLabel labelTitulo = new JLabel();
+    JLabel labelIcone = new JLabel();
+    JTextArea areaTexto = new JTextArea();
+    JScrollPane elementoScroll = new JScrollPane();
+    JLabel labelDireitos = new JLabel();
+    GroupLayout layout = new GroupLayout(getContentPane());
 
-    public JanelaPrincipal() {
-        initComponents();
+    public JanelaPrincipal(GerirEmpresas StarThrive) {
+        initComponents(StarThrive);
     }
-    private void initComponents() {
-
-        JButton botaoOperacoes = new JButton();
-        JButton botaoEstatisticas = new JButton();
-        JButton botaoSair = new JButton();
-        JLabel labelTitulo = new JLabel();
-        JLabel labelIcone = new JLabel();
-        JTextArea areaTexto = new JTextArea();
-        JScrollPane elementoScroll = new JScrollPane();
-        JLabel labelDireitos = new JLabel();
+    private void initComponents(GerirEmpresas StarThrive) {
 
         setResizable(false);
         setTitle("Bem-vindo ao StarThrive Gestão!");
@@ -35,18 +37,21 @@ public class JanelaPrincipal extends JFrame {
         elementoScroll.setViewportView(areaTexto);
 
         botaoOperacoes.setText("Operações");
-        botaoOperacoes.addActionListener(e -> new JanelaOperacoes(e).setVisible(true));
+        botaoOperacoes.addActionListener(e -> new JanelaOperacoes().setVisible(true));
 
         botaoEstatisticas.setText("Estatísticas");
-        botaoEstatisticas.addActionListener(e -> new JanelaOperacoes(e).setVisible(true));
+        botaoEstatisticas.addActionListener(e -> new JanelaEstatisticas(StarThrive).setVisible(true));
 
         botaoSair.setText("Sair");
         botaoSair.addActionListener(e -> System.exit(0));
 
         labelDireitos.setText("Software desenvolvido por Johnny Fernandes e Saulo Piccirilo");
 
+        gereLayout(layout);
+    }
+
+    private void gereLayout(GroupLayout layout) {
         // Gerado pelo NetBeans
-        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -96,3 +101,4 @@ public class JanelaPrincipal extends JFrame {
         pack();
     }
 }
+

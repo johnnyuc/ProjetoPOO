@@ -8,36 +8,30 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Inicialização do programa
         booting();
-
-        // Inicialização da GUI
-        display();
     }
+
+
+    // Inicialização do programa
     public static void booting() {
         File f = new File("starthrive.dat");
         if (f.exists()) {
             System.out.println("Bem-vindo ao StarThrive!");
             System.out.println("A iniciar a base de dados de objetos...");
             GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosDat());
-            //StarThrive.imprimirEmpresas();
-            StarThrive.maiorLucroAnual(0);
-            StarThrive.maiorReceitaAnual(0);
-
-            StarThrive.menorDespesaAnual(0);
-            StarThrive.maiorCapacidadeClientes(0);
+            display(StarThrive);
         }
         else {
             System.out.println("Bem-vindo ao StarThrive!");
-            System.out.println("A JanelaCriaEdita a base de dados a partir do arquivo de texto...");
+            System.out.println("A criar a base de dados a partir do arquivo de texto...");
             GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosTxt());
             Escritor.guardaDadosDat(GerirEmpresas.empresas);
-            //StarThrive.imprimirEmpresas();
+            display(StarThrive);
         }
     }
 
-    public static void display() {
-
+    // Inicialização do ecrã
+    public static void display(GerirEmpresas StarThrive) {
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -49,7 +43,7 @@ public class Main {
             java.util.logging.Logger.getLogger(JanelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
-        new JanelaPrincipal().setVisible(true);
+        new JanelaPrincipal(StarThrive).setVisible(true);
     }
 }
 

@@ -40,7 +40,7 @@ public class Fastfood extends Restaurante {
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
         this.clientesMedioDrive = clientesMedioDrive;
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
-        this.tipo = 3;
+        this.tipo = 2;
     }
 
 
@@ -138,7 +138,7 @@ public class Fastfood extends Restaurante {
     @Override
     public String toString(){
         String s=
-                "Tipo                  :\t"+"Fast-Food"+
+                "Tipo                  :\t"+"Fastfood"+
                 "\nNome                :\t"+this.nome+
                 "\nDistrito            :\t"+this.distrito+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+

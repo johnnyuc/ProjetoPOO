@@ -33,6 +33,8 @@ public abstract class Restauracao extends Empresa {
         this.clientesMedioDiario = clientesMedioDiario;
     }
 
+    public Restauracao() {}
+
     // Getters and Setters e Overrides
 
     /**
