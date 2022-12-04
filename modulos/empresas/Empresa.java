@@ -50,7 +50,7 @@ public abstract class Empresa implements java.io.Serializable {
      *
      * @return O valor do lucro
      */
-    public abstract float calcularLucro();
+    public float calcularLucro(){return calcularReceitaAnual() - calcularDespesaAnual();}
 
 
     // Getters and Setters e Overrides

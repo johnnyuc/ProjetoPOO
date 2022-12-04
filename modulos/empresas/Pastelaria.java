@@ -56,16 +56,6 @@ public class Pastelaria extends Restauracao {
      *
      * @return O valor do lucro anual
      */
-    public float calcularLucro() {
-        return calcularReceitaAnual() - calcularDespesaAnual();
-    }
-
-
-    // Getters and Setters e Overrides
-
-    /**
-     * Métodos de acesso externo ao número médio de bolos vendidos por dia
-     */
     public float getBolosMedioDiario() {
         return bolosMedioDiario;
     }

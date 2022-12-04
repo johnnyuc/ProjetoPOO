@@ -62,15 +62,6 @@ public class Local extends Restaurante {
         return (empregadosMesa * salarioMedioAnual) + (mesasEsplanada*custoLicencaMesaEsplanada);
     }
 
-    /**
-     * Método para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
-     * @return O valor do lucro anual
-     */
-    public float calcularLucro() {
-        return calcularReceitaAnual() - calcularDespesaAnual();
-    }
-
-
     // Getters and Setters e Overrides
 
     /**

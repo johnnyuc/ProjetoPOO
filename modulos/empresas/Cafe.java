@@ -51,16 +51,6 @@ public class Cafe extends Restauracao {
         return empregadosMesa * salarioMedioAnual;
     }
 
-    /**
-     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor do lucro anual
-     */
-    public float calcularLucro() {
-        return calcularReceitaAnual() - calcularDespesaAnual();
-    }
-
-
     // Getters and Setters e Overrides
 
     /**
