@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.4 (Página principal a 100%, Operações a 20%)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/Janelas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/Janelas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/Janelas.class" afterDir="false" />
-    </list>
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Versão final Janelas.arrayDadosEmpresas" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670010405948</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Versão final Janelas.arrayDadosEmpresas">
+      <created>1670013545005</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670013545005</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +288,7 @@
     <MESSAGE value="Interfaces v0.3 (Página principal a 80%)" />
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%), nova base de dados, polimorfismo" />
     <MESSAGE value="Interfaces v0.4 (Página principal a 100%, Operações a 20%)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaces v0.4 (Página principal a 100%, Operações a 20%)" />
+    <MESSAGE value="Versão final Janelas.arrayDadosEmpresas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versão final Janelas.arrayDadosEmpresas" />
   </component>
 </project>
