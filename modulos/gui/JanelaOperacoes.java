@@ -78,14 +78,19 @@ public class JanelaOperacoes extends JFrame {
         botaoPesquisar.addActionListener(e->{
             String[] opcoes = {"Pesquisar","Lucro", "Todos"};
             switch (JOptionPane.showOptionDialog(null, "Indique qual o tipo de pesquisa que pretende", "Pesquisar", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcoes, null)) {
-                case 0 -> {
+                case 0:
                     String valor = JOptionPane.showInputDialog("Indique o parâmetro de pesquisa");
                     if (valor != null) {
                         sorter(tabela, valor.toLowerCase());
                     }
-                }
-                case 1 -> sorter(tabela, "Sim");
-                case 2, default -> sorter(tabela, "");
+                    break;
+                case 1:
+                    sorter(tabela, "Sim");
+                    break;
+                case 2:
+                default:
+                    sorter(tabela, "");
+                    break;
             }
         });
 
