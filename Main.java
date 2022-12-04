@@ -19,7 +19,11 @@ public class Main {
             System.out.println("Bem-vindo ao StarThrive!");
             System.out.println("A iniciar a base de dados de objetos...");
             GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosDat());
-            display(StarThrive);
+            System.out.println(StarThrive.maiorReceitaAnual(0));
+            System.out.println(StarThrive.maiorLucroAnual(0));
+            System.out.println(StarThrive.menorDespesaAnual(0));
+            System.out.println(StarThrive.maiorCapacidadeClientes(3));
+            //display(StarThrive);
         }
         else {
             System.out.println("Bem-vindo ao StarThrive!");

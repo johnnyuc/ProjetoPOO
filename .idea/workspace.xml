@@ -4,31 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Interfaces v0.7 (Página principal a 100%, Operações a 70%)">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="mudanças no método Empresa.calcularLucro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/dados/Leitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Leitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Local.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/OperacoesMetodos.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaEstatisticas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Leitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Leitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Cafe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Cafe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Empresa.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Fastfood.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Fastfood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/GerirEmpresas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/GerirEmpresas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Frutaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Frutaria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Local.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Local.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Restauracao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Restauracao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Mercado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Mercado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Pastelaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Pastelaria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,10 +38,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/openjdk-18.0.2.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/modulos/empresas/Cafe.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/modulos/empresas/Restauracao.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,6 +78,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ProjetoPOO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -113,6 +109,7 @@
       <workItem from="1669986535237" duration="15927000" />
       <workItem from="1670073440100" duration="47005000" />
       <workItem from="1670159961003" duration="2067000" />
+      <workItem from="1670162945291" duration="965000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
