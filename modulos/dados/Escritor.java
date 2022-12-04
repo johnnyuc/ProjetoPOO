@@ -24,7 +24,6 @@ public class Escritor {
             for (Empresa empresa : empresas) {
                 oos.writeObject(empresa);
             }
-            System.out.println("Dados escritos com sucesso em " + baseDados);
             fos.close();
         }
         catch (FileNotFoundException e) {

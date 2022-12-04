@@ -5,7 +5,6 @@
 
 /Cafés
 
-/* Construtor da classe, recebe os dados para a inicialização dos atributos
 /* @param nome O nome da empresa
 /* @param distrito O distrito onde se localiza a empresa
 /* @param coordenadas As coordenadas da empresa

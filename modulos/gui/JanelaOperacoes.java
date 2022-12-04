@@ -1,21 +1,24 @@
 package modulos.gui;
 
-import modulos.empresas.GerirEmpresas;
+import modulos.dados.*;
+import modulos.empresas.*;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.util.Arrays;
-import javax.swing.table.DefaultTableModel;
+import java.awt.event.*;
+import javax.swing.table.*;
 
-public class Janelas extends JFrame {
+public class JanelaOperacoes extends JFrame {
 
-    public Janelas(ActionEvent e) {
+    public JanelaOperacoes(ActionEvent e) {
         if (e.getActionCommand().equals("Operações")) {
             initComponentsOperacoes();
         } else if (e.getActionCommand().equals("Estatísticas")) {
             System.out.println("Estatísticas");
             //initComponentsEstatisticas();
         }
+        setResizable(false);
+        setIconImage(new ImageIcon("starthrive.png").getImage());
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     private void initComponentsOperacoes() {
@@ -28,10 +31,7 @@ public class Janelas extends JFrame {
         JButton jButton4 = new JButton();
         JButton jButton5 = new JButton();
 
-        setResizable(false);
         setTitle("Secção de Operações");
-        setIconImage(new ImageIcon("starthrive.png").getImage());
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         jTable1.setModel(new DefaultTableModel(
                 arrayDadosEmpresas(),
@@ -42,36 +42,57 @@ public class Janelas extends JFrame {
                 return false;
             }
         });
+        jTable1.setAutoCreateRowSorter(true);
         jScrollPane2.setViewportView(jTable1);
 
         jButton1.setText("Criar empresa");
-        jButton1.addActionListener(e->{
-            int[] rows = jTable1.getSelectedRows();
-            System.out.println(Arrays.toString(rows));
-
-        });
+        jButton1.addActionListener(e-> new JanelaCriaEdita(e).setVisible(true));
 
         jButton2.setText("Remover empresa");
         jButton2.addActionListener(e->{
             int[] linha = jTable1.getSelectedRows();
-            for (int j : linha) {
-                GerirEmpresas.apagarEmpresa(jTable1.getModel().getValueAt(j, 0).toString());
+            if (linha.length > 0) {
+                int option = JOptionPane.showConfirmDialog(null,
+                        "Tem a certeza que pretende remover o(s) elemento(s) selecionado(s)?", "Remover", JOptionPane.YES_NO_OPTION);
+                if (option == JOptionPane.YES_OPTION) {
+                    // Tem que ser no sentido inverso porque quando se apagam múltiplas linhas
+                    // a tabela vai mudando de tamanho e as linhas seguintes vão mudando de posição
+                    // Também tem em consideração a posição original da linha através do converRowIndexToModel
+                    for (int i = linha.length-1; i >= 0; i--) {
+                        // Remove a empresa com base no seu nome — relembrando que não há duas empresas com o mesmo nome
+                        GerirEmpresas.apagarEmpresa(jTable1.getValueAt(linha[i], 0).toString());
+                        // Remove a linha da tabela com as coordenadas da célula da tabela principal
+                        ((DefaultTableModel)jTable1.getModel()).removeRow(jTable1.convertRowIndexToModel(linha[i]));
+                    }
+                }
+                Escritor.guardaDadosDat(GerirEmpresas.empresas);
+            } else {
+                JOptionPane.showMessageDialog(null, "Selecione pelo menos uma linha para remover.");
             }
         });
 
         jButton3.setText("Editar empresa");
-        jButton3.addActionListener(e->{
-
-        });
+        jButton3.addActionListener(e-> new JanelaCriaEdita(e).setVisible(true));
 
         jButton4.setText("Pesquisar empresa");
         jButton4.addActionListener(e->{
-
+            String[] opcoes = {"Pesquisar","Lucro", "Todos"};
+            switch (JOptionPane.showOptionDialog(null, "Indique qual o tipo de pesquisa que pretende", "Pesquisar", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcoes, null)) {
+                case 0 -> {
+                    String valor = JOptionPane.showInputDialog("Indique o parâmetro de pesquisa");
+                    if (valor != null) {
+                        sorter(jTable1, valor);
+                    }
+                }
+                case 1 -> sorter(jTable1, "Sim");
+                case 2, default -> sorter(jTable1, "");
+            }
         });
 
         jButton5.setText("Fechar");
         jButton5.addActionListener(e-> dispose());
 
+        // Gerado pelo NetBeans
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -119,8 +140,8 @@ public class Janelas extends JFrame {
             dados[i][0] = GerirEmpresas.empresas.get(i).getNome();
             dados[i][1] = tipos[GerirEmpresas.empresas.get(i).getTipo()];
             dados[i][2] = GerirEmpresas.empresas.get(i).getDistrito();
-            dados[i][3] = String.format("%.2f",GerirEmpresas.empresas.get(i).calcularReceitaAnual());
-            dados[i][4] = String.format("%.2f",GerirEmpresas.empresas.get(i).calcularDespesaAnual());
+            dados[i][3] = String.format("%.2f €",GerirEmpresas.empresas.get(i).calcularReceitaAnual());
+            dados[i][4] = String.format("%.2f €",GerirEmpresas.empresas.get(i).calcularDespesaAnual());
             float lucro= GerirEmpresas.empresas.get(i).calcularLucro();
             if(lucro>0){
                 dados[i][5]="Sim";
@@ -130,5 +151,11 @@ public class Janelas extends JFrame {
             }
         }
         return dados;
+    }
+
+    private void sorter (JTable table, String string) {
+        TableRowSorter<TableModel> sorter = new TableRowSorter<>(table.getModel());
+        sorter.setRowFilter(RowFilter.regexFilter(string));
+        table.setRowSorter(sorter);
     }
 }

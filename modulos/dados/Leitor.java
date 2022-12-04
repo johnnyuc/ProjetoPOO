@@ -29,7 +29,7 @@ public class Leitor {
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
 
-            // Leitura das linhas do ficheiro para criar os objetos com base nos dados do dummy file
+            // Leitura das linhas do ficheiro para JanelaCriaEdita os objetos com base nos dados do dummy file
             while ((linha = br.readLine()) != null) {
                 try {
                     // Primeiro é preciso verificar a length para só depois verificar o charAt, senão origina Exception
@@ -62,6 +62,7 @@ public class Leitor {
                     System.out.println("Pular: Leitura de dados insuficiente. [" + linha + "]");
                 }
             }
+            System.out.println("Dados carregados com sucesso.");
             fr.close();
         } catch (FileNotFoundException e) {
             System.out.println("O ficheiro de dados \"" + baseDadosTxt + "\" não foi encontrado.");
@@ -85,7 +86,7 @@ public class Leitor {
             while (fis.available() > 0) {
                 empresas.add((Empresa) ois.readObject());
             }
-
+            System.out.println("Dados carregados com sucesso.");
             fis.close();
         }
         catch (FileNotFoundException e) {
@@ -95,7 +96,6 @@ public class Leitor {
         } catch (ClassNotFoundException e) {
             System.out.println("Erro na leitura de classes.");
         }
-
         return empresas;
     }
 }
