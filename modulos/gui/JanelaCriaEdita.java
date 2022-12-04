@@ -530,7 +530,7 @@ public class JanelaCriaEdita extends JFrame {
                         janelaMae.atualizarLista();
                         dispose();
                     }
-                case default, null:
+                default:
                     break;
             }
         } catch (NumberFormatException erro) {
@@ -657,7 +657,7 @@ public class JanelaCriaEdita extends JFrame {
                         janelaMae.atualizarLista();
                         dispose();
                     }
-                case default, null:
+                default:
                     break;
             }
         } catch (NumberFormatException erro) {

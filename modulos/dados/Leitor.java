@@ -40,19 +40,27 @@ public class Leitor {
                         String[] data = linha.split("\\s*;\\s*");
 
                         switch (data[0]) {
-                            case "Café" -> empresas.add(new Cafe(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Float.parseFloat(data[8]), Float.parseFloat(data[9])));
-                            case "Pastelaria" ->
-                                    empresas.add(new Pastelaria(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Float.parseFloat(data[8]), Float.parseFloat(data[9])));
-                            case "Fastfood" ->
-                                    empresas.add(new Fastfood(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Integer.parseInt(data[8]), Integer.parseInt(data[9]), Float.parseFloat(data[10]), Float.parseFloat(data[11]), Float.parseFloat(data[12])));
-                            case "Local" ->
-                                    empresas.add(new Local(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Integer.parseInt(data[8]), Integer.parseInt(data[9]), Integer.parseInt(data[10]), Float.parseFloat(data[11]), Float.parseFloat(data[12])));
-                            case "Frutaria" ->
-                                    empresas.add(new Frutaria(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), Integer.parseInt(data[6]), Float.parseFloat(data[7])));
-                            case "Mercado" ->
-                                    empresas.add(new Mercado(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), data[6], Integer.parseInt(data[7]), Float.parseFloat(data[8])));
-                            case null, default ->
-                                    System.out.println("Tipo de empresa não reconhecido. " + Arrays.toString(data));
+                            case "Café":
+                                empresas.add(new Cafe(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Float.parseFloat(data[8]), Float.parseFloat(data[9])));
+                                break;
+                            case "Pastelaria":
+                                empresas.add(new Pastelaria(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Float.parseFloat(data[8]), Float.parseFloat(data[9])));
+                                break;
+                            case "Fastfood":
+                                empresas.add(new Fastfood(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Integer.parseInt(data[8]), Integer.parseInt(data[9]), Float.parseFloat(data[10]), Float.parseFloat(data[11]), Float.parseFloat(data[12])));
+                                break;
+                            case "Local":
+                                empresas.add(new Local(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Integer.parseInt(data[5]), Float.parseFloat(data[6]), Float.parseFloat(data[7]), Integer.parseInt(data[8]), Integer.parseInt(data[9]), Integer.parseInt(data[10]), Float.parseFloat(data[11]), Float.parseFloat(data[12])));
+                                break;
+                            case "Frutaria":
+                               empresas.add(new Frutaria(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), Integer.parseInt(data[6]), Float.parseFloat(data[7])));
+                               break;
+                            case "Mercado":
+                               empresas.add(new Mercado(data[1], data[2], new float[]{Float.parseFloat(data[3]), Float.parseFloat(data[4])}, Float.parseFloat(data[5]), data[6], Integer.parseInt(data[7]), Float.parseFloat(data[8])));
+                               break;
+                            default:
+                                System.out.println("Tipo de empresa desconhecido: "+ Arrays.toString(data));
+                                break;
                         }
                     }
                 } catch (NumberFormatException e) {
