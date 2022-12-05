@@ -1,6 +1,6 @@
-package modulo.gui;
+package StarThrive.gui;
 
-import modulo.empresas.GerirEmpresas;
+import StarThrive.empresas.GerirEmpresas;
 
 import java.awt.*;
 import javax.swing.*;
@@ -64,12 +64,12 @@ public class JanelaPrincipal extends JFrame {
 
         setResizable(false);
         setTitle("Bem-vindo ao StarThrive Gestão!");
-        setIconImage(new ImageIcon("modulo/starthrive.png").getImage());
+        setIconImage(new ImageIcon("StarThrive/starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         labelTitulo.setFont(new Font("Trebuchet MS", Font.BOLD, 36));
         labelTitulo.setText("StarThrive Gestão");
-        labelIcone.setIcon(new ImageIcon("modulo/starthrive.png"));
+        labelIcone.setIcon(new ImageIcon("StarThrive/starthrive.png"));
 
         areaTexto.setEnabled(false);
         areaTexto.setColumns(20);

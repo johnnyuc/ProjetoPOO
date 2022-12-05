@@ -1,4 +1,4 @@
-package modulo.empresas;
+package StarThrive.empresas;
 /**
  * Classe comum de todas as empresas
  */

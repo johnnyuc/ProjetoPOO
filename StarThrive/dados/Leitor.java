@@ -1,6 +1,6 @@
-package modulo.dados;
+package StarThrive.dados;
 
-import modulo.empresas.*;
+import StarThrive.empresas.*;
 
 import java.io.*;
 import java.util.*;
@@ -14,13 +14,13 @@ public class Leitor {
      * Base de dados dummy para testes
      * O ficheiro tem nome hardcoded constante no enunciado do projeto
      */
-    public static String baseDadosTxt = "modulo/starthrive.txt";
+    public static String baseDadosTxt = "StarThrive/starthrive.txt";
 
     /**
      * Base de dados de (objetos) empresas
      * Esta base de dados é única e é hardcoded (por isso estática)
      */
-    public static String baseDados = "starthrive.dat";
+    public static String baseDados = "StarThrive/starthrive.dat";
 
     /**
      * Construtor da classe

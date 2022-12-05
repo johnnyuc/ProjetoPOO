@@ -1,6 +1,6 @@
-package modulo.gui;
+package StarThrive.gui;
 
-import modulo.empresas.GerirEmpresas;
+import StarThrive.empresas.GerirEmpresas;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -75,7 +75,7 @@ public class JanelaEstatisticas extends JFrame {
         JMenuItem mercado = new JMenuItem();
 
         setTitle("Secção de estatísticas");
-        setIconImage(new ImageIcon("modulo/starthrive.png").getImage());
+        setIconImage(new ImageIcon("StarThrive/starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         painelMae.setLayout(new java.awt.CardLayout());
 

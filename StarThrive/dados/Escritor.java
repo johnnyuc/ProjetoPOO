@@ -1,6 +1,6 @@
-package modulo.dados;
+package StarThrive.dados;
 
-import modulo.empresas.Empresa;
+import StarThrive.empresas.Empresa;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class Escritor {
      * Base de dados de (objetos) empresas
      * Esta base de dados é única e é hardcoded (por isso estática)
      */
-    public static String baseDados = "starthrive.dat";
+    public static String baseDados = "StarThrive/starthrive.dat";
 
     /**
      * Construtor da classe

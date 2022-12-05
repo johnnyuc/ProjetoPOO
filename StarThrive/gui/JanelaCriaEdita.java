@@ -1,8 +1,8 @@
-package modulo.gui;
+package StarThrive.gui;
 
-import modulo.dados.Escritor;
-import modulo.empresas.*;
-import static modulo.empresas.GerirEmpresas.*;
+import StarThrive.dados.Escritor;
+import StarThrive.empresas.*;
+import static StarThrive.empresas.GerirEmpresas.*;
 
 import java.awt.*;
 import java.util.*;
@@ -147,7 +147,7 @@ public class JanelaCriaEdita extends JFrame {
         initComponentsCriar();
         this.janelaMae = janelaMae;
         setResizable(false);
-        setIconImage(new ImageIcon("modulo/starthrive.png").getImage());
+        setIconImage(new ImageIcon("StarThrive/starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
     /**
@@ -159,7 +159,7 @@ public class JanelaCriaEdita extends JFrame {
         initComponentsEditar(nome);
         this.janelaMae = janelaMae;
         setResizable(false);
-        setIconImage(new ImageIcon("modulo/starthrive.png").getImage());
+        setIconImage(new ImageIcon("StarThrive/starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
     /**

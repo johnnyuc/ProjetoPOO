@@ -1,4 +1,4 @@
-package modulo.empresas;
+package StarThrive.empresas;
 /**
  * Classe que simboliza as empresas do tipo pastelaria
  */
@@ -54,9 +54,8 @@ public class Pastelaria extends Restauracao {
     }
 
     /**
-     * Método utilizado para calcular o lucro anual de uma determinada empresa a partir dos seus dados,
-     *
-     * @return O valor do lucro anual
+     * Método para definir o número médio de bolos vendidos por dia
+     * @return o número médio de bolos vendidos por dia
      */
     public float getBolosMedioDiario() {
         return bolosMedioDiario;
@@ -64,22 +63,23 @@ public class Pastelaria extends Restauracao {
 
     /**
      * Método para definir o número médio de bolos vendidos por dia
+     * @param bolosMedioDiario o número médio de bolos vendidos por dia
      */
     public void setBolosMedioDiario(float bolosMedioDiario) {
         this.bolosMedioDiario = bolosMedioDiario;
     }
 
     /**
-     * Métodos de acesso externo ao custo médio de um bolo vendido por dia
      * Diz também respeito ao valor médio de faturação anual por bolo vendido por dia
+     * @return o valor médio de faturação anual por bolo vendido por dia
      */
     public float getFaturacaoMediaAnualBolo() {
         return faturacaoMediaAnualBolo;
     }
 
     /**
-     * Método para definir o custo médio de um bolo vendido por dia
      * Diz também respeito ao valor médio de faturação anual por bolo vendido por dia
+     * @param faturacaoMediaAnualBolo o valor médio de faturação anual por bolo vendido por dia
      */
     public void setFaturacaoMediaAnualBolo(float faturacaoMediaAnualBolo) {
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;

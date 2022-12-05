@@ -1,4 +1,4 @@
-package modulo.empresas;
+package StarThrive.empresas;
 /**
  * Classe que simboliza as empresas do tipo mercado
  */
@@ -76,6 +76,7 @@ public class Mercado extends Mercearia {
 
     /**
      * Métodos de acesso externo à área em metros quadrados dos corredores
+     * @return a área em metros quadrados dos corredores
      */
     public int getAreaCorredores() {
         return areaCorredores;
@@ -83,6 +84,7 @@ public class Mercado extends Mercearia {
 
     /**
      * Método para definir a área em metros quadrados dos corredores
+     * @param areaCorredores a área em metros quadrados dos corredores
      */
     public void setAreaCorredores(int areaCorredores) {
         this.areaCorredores = areaCorredores;
@@ -90,6 +92,7 @@ public class Mercado extends Mercearia {
 
     /**
      * Métodos de acesso externo à faturação anual por metro quadrado
+     * @return faturação anual por metro quadrado
      */
     public float getFaturacaoMediaAnualM2() {
         return faturacaoMediaAnualM2;
@@ -97,6 +100,7 @@ public class Mercado extends Mercearia {
 
     /**
      * Método para definir a faturação anual por metro quadrado
+     * @param faturacaoMediaAnualM2 a faturação anual por metro quadrado
      */
     public void setFaturacaoMediaAnualM2(float faturacaoMediaAnualM2) {
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;

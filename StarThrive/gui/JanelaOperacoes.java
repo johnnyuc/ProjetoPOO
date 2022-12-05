@@ -1,7 +1,7 @@
-package modulo.gui;
+package StarThrive.gui;
 
-import modulo.dados.*;
-import modulo.empresas.*;
+import StarThrive.dados.*;
+import StarThrive.empresas.*;
 
 import javax.swing.*;
 import javax.swing.table.*;
@@ -54,7 +54,7 @@ public class JanelaOperacoes extends JFrame {
         initComponentsOperacoes();
 
         setResizable(false);
-        setIconImage(new ImageIcon("modulo/starthrive.png").getImage());
+        setIconImage(new ImageIcon("StarThrive/starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         selfInstance = this;

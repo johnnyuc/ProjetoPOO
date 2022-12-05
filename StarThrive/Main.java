@@ -1,11 +1,8 @@
-package modulo; /**
- * @authors Johnny Fernandes e Saulo José Mendes
- */
-
-import modulo.dados.Escritor;
-import modulo.gui.*;
-import modulo.dados.*;
-import modulo.empresas.*;
+package StarThrive;
+import StarThrive.dados.Escritor;
+import StarThrive.gui.*;
+import StarThrive.dados.*;
+import StarThrive.empresas.*;
 
 import java.io.*;
 import javax.swing.*;
@@ -14,6 +11,10 @@ import javax.swing.*;
  * Classe utilizada para a inicialização do programa
  */
 public class Main {
+    /**
+     * Inicialização da aplicação
+     * @param args default java
+     */
     public static void main(String[] args) {
         booting();
     }
@@ -23,7 +24,7 @@ public class Main {
      */
     // Inicialização do programa
     public static void booting() {
-        File f = new File("starthrive.dat");
+        File f = new File("StarThrive/starthrive.dat");
         //Caso não exista um ficheiro.dat, procede-se à leitura do ficheiro.txt
         if (f.exists()) {
             System.out.println("Bem-vindo ao StarThrive!");

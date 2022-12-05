@@ -1,4 +1,4 @@
-package modulo.empresas;
+package StarThrive.empresas;
 
 import java.util.ArrayList;
 import java.util.Objects;

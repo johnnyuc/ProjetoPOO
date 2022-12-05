@@ -1,4 +1,4 @@
-package modulo.empresas;
+package StarThrive.empresas;
 /**
  * Classe que simboliza as empresas do tipo restaurante local
  */
