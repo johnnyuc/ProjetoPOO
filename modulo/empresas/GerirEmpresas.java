@@ -64,7 +64,7 @@ public class GerirEmpresas {
     public String maiorReceitaAnual(int tipoProcurar) {
         if (empresas != null) {
             String nome = "";
-            float valor = 0;
+            float valor = Float.MIN_VALUE;
             for (Empresa empresa : empresas) {
                 if (empresa.tipo == tipoProcurar) {
                     float receitaTemp = empresa.calcularReceitaAnual();
