@@ -10,43 +10,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Javadoc">
-      <change afterPath="$PROJECT_DIR$/StarThrive/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StarThrive/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StarThrive/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StarThrive/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StarThrive/StarThrive.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StarThrive/out/production/StarThrive/StarThrive/StarThrive.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Enunciado_Guidelines.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Enunciado_Guidelines.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/dados/Escritor.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/dados/Escritor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/dados/Leitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/dados/Leitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/dados/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/dados/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Cafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Fastfood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Frutaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Frutaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/GerirEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Local.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Mercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Mercado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Mercearia.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Mercearia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Pastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Pastelaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Restauracao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/Restaurante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/empresas/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/empresas/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/gui/JanelaCriaEdita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/gui/JanelaEstatisticas.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/gui/JanelaEstatisticas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/gui/JanelaOperacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/gui/JanelaOperacoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/gui/JanelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/gui/JanelaPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/gui/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/gui/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/starthrive.png" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/starthrive.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulo/starthrive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/StarThrive/starthrive.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_Guidelines.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_Guidelines.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/StarThrive.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/dados/Escritor.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Escritor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/dados/Leitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/dados/Leitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/dados/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Frutaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Mercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Mercearia.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Pastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/empresas/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/gui/JanelaEstatisticas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaEstatisticas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/gui/JanelaOperacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/gui/JanelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/gui/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/out/production/StarThrive/StarThrive/StarThrive.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/starthrive.png" beforeDir="false" afterPath="$PROJECT_DIR$/starthrive.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarThrive/starthrive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/starthrive.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/ProjetoPOO.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_Guidelines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_NameConventions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_Projeto.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Projeto POO.drawio" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +77,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/StarThrive/empresas/Cafe.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StarThrive/empresas/GerirEmpresas.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StarThrive/empresas/Restauracao.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-18.0.2.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/modulos/empresas/Cafe.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/modulos/empresas/Restauracao.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -111,6 +119,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\johnn\IdeaProjects\ProjetoPOO" />
       <recent name="$PROJECT_DIR$/StarThrive" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/modulo" />
@@ -393,20 +402,5 @@
     <MESSAGE value="Trabalho acabado, falta corrigir as funções de GerirEmpresas" />
     <MESSAGE value="Javadoc" />
     <option name="LAST_COMMIT_MESSAGE" value="Javadoc" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/StarThrive/empresas/GerirEmpresas.java</url>
-          <line>108</line>
-          <properties class="StarThrive.empresas.GerirEmpresas">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
