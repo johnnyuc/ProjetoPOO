@@ -41,6 +41,7 @@ public class Main {
                 display(StarThrive);
             } else {
                 System.out.println("Nenhum dos arquivos de dados foi encontrado.");
+                System.exit(-1);
             }
         }
     }
