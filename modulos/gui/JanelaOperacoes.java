@@ -50,8 +50,8 @@ public class JanelaOperacoes extends JFrame {
     /**
      * Construtor responsável por inicializar os componentes da janela de operações
      */
-    public JanelaOperacoes() {
-        initComponentsOperacoes();
+    public JanelaOperacoes(GerirEmpresas StarThrive) {
+        initComponentsOperacoes(StarThrive);
 
         setResizable(false);
         setIconImage(new ImageIcon("starthrive.png").getImage());
@@ -63,16 +63,16 @@ public class JanelaOperacoes extends JFrame {
     /**
      * Método responsável por inicializar o ecrã de operações
      */
-    private void initComponentsOperacoes() {
+    private void initComponentsOperacoes(GerirEmpresas StarThrive) {
 
         setTitle("Secção de Operações");
-        atualizarLista();
+        atualizarLista(StarThrive);
         tabela.setAutoCreateRowSorter(true);
         jScrollPane2.setViewportView(tabela);
 
         // Botão de adicionar empresa
         botaoCriar.setText("Criar empresa");
-        botaoCriar.addActionListener(e-> new JanelaCriaEdita(selfInstance).setVisible(true));
+        botaoCriar.addActionListener(e-> new JanelaCriaEdita(StarThrive, selfInstance).setVisible(true));
 
         // Botão de remover empresa
         botaoRemover.setText("Remover empresa");
@@ -87,11 +87,11 @@ public class JanelaOperacoes extends JFrame {
                     // Também tem em consideração a posição original da linha através do converRowIndexToModel
                     for (int i = linha.length-1; i >= 0; i--) {
                         // Remove a empresa com base no seu nome — relembrando não haver duas empresas com o mesmo nome
-                        GerirEmpresas.apagarEmpresa(tabela.getValueAt(linha[i], 0).toString());
+                        StarThrive.apagarEmpresa(tabela.getValueAt(linha[i], 0).toString());
                     }
-                    atualizarLista();
+                    atualizarLista(StarThrive);
                 }
-                Escritor.guardaDadosDat(GerirEmpresas.empresas);
+                Escritor.guardaDadosDat(StarThrive.getEmpresas());
             } else {
                 JOptionPane.showMessageDialog(null, "Selecione pelo menos uma linha para remover.");
             }
@@ -102,7 +102,7 @@ public class JanelaOperacoes extends JFrame {
         botaoEditar.addActionListener(e-> {
             int[] linha = tabela.getSelectedRows();
             if (linha.length == 1) {
-                new JanelaCriaEdita(selfInstance, tabela.getValueAt(linha[0],0).toString()).setVisible(true);
+                new JanelaCriaEdita(StarThrive, selfInstance, tabela.getValueAt(linha[0],0).toString()).setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Selecione apenas uma linha para editar.");
             }
@@ -183,19 +183,19 @@ public class JanelaOperacoes extends JFrame {
      * Método responsável por recolher individualmente os dados de cada empresa e guardá-los
      * num array multidimensional
      */
-    private static Object[][] arrayDadosEmpresas() {
-        Object[][] dados = new Object[GerirEmpresas.empresas.size()][6];
+    private static Object[][] arrayDadosEmpresas(GerirEmpresas StarThrive) {
+        Object[][] dados = new Object[StarThrive.getEmpresas().size()][6];
         // Como a função getTipo retorna um inteiro equivalente a um tipo, utiliza-se esse inteiro como
         // índice da array para obter o nome do tipo desejado
         String[] tipos= {"Café","Pastelaria","Restaurante Fastfood","Restaurante Local","Frutaria"
                 ,"Mercado"};
-        for (int i = 0; i < GerirEmpresas.empresas.size(); i++) {
-            dados[i][0] = GerirEmpresas.empresas.get(i).getNome();
-            dados[i][1] = tipos[GerirEmpresas.empresas.get(i).getTipo()];
-            dados[i][2] = GerirEmpresas.empresas.get(i).getDistrito();
-            dados[i][3] = String.format("%.2f €",GerirEmpresas.empresas.get(i).calcularReceitaAnual());
-            dados[i][4] = String.format("%.2f €",GerirEmpresas.empresas.get(i).calcularDespesaAnual());
-            float lucro= GerirEmpresas.empresas.get(i).calcularLucro();
+        for (int i = 0; i < StarThrive.getEmpresas().size(); i++) {
+            dados[i][0] = StarThrive.getEmpresas().get(i).getNome();
+            dados[i][1] = tipos[StarThrive.getEmpresas().get(i).getTipo()];
+            dados[i][2] = StarThrive.getEmpresas().get(i).getDistrito();
+            dados[i][3] = String.format("%.2f €",StarThrive.getEmpresas().get(i).calcularReceitaAnual());
+            dados[i][4] = String.format("%.2f €",StarThrive.getEmpresas().get(i).calcularDespesaAnual());
+            float lucro= StarThrive.getEmpresas().get(i).calcularLucro();
             if(lucro>0){
                 dados[i][5]="Sim";
             }
@@ -222,8 +222,8 @@ public class JanelaOperacoes extends JFrame {
     /**
      * Método responsável por atualizar a lista de empresas exibida no ecrã sempre que uma alteração é feita
      */
-    protected void atualizarLista() {
-        this.tabela.setModel(new DefaultTableModel(arrayDadosEmpresas(), new String [] {
+    protected void atualizarLista(GerirEmpresas StarThrive) {
+        this.tabela.setModel(new DefaultTableModel(arrayDadosEmpresas(StarThrive), new String [] {
                 "Nome", "Tipo de empresa", "Distrito", "Receita Anual", "Despesa Anual", "Lucro"
         }) {
             public boolean isCellEditable(int row, int column) {

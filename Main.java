@@ -37,7 +37,7 @@ public class Main {
                 System.out.println("Bem-vindo ao StarThrive!");
                 System.out.println("A criar a base de dados a partir do arquivo de texto...");
                 GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosTxt());
-                Escritor.guardaDadosDat(GerirEmpresas.empresas);
+                Escritor.guardaDadosDat(StarThrive.getEmpresas());
                 display(StarThrive);
             } else {
                 System.out.println("Nenhum dos arquivos de dados foi encontrado.");

@@ -78,7 +78,7 @@ public class JanelaPrincipal extends JFrame {
         elementoScroll.setViewportView(areaTexto);
 
         botaoOperacoes.setText("Operações");
-        botaoOperacoes.addActionListener(e -> new JanelaOperacoes().setVisible(true));
+        botaoOperacoes.addActionListener(e -> new JanelaOperacoes(StarThrive).setVisible(true));
 
         botaoEstatisticas.setText("Estatísticas");
         botaoEstatisticas.addActionListener(e -> new JanelaEstatisticas(StarThrive).setVisible(true));

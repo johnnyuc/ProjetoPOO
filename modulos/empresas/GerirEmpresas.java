@@ -9,7 +9,7 @@ public class GerirEmpresas {
     /**
      * Lista de empresas
      */
-    public static ArrayList <Empresa> empresas;
+    private ArrayList <Empresa> empresas;
 
 
     /**
@@ -17,10 +17,12 @@ public class GerirEmpresas {
      * @param empresas A lista de empresas
      */
     public GerirEmpresas(ArrayList <Empresa> empresas){
-        GerirEmpresas.empresas = empresas;
+        this.empresas = empresas;
     }
 
     // Métodos
+
+
 
     /**
      * Método responsável por adicionar uma empresa a lista de gestão de empresas
@@ -28,8 +30,8 @@ public class GerirEmpresas {
      * @param nome Nome da empresa
      * @return Retorna os dados da empresa, caso exista.
      */
-    public static Empresa pesquisarEmpresa(String nome){
-        if(GerirEmpresas.empresas != null){
+    public Empresa pesquisarEmpresa(String nome){
+        if(this.empresas != null){
             for (Empresa empresa : empresas) {
                 if (empresa.getNome().equals(nome)) {
                     return empresa;
@@ -44,8 +46,8 @@ public class GerirEmpresas {
      *
      * @param nome Nome da empresa a ser apagada
      */
-    public static void apagarEmpresa(String nome){
-        if(GerirEmpresas.empresas != null){
+    public void apagarEmpresa(String nome){
+        if(this.empresas != null){
             for(int i=0; i< empresas.size(); i++){
                 if(Objects.equals(empresas.get(i).getNome(), nome)){
                     empresas.remove(i);
@@ -183,6 +185,6 @@ public class GerirEmpresas {
      * @param empresas lista de empresas geridas
      */
     public void setEmpresas(ArrayList<Empresa> empresas) {
-        GerirEmpresas.empresas = empresas;
+        this.empresas = empresas;
     }
 }
