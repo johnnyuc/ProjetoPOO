@@ -2,12 +2,13 @@ package modulos.gui;
 
 import modulos.dados.*;
 import modulos.empresas.*;
-import static modulos.empresas.GerirEmpresas.*;
 
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
+
+import static modulos.empresas.GerirEmpresas.empresas;
 
 /**
  * Classe utilizada para criar novas janelas e editar janelas preexistentes
@@ -585,69 +586,93 @@ public class JanelaCriaEdita extends JFrame {
         try {
             switch (Objects.requireNonNull(botaoSelecionador.getSelectedItem()).toString()) {
                 case "Café":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        emppresas.add(new Cafe(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            empresas.add(new Cafe(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Pastelaria":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        empresas.add(new Pastelaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            empresas.add(new Pastelaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Restaurante Fastfood":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("") || jTextField10.getText().equals("") || jTextField11.getText().equals("") || jTextField12.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        empresas.add(new Fastfood(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Float.parseFloat(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("") || jTextField10.getText().equals("") || jTextField11.getText().equals("") || jTextField12.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            empresas.add(new Fastfood(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Float.parseFloat(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Restaurante Local":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        empresas.add(new Local(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            empresas.add(new Local(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Frutaria":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        empresas.add(new Frutaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), Integer.parseInt(jTextField6.getText()), Float.parseFloat(jTextField7.getText())));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            empresas.add(new Frutaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), Integer.parseInt(jTextField6.getText()), Float.parseFloat(jTextField7.getText())));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Mercado":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        empresas.add(new Mercado(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), jTextField6.getText(), Integer.parseInt(jTextField7.getText()), Float.parseFloat(jTextField8.getText())));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            empresas.add(new Mercado(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), jTextField6.getText(), Integer.parseInt(jTextField7.getText()), Float.parseFloat(jTextField8.getText())));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                 default:
                     break;
@@ -667,101 +692,121 @@ public class JanelaCriaEdita extends JFrame {
         try {
             switch (Objects.requireNonNull(botaoSelecionador.getSelectedItem()).toString()) {
                 case "Café":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        Cafe cafe = (Cafe) editar;
-                        cafe.setNome(jTextField1.getText());
-                        cafe.setDistrito(jTextField2.getText());
-                        cafe.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
-                        cafe.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
-                        cafe.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
-                        cafe.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
-                        cafe.setCafesMedioDiario(Float.parseFloat(jTextField8.getText()));
-                        cafe.setFaturacaoMediaAnualCafe(Float.parseFloat(jTextField9.getText()));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                        } else {
+                            Cafe cafe = (Cafe) editar;
+                            cafe.setNome(jTextField1.getText());
+                            cafe.setDistrito(jTextField2.getText());
+                            cafe.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                            cafe.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
+                            cafe.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
+                            cafe.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
+                            cafe.setCafesMedioDiario(Float.parseFloat(jTextField8.getText()));
+                            cafe.setFaturacaoMediaAnualCafe(Float.parseFloat(jTextField9.getText()));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Pastelaria":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        Pastelaria pastelaria = (Pastelaria) editar;
-                        pastelaria.setNome(jTextField1.getText());
-                        pastelaria.setDistrito(jTextField2.getText());
-                        pastelaria.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
-                        pastelaria.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
-                        pastelaria.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
-                        pastelaria.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
-                        pastelaria.setBolosMedioDiario(Float.parseFloat(jTextField8.getText()));
-                        pastelaria.setFaturacaoMediaAnualBolo(Float.parseFloat(jTextField9.getText()));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            Pastelaria pastelaria = (Pastelaria) editar;
+                            pastelaria.setNome(jTextField1.getText());
+                            pastelaria.setDistrito(jTextField2.getText());
+                            pastelaria.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                            pastelaria.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
+                            pastelaria.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
+                            pastelaria.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
+                            pastelaria.setBolosMedioDiario(Float.parseFloat(jTextField8.getText()));
+                            pastelaria.setFaturacaoMediaAnualBolo(Float.parseFloat(jTextField9.getText()));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Restaurante Fastfood":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("") || jTextField10.getText().equals("") || jTextField11.getText().equals("") || jTextField12.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        Fastfood fastfood = (Fastfood) editar;
-                        fastfood.setNome(jTextField1.getText());
-                        fastfood.setDistrito(jTextField2.getText());
-                        fastfood.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
-                        fastfood.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
-                        fastfood.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
-                        fastfood.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
-                        fastfood.setDiasFuncionamento(Integer.parseInt(jTextField8.getText()));
-                        fastfood.setMesasInterior(Integer.parseInt(jTextField9.getText()));
-                        fastfood.setFaturacaoMediaMesaDiario(Float.parseFloat(jTextField10.getText()));
-                        fastfood.setClientesMedioDrive(Float.parseFloat(jTextField11.getText()));
-                        fastfood.setFaturacaoMediaClienteDrive(Float.parseFloat(jTextField12.getText()));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("") || jTextField10.getText().equals("") || jTextField11.getText().equals("") || jTextField12.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            Fastfood fastfood = (Fastfood) editar;
+                            fastfood.setNome(jTextField1.getText());
+                            fastfood.setDistrito(jTextField2.getText());
+                            fastfood.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                            fastfood.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
+                            fastfood.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
+                            fastfood.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
+                            fastfood.setDiasFuncionamento(Integer.parseInt(jTextField8.getText()));
+                            fastfood.setMesasInterior(Integer.parseInt(jTextField9.getText()));
+                            fastfood.setFaturacaoMediaMesaDiario(Float.parseFloat(jTextField10.getText()));
+                            fastfood.setClientesMedioDrive(Float.parseFloat(jTextField11.getText()));
+                            fastfood.setFaturacaoMediaClienteDrive(Float.parseFloat(jTextField12.getText()));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Restaurante Local":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        Local local = (Local) editar;
-                        local.setNome(jTextField1.getText());
-                        local.setDistrito(jTextField2.getText());
-                        local.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
-                        local.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
-                        local.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
-                        local.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
-                        local.setDiasFuncionamento(Integer.parseInt(jTextField8.getText()));
-                        local.setMesasInterior(Integer.parseInt(jTextField9.getText()));
-                        local.setMesasEsplanada(Integer.parseInt(jTextField10.getText()));
-                        local.setCustoLicencaMesaEsplanada(Float.parseFloat(jTextField11.getText()));
-                        local.setFaturacaoMediaMesaDiario(Float.parseFloat(jTextField12.getText()));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            Local local = (Local) editar;
+                            local.setNome(jTextField1.getText());
+                            local.setDistrito(jTextField2.getText());
+                            local.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                            local.setEmpregadosMesa(Integer.parseInt(jTextField5.getText()));
+                            local.setSalarioMedioAnual(Float.parseFloat(jTextField6.getText()));
+                            local.setClientesMedioDiario(Float.parseFloat(jTextField7.getText()));
+                            local.setDiasFuncionamento(Integer.parseInt(jTextField8.getText()));
+                            local.setMesasInterior(Integer.parseInt(jTextField9.getText()));
+                            local.setMesasEsplanada(Integer.parseInt(jTextField10.getText()));
+                            local.setCustoLicencaMesaEsplanada(Float.parseFloat(jTextField11.getText()));
+                            local.setFaturacaoMediaMesaDiario(Float.parseFloat(jTextField12.getText()));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Frutaria":
-                    if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("")) {
-                        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-                        botaoSelecionador.setSelectedIndex(0);
+                    if (GerirEmpresas.pesquisarEmpresa(jTextField1.getText()) != null) {
+                        JOptionPane.showMessageDialog(null, "Já existe uma empresa com este nome");
                     } else {
-                        Frutaria frutaria = (Frutaria) editar;
-                        frutaria.setNome(jTextField1.getText());
-                        frutaria.setDistrito(jTextField2.getText());
-                        frutaria.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
-                        frutaria.setCustoAnualLimpeza(Float.parseFloat(jTextField5.getText()));
-                        frutaria.setNumeroProdutos(Integer.parseInt(jTextField6.getText()));
-                        frutaria.setFaturacaoMediaAnualProduto(Float.parseFloat(jTextField7.getText()));
-                        JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                        janelaMae.atualizarLista();
-                        dispose();
+                        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("")) {
+                            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                            botaoSelecionador.setSelectedIndex(0);
+                        } else {
+                            Frutaria frutaria = (Frutaria) editar;
+                            frutaria.setNome(jTextField1.getText());
+                            frutaria.setDistrito(jTextField2.getText());
+                            frutaria.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
+                            frutaria.setCustoAnualLimpeza(Float.parseFloat(jTextField5.getText()));
+                            frutaria.setNumeroProdutos(Integer.parseInt(jTextField6.getText()));
+                            frutaria.setFaturacaoMediaAnualProduto(Float.parseFloat(jTextField7.getText()));
+                            JOptionPane.showMessageDialog(null, "Guardado com sucesso");
+                            janelaMae.atualizarLista();
+                            dispose();
+                        }
                     }
                     break;
                 case "Mercado":

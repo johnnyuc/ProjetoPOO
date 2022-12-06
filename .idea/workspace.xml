@@ -9,21 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Projeto Finalizado v1">
-      <change afterPath="$PROJECT_DIR$/test.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Bug fixing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Local.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +116,7 @@
       <workItem from="1670339846326" duration="24000" />
       <workItem from="1670340385420" duration="98000" />
       <workItem from="1670346476124" duration="2347000" />
-      <workItem from="1670350420958" duration="2715000" />
+      <workItem from="1670350420958" duration="4214000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -354,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670274376678</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Bug fixing">
+      <created>1670353224163</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670353224163</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +390,7 @@
     <MESSAGE value="Trabalho acabado, falta corrigir as funções de GerirEmpresas" />
     <MESSAGE value="Javadoc" />
     <MESSAGE value="Projeto Finalizado v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Projeto Finalizado v1" />
+    <MESSAGE value="Bug fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixing" />
   </component>
 </project>
