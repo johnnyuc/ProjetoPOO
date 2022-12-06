@@ -21,12 +21,19 @@ public class GerirEmpresas {
     }
 
     // Métodos
-
-
+    public boolean empresaUnica(String nome){
+        if(empresas!=null){
+            for (Empresa empresa: empresas){
+                if (empresa.getNome().equals(nome)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
     /**
-     * Método responsável por adicionar uma empresa a lista de gestão de empresas
-     *
+     * Método responsável por pesquisar uma empresa a lista de gestão de empresas
      * @param nome Nome da empresa
      * @return Retorna os dados da empresa, caso exista.
      */

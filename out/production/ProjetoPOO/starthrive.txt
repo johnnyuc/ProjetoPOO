@@ -1,0 +1,146 @@
+/Dummy data file
+
+/Ficheiro aceita comentários com / no início da linha
+
+
+/Cafés
+
+/* @param nome O nome da empresa
+/* @param distrito O distrito onde se localiza a empresa
+/* @param coordenadas As coordenadas da empresa
+/* @param empregadosMesa O número de empregados de mesa
+/* @param salarioMedioAnual O custo do salário médio anual
+/* @param clientesMedioDiario O número médio de clientes diário
+/* @param cafesMedioDiario O número médio de cafés que são vendidos por dia
+/* @param faturacaoMediaAnualCafe O valor médio de faturação anual por café vendido por dia
+
+/tipo; nome; distrito; {latitude; longitude}; empregadosMesa; salarioMedioAnual; clientesMedioDiario; cafesMedioDiario; faturacaoMediaAnualCafe
+Café; Solo Café; Aveiro; 40.6411; -8.6534; 5; 1000; 100; 120; 0.5;
+Café; Café Avenida; Lisboa; 38.7223; -9.1393; 7; 2200; 220; 240; 1.5;
+Café; Pão Quente; Viseu; 40.6411; -8.6534; 4; 1300; 130; 150; 1.0;
+Café; Café Boavida; Porto; 41.1496; -8.6109; 10; 2040; 206; 260; 0.5;
+Café; Café Copenhagen; Coimbra; 40.2033; -8.4103; 5; 1045; 140; 100; 0.5;
+Café; Portugal dos Granditos Café; Braga; 41.5578; -8.4201; 8; 2000; 250; 270; 1.5;
+Café; Royale Café; Leiria; 39.7436; -8.8078; 6; 1600; 165; 130; 1.0;
+Café; Mais Café; Viana do Castelo; 41.6931; -8.8318; 4; 2050; 230; 230; 0.5;
+Café; Caféuzes; Bragança; 41.8058; -6.7573; 5; 1300; 100; 170; 1.5;
+Café; Outro Café; Vila Real; 41.3005; -7.7446; 7; 2000; 220; 200; 0.5;
+
+
+/Pastelarias
+
+/* @param nome O nome da empresa
+/* @param distrito O distrito onde se localiza a empresa
+/* @param coordenadas As coordenadas da empresa
+/* @param empregadosMesa O número de empregados de mesa
+/* @param salarioMedioAnual O custo do salário médio anual
+/* @param clientesMedioDiario O número médio de clientes diário
+/* @param bolosMedioDiario O número de bolos vendidos por dia
+/* @param faturacaoMediaAnualBolo O custo médio de um bolo vendido por dia
+
+/tipo; nome; distrito; {latitude; longitude}; empregadosMesa; salarioMedioAnual; clientesMedioDiario; bolosMedioDiario; faturacaoMediaAnualBolo
+Pastelaria; O Pasteleiro; Aveiro; 40.6431; -8.6134; 5; 3000; 100; 200; 0.5
+Pastelaria; Pastelândia; Braga; 38.7543; -6.3476; 7; 2000; 50; 100; 1.5
+Pastelaria; Império dos Bolos; Vila Real; 40.2563; -9.8722; 4; 2000; 80; 100; 0.5
+Pastelaria; Portalegre Pastelaria; Portalegre; 37.1943; -8.9876; 5; 1000; 40; 100; 1.0
+Pastelaria; Pastelaria do Rei; Beja; 39.7089; -7.2131; 6; 3000; 100; 200; 1.5
+Pastelaria; Casarão dos Doces; Faro; 40.3218; -9.3472; 4; 2000; 80; 100; 1.0
+Pastelaria; Divina Massa; Coimbra; 39.0921; -8.2558; 7; 1000; 50; 80; 0.5
+Pastelaria; Bolos e Casamentos; Faro; 38.7856; -7.2342; 8; 2000; 80; 100; 1.0
+Pastelaria; Queques; Porto; 40.8967; -6.9837; 5; 3000; 100; 200; 0.5
+Pastelaria; Croissanteria Primeira; Aveiro; 41.5431; -9.6741; 6; 1000; 50; 70; 1.5
+
+/Restaurante Fastfood
+
+/* @param nome O nome da empresa
+/* @param distrito O distrito onde se localiza a empresa
+/* @param coordenadas As coordenadas da empresa
+/* @param empregadosMesa O número de empregados de mesa
+/* @param salarioMedioAnual O custo do salário médio anual
+/* @param clientesMedioDiario O número médio de clientes diário
+/* @param diasFuncionamento O número de dias de funcionamento
+/* @param mesasInterior O número de mesas no interior
+/* @param faturacaoMediaMesaDiario A faturação média por mesa
+/* @param clientesMedioDrive O número médio de clientes 'drive-thru' diário
+/* @param faturacaoMediaClienteDrive O valor médio de faturação por cliente de 'drive-thru' (diário)
+
+/tipo; nome; distrito; {latitude; longitude}; empregadosMesa; salarioMedioAnual; clientesMedioDiario; diasFuncionamento; mesasInterior; faturacaoMediaMesaDiario; clientesMedioDrive; faturacaoMediaClienteDrive
+Fastfood; Burguetariano; Aveiro; 40.6211; -8.4534; 5; 1000; 100; 100; 15; 105.5; 2.8; 3.5;
+Fastfood; Pitada Picante; Bragança; 35.7667; -7.4325; 7; 1500; 200; 100; 20; 200.0; 3.5; 4.1;
+Fastfood; Vegfast; Porto; 38.4323; -9.4565; 6; 2000; 150; 200; 18; 150.3; 1.9; 3.8;
+Fastfood; Quero Queso; Viseu; 39.1098; -8.1652; 5; 1000; 180; 150; 22; 100.3; 2.3; 2.3;
+Fastfood; Sandes; Coimbra; 41.7865; -7.8757; 8; 1500; 200; 100; 17; 204.2; 2.8; 3.2;
+Fastfood; Wok; Vila Real; 40.9876; -9.1732; 7; 2000; 150; 200; 15; 180.5; 3.2; 3.7;
+Fastfood; Taco Bell; Faro; 37.5645; -8.6534; 8; 1500; 100; 150; 20; 270.1; 3.5; 3.5;
+Fastfood; Wrap To Go; Aveiro; 39.3451; -9.3342; 5; 1000; 200; 100; 22; 100.2; 2.8; 2.9;
+Fastfood; Guru Burgers; Évora; 41.0990; -7.9078; 6; 2000; 150; 200; 18; 120.6; 3.1; 3.3;
+Fastfood; Pizza Hut; Lisboa; 40.2132; -8.4365; 7; 1500; 100; 200; 20; 170.2; 2.8; 2.6;
+
+/Restaurante Local
+
+/* @param nome O nome da empresa
+/* @param distrito O distrito onde se localiza a empresa
+/* @param coordenadas As coordenadas da empresa
+/* @param empregadosMesa O número de empregados de mesa
+/* @param salarioMedioAnual O custo do salário médio anual
+/* @param clientesMedioDiario O número médio de clientes diário
+/* @param diasFuncionamento O número de dias de funcionamento
+/* @param mesasInterior O número de mesas no interior
+/* @param mesasEsplanada O número de mesas na esplanada
+/* @param custoLicencaMesaEsplanada O custo da licença de mesa na esplanada
+/* @param faturacaoMediaMesaDiario A faturação média por mesa
+
+/tipo; nome; distrito; {latitude; longitude}; empregadosMesa; salarioMedioAnual; clientesMedioDiario; diasFuncionamento; mesasInterior; mesasEsplanada; custoLicencaMesaEsplanada; faturacaoMediaMesaDiario
+Local; Fogão a Lenha; Aveiro; 40.6461; -8.6574; 5; 1000; 100; 100; 6; 8; 125.0; 138.0;
+Local; Bom de Garfo; Lisboa; 41.5676; -9.4434; 10; 2200; 120; 130; 10; 12; 120.0; 140.2;
+Local; Panela de Ferro; Coimbra; 40.8756; -7.6787; 8; 2000; 90; 110; 8; 10; 132.2; 138.7;
+Local; Dona Amélia; Beja; 39.3452; -9.3341; 12; 1800; 100; 100; 11; 12; 130.0; 143.4;
+Local; Massas e Pizzas; Faro; 37.7877; -7.1123; 6; 1500; 110; 120; 7; 11; 123.4; 129.9;
+Local; Paladar; Vila Real; 41.3245; -8.6534; 9; 2000; 90; 100; 6; 9; 132.8; 133.2;
+Local; Menu Gourmet; Porto; 39.9000; -9.9078; 10; 2300; 100; 110; 10; 12; 125.3; 123.4;
+Local; Le Fork; Bragança; 37.5673; -7.3433; 5; 2500; 120; 100; 12; 14; 121.9; 130.0;
+Local; Tempero Rústico; Lisboa; 40.3432; -8.3205; 12; 2100; 80; 130; 11; 12; 127.4; 135.4;
+Local; Delícias do Campo; Braga; 38.1232; -7.4522; 8; 1900; 100; 110; 10; 12; 120.3; 140.2;
+
+/Frutaria
+
+/* @param nome O nome da empresa
+/* @param distrito O distrito onde se localiza a empresa
+/* @param coordenadas As coordenadas da empresa
+/* @param custoAnualLimpeza O custo anual de limpeza da mercearia
+/* @param numeroProdutos O número de produtos para venda na frutaria
+/* @param faturacaoMediaAnualProduto O valor médio de faturação anual por produto
+
+/tipo; nome; distrito; {latitude; longitude}; empregadosMesa; salarioMedioAnual; clientesMedioDiario; cafesMedioDiario; faturacaoMediaAnualCafe
+Frutaria; Mercado Municipal; Aveiro; 40.6321; -8.6534; 3500; 1294; 1420.68;
+Frutaria; Banca Orgânica; Braga; 37.2352; -10.0001; 5000; 1500; 1670.43;
+Frutaria; Naturale; Leiria; 41.1325; -6.2354; 4200; 1480; 1876.32;
+Frutaria; Sabor Tropical; Faro; 409867; -8.4554; 3600; 2100; 2345.98;
+Frutaria; Fresh Frutaria; Beja; 39.1111; -7.1243; 3000; 2500; 2197.32;
+Frutaria; La Fruta; Lisboa; 38.2332; -4.7865; 2500; 2000; 1782;98
+Frutaria; Pomar da Esquina; Porto; 40.3945; -9.8123; 3800; 1980; 2321.01;
+Frutaria; Colheita Fresca; Coimbra; 42.3461; -8.4356; 4000; 1560; 1988.99;
+Frutaria; Quintal das Frutas; Vila Real; 38.5423; -10.1125; 3200; 2400; 2321.23;
+Frutaria; Doce Frutaria; Guarda; 36.9070; -9.4521; 2800; 1874; 1097.11;
+
+/Mercado
+
+/* @param nome O nome da empresa
+/* @param distrito O distrito onde se localiza a empresa
+/* @param coordenadas As coordenadas da empresa
+/* @param custoAnualLimpeza O custo anual de limpeza da mercearia
+/* @param tipo A tipologia de mercado (pode ser mini, super, hiper)
+/* @param areaCorredores A área em metros quadrados dos corredores
+/* @param faturacaoMediaAnualM2 A faturação anual por metro quadrado
+
+/tipo; nome; distrito; {latitude; longitude}; empregadosMesa; salarioMedioAnual; clientesMedioDiario; cafesMedioDiario; faturacaoMediaAnualCafe
+Mercado; Central das Compras; Aveiro; 40.6411; -8.6534; 9231; super; 498; 3293;
+Mercado; Continente; Guarda; 42.5434; -9.8733; 8743; mini; 554; 4565;
+Mercado; Bom Preço; Vila Real; 45.3212; -6.2341; 7845; hiper; 428; 3999;
+Mercado; Minipreço; Coimbra; 43.9987; -7.9987; 9812; hiper; 440; 2897;
+Mercado; Leve Mais; Porto; 42.9067; -10.4576; 8765; mini; 510; 4000;
+Mercado; Auchan; Lisboa; 40.6675; -9.6541; 7345; super; 574; 4532;
+Mercado; Max Mercado; Beja; 39.5465; -8.9121; 91232; mini; 399; 3765;
+Mercado; Pague Menos; Faro; 39.7600; -10.4434; 7453; hiper; 444; 4342;
+Mercado; Sempre Vale; Leiria; 41.3323; -6.3217; 8234; super; 498; 5443;
+Mercado; Market; Braga; 42.9657; -5.9887; 98765; super; 512; 4982;

@@ -1,0 +1,2 @@
+* Verificar a estrutura dos modulos para ficar conforme o que é pedido.
+* Ter em atenção à convenção para o nome das classes, variáveis e métodos.
