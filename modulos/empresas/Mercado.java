@@ -35,7 +35,7 @@ public class Mercado extends Mercearia {
         this.tipoMercado = tipoMercado;
         this.areaCorredores = areaCorredores;
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
-        this.tipo = 5;
+        this.setTipo(5);
     }
 
 
@@ -56,7 +56,7 @@ public class Mercado extends Mercearia {
      * @return O valor da despesa anual
      */
     public float calcularDespesaAnual() {
-        return custoAnualLimpeza;
+        return getCustoAnualLimpeza();
     }
 
     // Getters and Setters e Overrides
@@ -114,8 +114,8 @@ public class Mercado extends Mercearia {
     public String toString(){
         String s=
                 "Tipo                  :\t"+"Mercado"+
-                "\nNome                :\t"+this.nome+
-                "\nDistrito            :\t"+this.distrito+
+                "\nNome                :\t"+this.getNome()+
+                "\nDistrito            :\t"+this.getDistrito()+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+
                 "\nLucro               :\t";

@@ -28,7 +28,7 @@ public class Frutaria extends Mercearia {
         super(nome, distrito, coordenadas, custoAnualLimpeza);
         this.numeroProdutos = numeroProdutos;
         this.faturacaoMediaAnualProduto = faturacaoMediaAnualProduto;
-        this.tipo = 4;
+        this.setTipo(4);
     }
 
 
@@ -49,7 +49,7 @@ public class Frutaria extends Mercearia {
      * @return O valor da despesa anual
      */
     public float calcularDespesaAnual() {
-        return custoAnualLimpeza;
+        return getCustoAnualLimpeza();
     }
 
     // Getters and Setters e Overrides
@@ -93,8 +93,8 @@ public class Frutaria extends Mercearia {
     public String toString(){
         String s=
                 "Tipo                  :\t"+"Frutaria"+
-                "\nNome                :\t"+this.nome+
-                "\nDistrito            :\t"+this.distrito+
+                "\nNome                :\t"+this.getNome()+
+                "\nDistrito            :\t"+this.getDistrito()+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+
                 "\nLucro               :\t";

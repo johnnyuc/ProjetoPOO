@@ -1,0 +1,286 @@
+@startuml
+!define LIGHTGREEN
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+
+package modulos.dados {
+    class Escritor {
+    + String baseDados
+    ---
+    + guardaDadosDat(ArrayList<Empresa> empresas)
+    ---
+    }
+    class Leitor {
+    - String baseDados
+    - String baseDadosTxt
+    ---
+    + carregaDadosTxt()
+    + carregaDadosDat()
+    ---
+    }
+}
+
+package modulos.empresas {
+    class GerirEmpresas {
+    + ArrayList<Empresa> empresas
+    ---
+    + pesquisarEmpresa(String nome)
+    + apagarEmpresa(String nome)
+    + maiorReceitaAnual(int tipoProcurar)
+    + menorDespesaAnual(int tipoProcurar)
+    + maiorLucroAnual(int tipoProcurar)
+    + maiorCapacidadeClientes(int tipoProcurar)
+    ---
+    + getEmpresas()
+    + setEmpresas(ArrayList<Empresa> empresas)
+    }
+    abstract Empresa {
+    + String nome
+    + String distrito
+    + float[] coordenadas
+    + int tipo
+    ---
+    + calcularDespesaAnual()
+    + calcularReceitaAnual()
+    + calcularLucro()
+    ---
+    + getTipo()
+    + setTipo(int tipo)
+    + getNome()
+    + setNome(String nome)
+    + getDistrito()
+    + setDistrito(String distrito)
+    + getCoordenadas()
+    + setCoordenadas(float[] coordenadas)
+    }
+    abstract Restauracao {
+    + int empregadosMesa
+    + float salarioMedioAnual
+    + float clientesMedioDiario
+    ---
+    ---
+    + getEmpregadosMesa()
+    + setEmpregadosMesa(int empregadosMesa)
+    + getSalarioMedioAnual()
+    + setSalarioMedioAnual(float salarioMedioAnual)
+    + getClientesMedioDiario()
+    + setClientesMedioDiario(float clientesMedioDiario)
+    }
+    class Cafe {
+    - cafesMedioDiario
+    - faturacaoMediaAnualCafe
+    ---
+    + calcularReceitaAnual()
+    + calcularDespesaAnual()
+    ---
+    + getCafesMedioDiario()
+    + setCafesMedioDiario(float cafesMedioDiario)
+    + getFaturacaoMediaAnualCafe()
+    + setFaturacaoMediaAnualCafe(float faturacaoMediaAnualCafe)
+    }
+    class Pastelaria {
+    - float bolosMedioDiario
+    - float faturacaoMediaAnualBolo
+    ---
+    + calcularReceitaAnual()
+    + calcularDespesaAnual()
+    ---
+    + getBolosMedioDiario()
+    + setBolosMedioDiario(float bolosMedioDiario)
+    + getFaturacaoMediaAnualBolo()
+    + setFaturacaoMediaAnualBolo(float faturacaoMediaAnualBolo)
+    }
+    abstract Restaurante {
+    + int diasFuncionamento
+    ---
+    ---
+    + getDiasFuncionamento()
+    + setDiasFuncionamento(int diasFuncionamento)
+    }
+    class Fastfood {
+    - int mesasInterior
+    - float faturacaoMediaMesaDiario
+    - float clientesMedioDrive
+    - float faturacaoMediaClienteDrive
+    ---
+    + calcularReceitaAnual()
+    + calcularDespesaAnual()
+    ---
+    + getMesasInterior()
+    + setMesasInterior(int mesasInterior)
+    + getFaturacaoMediaMesaDiario()
+    + setFaturacaoMediaMesaDiario(float faturacaoMediaMesaDiario)
+    + getClientesMedioDrive()
+    + setClientesMedioDrive(float clientesMedioDrive)
+    + getFaturacaoMediaClienteDrive()
+    + setFaturacaoMediaClienteDrive(float faturacaoMediaClienteDrive)
+    }
+    class Local {
+    - int mesasInterior
+    - int mesasEsplanada
+    - float custoLicencaMesaEsplanada
+    - float faturacaoMediaMesaDiario
+    ---
+    + calcularReceitaAnual()
+    + calcularDespesaAnual()
+    ---
+    + getMesasInterior()
+    + setMesasInterior(int mesasInterior)
+    + getMesasEsplanada()
+    + setMesasEsplanada(int mesasEsplanada)
+    + getCustoLicencaMesaEsplanada()
+    + setCustoLicencaMesaEsplanada(float custoLicencaMesaEsplanada)
+    + getFaturacaoMediaMesaDiario()
+    + setFaturacaoMediaMesaDiario(float faturacaoMediaMesaDiario)
+    }
+    abstract Mercearia {
+    + custoAnualLimpeza
+    ---
+    ---
+    + getCustoAnualLimpeza()
+    + setCustoAnualLimpeza(float custoAnualLimpeza)
+    }
+    class Frutaria {
+    - int numeroProdutos
+    - float faturacaoMediaAnualProduto
+    ---
+    + calcularReceitaAnual()
+    + calcularDespesaAnual()
+    ---
+    + getNumeroProdutos()
+    + setNumeroProdutos(int numeroProdutos)
+    + getFaturacaoMediaAnualProduto()
+    + setFaturacaoMediaAnualProduto(float faturacaoMediaAnualProduto)
+    }
+    class Mercado {
+    - String tipoMercado
+    - int areaCorredores
+    - float faturacaoMediaAnualM2
+    ---
+    + calcularReceitaAnual()
+    + calcularDespesaAnual()
+    ---
+    + getTipoMercado()
+    + setTipoMercado(String tipoMercado)
+    + getAreaCorredores()
+    + setAreaCorredores(int areaCorredores)
+    + getFaturacaoMediaAnualM2()
+    + setFaturacaoMediaAnualM2(float faturacaoMediaAnualM2)
+    }
+}
+
+package modulos.gui {
+    class JanelaPrincipal {
+    botaoOperacoes
+    botaoEstatisticas
+    botaoSair
+    labelTitulo
+    labelIcone
+    areaTexto
+    elementoScroll
+    labelDireitos
+    layout
+    ---
+    JanelaPrincipal
+    initComponents
+    gereLayout
+    }
+    class JanelaOperacoes {
+    selfInstance
+    jScrollPane2
+    tabela
+    botaoCriar
+    botaoRemover
+    botaoEditar
+    botaoPesquisar
+    botaoFechar
+    layout
+    ---
+    JanelaOperacoes
+    initComponentsOperacoes
+    gereLayout
+    arrayDadosEmpresas
+    sorter
+    atualizarLista
+    }
+    class JanelaCriaEditar {
+    janelaMae
+    editar
+    botaoSelecionador
+    labelInfo
+    jLabel1
+    jTextField1
+    jLabel2
+    jTextField2
+    jLabel3
+    jTextField3
+    jLabel4
+    jTextField4
+    jLabel5
+    jTextField5
+    jLabel6
+    jTextField6
+    jLabel7
+    jTextField7
+    jLabel8
+    jTextField8
+    jLabel9
+    jTextField9
+    jLabel10
+    jTextField10
+    jLabel11
+    jTextField11
+    jLabel12
+    jTextField12
+    botaoGuardar
+    botaoFechar
+    layout
+    ---
+    initComponentsCriar
+    initComponentsEditar
+    gereLayout
+    botaoSelecionadorActionPerformed
+    botaoGuardarActionPerformed
+    botaoAlterarActionPerformed
+    }
+    class JanelaEstatisticas {
+    painelMae
+    cafePanel
+    pastelariaPanel
+    fastfoodPanel
+    localPanel
+    frutariaPanel
+    mercadoPanel
+    ---
+    JanelaEstatisticas
+    initComponents
+    gereLayout
+    cafeActionPerformed
+    pastelariaActionPerformed
+    fastfoodActionPerformed
+    localActionPerformed
+    frutariaActionPerformed
+    mercadoActionPerformed
+    }
+}
+
+class Main {
+    ---
+    + main(String[] args)
+    + booting()
+    + display(GerirEmpresas StarThrive)
+}
+
+Main <-- GerirEmpresas
+GerirEmpresas <-- Empresa
+Empresa <-- Restauracao
+Empresa <-- Mercearia
+Restauracao <-- Cafe
+Restauracao <-- Pastelaria
+Restauracao <-- Restaurante
+Restaurante <-- Fastfood
+Restaurante <-- Local
+Mercearia <-- Frutaria
+Mercearia <-- Mercado
+
+
+@enduml

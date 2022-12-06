@@ -8,7 +8,7 @@ public abstract class Restaurante extends Restauracao {
     /**
      * O número de dias de funcionamento do estabelecimento por ano
      */
-    public int diasFuncionamento;
+    private int diasFuncionamento;
 
 
     /**

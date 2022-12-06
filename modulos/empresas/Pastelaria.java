@@ -30,7 +30,7 @@ public class Pastelaria extends Restauracao {
         super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
         this.bolosMedioDiario = bolosMedioDiario;
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;
-        this.tipo = 1;
+        this.setTipo(1);
     }
 
 
@@ -51,7 +51,7 @@ public class Pastelaria extends Restauracao {
      * @return O valor da despesa anual
      */
     public float calcularDespesaAnual() {
-        return empregadosMesa * salarioMedioAnual;
+        return getEmpregadosMesa() * getSalarioMedioAnual();
     }
 
     /**
@@ -93,8 +93,8 @@ public class Pastelaria extends Restauracao {
     public String toString(){
         String s=
                 "Tipo                  :\t"+"Pastelaria"+
-                "\nNome                :\t"+this.nome+
-                "\nDistrito            :\t"+this.distrito+
+                "\nNome                :\t"+this.getNome()+
+                "\nDistrito            :\t"+this.getDistrito()+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+
                 "\nLucro               :\t";

@@ -8,16 +8,16 @@ public abstract class Restauracao extends Empresa {
     /**
      * O número de empregados de mesa
      */
-    public int empregadosMesa;
+    private int empregadosMesa;
     /**
      * O custo do salário médio anual por empregado de mesa
      */
-    public float salarioMedioAnual;
+    private float salarioMedioAnual;
     /**
      * O número médio de clientes diário
      * Este campo é transversal a todas as empresas de restauração, logo foi passado à classe mãe
      */
-    public float clientesMedioDiario;
+    private float clientesMedioDiario;
 
 
     /**

@@ -589,7 +589,7 @@ public class JanelaCriaEdita extends JFrame {
                         JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                         botaoSelecionador.setSelectedIndex(0);
                     } else {
-                        empresas.add(new Cafe(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
+                        emppresas.add(new Cafe(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
                         JOptionPane.showMessageDialog(null, "Guardado com sucesso");
                         janelaMae.atualizarLista();
                         dispose();

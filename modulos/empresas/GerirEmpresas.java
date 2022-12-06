@@ -9,7 +9,7 @@ public class GerirEmpresas {
     /**
      * Lista de empresas
      */
-    public static ArrayList <Empresa> empresas;
+    private ArrayList <Empresa> empresas;
 
 
     /**
@@ -17,7 +17,7 @@ public class GerirEmpresas {
      * @param empresas A lista de empresas
      */
     public GerirEmpresas(ArrayList <Empresa> empresas){
-        GerirEmpresas.empresas = empresas;
+        this.empresas = empresas;
     }
 
     // Métodos
@@ -29,9 +29,9 @@ public class GerirEmpresas {
      * @return Retorna os dados da empresa, caso exista.
      */
     public static Empresa pesquisarEmpresa(String nome){
-        if(empresas != null){
+        if(this.empresas != null){
             for (Empresa empresa : empresas) {
-                if (empresa.nome.equals(nome)) {
+                if (empresa.getNome().equals(nome)) {
                     return empresa;
                 }
             }
@@ -44,10 +44,10 @@ public class GerirEmpresas {
      *
      * @param nome Nome da empresa a ser apagada
      */
-    public static void apagarEmpresa(String nome){
-        if(empresas!=null){
+    public  void apagarEmpresa(String nome){
+        if(this.empresas != null){
             for(int i=0; i< empresas.size(); i++){
-                if(Objects.equals(empresas.get(i).nome, nome)){
+                if(Objects.equals(empresas.get(i).getNome(), nome)){
                     empresas.remove(i);
                     return;
                 }
@@ -65,10 +65,10 @@ public class GerirEmpresas {
             String nome = "";
             float valor = Float.MIN_VALUE;
             for (Empresa empresa : empresas) {
-                if (empresa.tipo == tipoProcurar) {
+                if (empresa.getTipo() == tipoProcurar) {
                     float receitaTemp = empresa.calcularReceitaAnual();
                     if (receitaTemp > valor) {
-                        nome = empresa.nome;
+                        nome = empresa.getNome();
                         valor = receitaTemp;
                     }
                 }
@@ -88,10 +88,10 @@ public class GerirEmpresas {
             String nome = "";
             float valor = Float.MAX_VALUE;
             for (Empresa empresa : empresas) {
-                if (empresa.tipo == tipoProcurar){
+                if (empresa.getTipo() == tipoProcurar){
                     float despesaTemp = empresa.calcularDespesaAnual();
                     if (despesaTemp < valor) {
-                        nome = empresa.nome;
+                        nome = empresa.getNome();
                         valor = despesaTemp;
                     }
                 }
@@ -110,10 +110,10 @@ public class GerirEmpresas {
             String nome = null;
             float valor = Float.MIN_VALUE;
             for (Empresa empresa : empresas) {
-                if (empresa.tipo==tipoProcurar){
+                if (empresa.getTipo() == tipoProcurar){
                     float lucroTemp = empresa.calcularLucro();
                     if (lucroTemp >= valor) {
-                        nome = empresa.nome;
+                        nome = empresa.getNome();
                         valor = lucroTemp;
                     }
                 }
@@ -139,18 +139,18 @@ public class GerirEmpresas {
                 String nome2= null;
                 float valor2 = Float.MIN_VALUE;
                 for (Empresa empresa : empresas) {
-                    if (empresa.tipo == tipoProcurar) {
-                        float clientesTemp = ((Restauracao)empresa).clientesMedioDiario;
+                    if (empresa.getTipo() == tipoProcurar) {
+                        float clientesTemp = ((Restauracao)empresa).getClientesMedioDiario();
                         if (clientesTemp >= valor1) {
                             //A empresa que antes estava em primeiro, agora passa a segunda
                             nome2= nome1;
                             valor2=valor1;
                             //Substituem-se os valores da empresa antes em primeiro, pelos novos dados
-                            nome1 = empresa.nome;
+                            nome1 = empresa.getNome();
                             valor1 = clientesTemp;
                         }
-                        if(!empresa.nome.equals(nome1)&&clientesTemp>=valor2){
-                            nome2 = empresa.nome;
+                        if(!empresa.getNome().equals(nome1)&&clientesTemp>=valor2){
+                            nome2 = empresa.getNome();
                             valor2 = clientesTemp;
                         }
                     }
@@ -183,6 +183,6 @@ public class GerirEmpresas {
      * @param empresas lista de empresas geridas
      */
     public void setEmpresas(ArrayList<Empresa> empresas) {
-        GerirEmpresas.empresas = empresas;
+        this.empresas = empresas;
     }
 }

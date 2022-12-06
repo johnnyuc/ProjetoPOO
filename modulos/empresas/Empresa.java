@@ -8,19 +8,19 @@ public abstract class Empresa implements java.io.Serializable {
     /**
      * O nome da empresa
      * */
-    public String nome;
+    private String nome;
     /**
      * O distrito da empresa
      * */
-    public String distrito;
+    private String distrito;
     /**
      * As coordendas da empresa (latitude e longitude)
      * */
-    public float[] coordenadas;
+    private float[] coordenadas;
     /**
      * A categoria de empresa
      */
-    int tipo;
+    private int tipo;
 
 
     /**

@@ -9,7 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Projeto Finalizado v1" />
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Projeto Finalizado v1">
+      <change afterPath="$PROJECT_DIR$/test.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Cafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +38,7 @@
         <option value="Class" />
         <option value="package-info" />
         <option value="module-info" />
+        <option value="UML Class" />
       </list>
     </option>
   </component>
@@ -54,13 +71,14 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/saulopiccirilo/final_poo/ProjetoPOO&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/johnn/IdeaProjects/ProjetoPOO&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -68,7 +86,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -105,6 +123,12 @@
       <workItem from="1670162878900" duration="1122000" />
       <workItem from="1670254262622" duration="1829000" />
       <workItem from="1670256118172" duration="334000" />
+      <workItem from="1670274306697" duration="1156000" />
+      <workItem from="1670275817605" duration="5782000" />
+      <workItem from="1670339846326" duration="24000" />
+      <workItem from="1670340385420" duration="98000" />
+      <workItem from="1670346476124" duration="2347000" />
+      <workItem from="1670350420958" duration="2715000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -323,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670274216686</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Projeto Finalizado v1">
+      <created>1670274376678</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670274376678</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

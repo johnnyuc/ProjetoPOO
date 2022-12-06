@@ -43,7 +43,7 @@ public class Fastfood extends Restaurante {
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
         this.clientesMedioDrive = clientesMedioDrive;
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
-        this.tipo = 2;
+        this.setTipo(2);
     }
 
 
@@ -55,7 +55,7 @@ public class Fastfood extends Restaurante {
      * @return O valor da receita anual
      */
     public float calcularReceitaAnual() {
-        return ((mesasInterior * faturacaoMediaMesaDiario) + (clientesMedioDrive * faturacaoMediaClienteDrive)) * diasFuncionamento;
+        return ((mesasInterior * faturacaoMediaMesaDiario) + (clientesMedioDrive * faturacaoMediaClienteDrive)) * getDiasFuncionamento();
     }
 
     /**
@@ -64,7 +64,7 @@ public class Fastfood extends Restaurante {
      * @return O valor da despesa anual
      */
     public float calcularDespesaAnual() {
-        return empregadosMesa * salarioMedioAnual;
+        return getEmpregadosMesa() * getSalarioMedioAnual();
     }
 
     // Getters and Setters e Overrides
@@ -140,8 +140,8 @@ public class Fastfood extends Restaurante {
     public String toString(){
         String s=
                 "Tipo                  :\t"+"Fastfood"+
-                "\nNome                :\t"+this.nome+
-                "\nDistrito            :\t"+this.distrito+
+                "\nNome                :\t"+this.getNome()+
+                "\nDistrito            :\t"+this.getDistrito()+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+
                 "\nLucro               :\t";

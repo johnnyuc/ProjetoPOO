@@ -8,7 +8,7 @@ public abstract class Mercearia extends Empresa {
     /**
      * O custo anual de limpeza da mercearia (seja ela frutaria ou mercado)
      */
-    public float custoAnualLimpeza;
+    private float custoAnualLimpeza;
 
 
     /**

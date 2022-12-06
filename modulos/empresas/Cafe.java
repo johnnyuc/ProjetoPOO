@@ -30,7 +30,7 @@ public class Cafe extends Restauracao {
         super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
         this.cafesMedioDiario = cafesMedioDiario;
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
-        this.tipo = 0;
+        this.setTipo(0);
     }
 
     // Métodos
@@ -50,7 +50,7 @@ public class Cafe extends Restauracao {
      * @return O valor da despesa anual
      */
     public float calcularDespesaAnual() {
-        return empregadosMesa * salarioMedioAnual;
+        return getEmpregadosMesa() * getSalarioMedioAnual();
     }
 
     // Getters and Setters e Overrides
@@ -94,8 +94,8 @@ public class Cafe extends Restauracao {
     public String toString(){
         String s=
                 "Tipo                  :\t"+"Café"+
-                "\nNome                :\t"+this.nome+
-                "\nDistrito            :\t"+this.distrito+
+                "\nNome                :\t"+this.getNome()+
+                "\nDistrito            :\t"+this.getDistrito()+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+
                 "\nLucro               :\t";

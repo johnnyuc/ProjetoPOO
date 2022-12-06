@@ -43,7 +43,7 @@ public class Local extends Restaurante {
         this.mesasEsplanada = mesasEsplanada;
         this.custoLicencaMesaEsplanada = custoLicencaMesaEsplanada;
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
-        this.tipo = 3;
+        this.setTipo(3);
     }
 
 
@@ -54,7 +54,7 @@ public class Local extends Restaurante {
      * @return O valor da receita anual
      */
     public float calcularReceitaAnual() {
-        return (mesasInterior + mesasEsplanada) * faturacaoMediaMesaDiario * diasFuncionamento;
+        return (mesasInterior + mesasEsplanada) * faturacaoMediaMesaDiario * getDiasFuncionamento();
     }
 
     /**
@@ -62,7 +62,7 @@ public class Local extends Restaurante {
      * @return O valor da despesa anual
      */
     public float calcularDespesaAnual() {
-        return (empregadosMesa * salarioMedioAnual) + (mesasEsplanada*custoLicencaMesaEsplanada);
+        return (getEmpregadosMesa() * getSalarioMedioAnual()) + (mesasEsplanada*custoLicencaMesaEsplanada);
     }
 
     // Getters and Setters e Overrides
@@ -138,8 +138,8 @@ public class Local extends Restaurante {
     public String toString(){
         String s=
                 "Tipo                  :\t"+"Local"+
-                "\nNome                :\t"+this.nome+
-                "\nDistrito            :\t"+this.distrito+
+                "\nNome                :\t"+this.getNome()+
+                "\nDistrito            :\t"+this.getDistrito()+
                 "\nDespesa Anual       :\t"+calcularDespesaAnual()+
                 "\nReceita Anual       :\t"+calcularReceitaAnual()+
                 "\nLucro               :\t";
