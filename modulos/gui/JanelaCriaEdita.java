@@ -23,120 +23,120 @@ public class JanelaCriaEdita extends JFrame {
     /**
      * Botão para o utilizador escolher a opção desejada
      */
-    JComboBox<String> botaoSelecionador = new JComboBox<>();
+    private final JComboBox<String> botaoSelecionador = new JComboBox<>();
     /**
      * Área destinada a mostrar as informações
      */
-    JLabel labelInfo = new JLabel();
+    private final JLabel labelInfo = new JLabel();
     /**
      * Área destinada a exibit o nome da empresa
      */
-    JLabel jLabel1 = new JLabel("Nome da empresa");
+    private final JLabel jLabel1 = new JLabel("Nome da empresa");
     /**
      * Secção de texto
      */
-    JTextField jTextField1 = new JTextField();
+    private final JTextField jTextField1 = new JTextField();
     /**
      * Área destinada a exibir o distrito da empresa
      */
-    JLabel jLabel2 = new JLabel("Distrito da empresa");
+    private final JLabel jLabel2 = new JLabel("Distrito da empresa");
     /**
      * Secção de texto
      */
-    JTextField jTextField2 = new JTextField();
+    private final JTextField jTextField2 = new JTextField();
     /**
      * Área destinada a exibir a latitude das coordenadas da empresa
      */
-    JLabel jLabel3 = new JLabel("Latitude de localização");
+    private final JLabel jLabel3 = new JLabel("Latitude de localização");
     /**
      * Secção de texto
      */
-    JTextField jTextField3 = new JTextField();
+    private final JTextField jTextField3 = new JTextField();
     /**
      * Área destinada a exibir a longitude das coordenadas da empresa
      */
-    JLabel jLabel4 = new JLabel("Longitude de localização");
+    private final JLabel jLabel4 = new JLabel("Longitude de localização");
     /**
      * Secção de texto
      */
-    JTextField jTextField4 = new JTextField();
+    private final JTextField jTextField4 = new JTextField();
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
-    JLabel jLabel5 = new JLabel();
+    private final JLabel jLabel5 = new JLabel();
     /**
      * Secção de texto
      */
-    JTextField jTextField5 = new JTextField();
+    private final JTextField jTextField5 = new JTextField();
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
-    JLabel jLabel6 = new JLabel();
+    private final JLabel jLabel6 = new JLabel();
     /**
      * Secção de texto
      */
-    JTextField jTextField6 = new JTextField();
+    private final JTextField jTextField6 = new JTextField();
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
-    JLabel jLabel7 = new JLabel();
+    private final JLabel jLabel7 = new JLabel();
     /**
      * Secção de texto
      */
-    JTextField jTextField7 = new JTextField();
+    private final JTextField jTextField7 = new JTextField();
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
-    JLabel jLabel8 = new JLabel();
+    private final JLabel jLabel8 = new JLabel();
     /**
      * Secção de texto
      */
-    JTextField jTextField8 = new JTextField();
+    private final JTextField jTextField8 = new JTextField();
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
-    JLabel jLabel9 = new JLabel();
+    private final JLabel jLabel9 = new JLabel();
     /**
      * Secção de texto
      */
-    JTextField jTextField9 = new JTextField();
+    private final JTextField jTextField9 = new JTextField();
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
-    JLabel jLabel10 = new JLabel();
+    private final JLabel jLabel10 = new JLabel();
     /**
      * Secção de texto
      */
-    JTextField jTextField10 = new JTextField();
+    private final JTextField jTextField10 = new JTextField();
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
-    JLabel jLabel11 = new JLabel();
+    private final JLabel jLabel11 = new JLabel();
     /**
      * Secção de texto
      */
-    JTextField jTextField11 = new JTextField();
+    private final JTextField jTextField11 = new JTextField();
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
-    JLabel jLabel12 = new JLabel();
+    private final JLabel jLabel12 = new JLabel();
     /**
      * Secção de texto
      */
-    JTextField jTextField12 = new JTextField();
+    private final JTextField jTextField12 = new JTextField();
     /**
      * Botão para guardar as informações alteradas
      */
-    JButton botaoGuardar = new JButton();
+    private final JButton botaoGuardar = new JButton();
     /**
      * Botão para fechar a janela
      */
-    JButton botaoFechar = new JButton();
+    private final JButton botaoFechar = new JButton();
     /**
      * Objeto proveniente do Netbeans utilizado para guardar as informações referentes
      * ao layout da janela
      */
-    GroupLayout layout = new GroupLayout(getContentPane());
+    private final GroupLayout layout = new GroupLayout(getContentPane());
 
     /**
      * Construtor responsável por inicializar a janela de criar
@@ -541,6 +541,8 @@ public class JanelaCriaEdita extends JFrame {
                 jTextField10.setVisible(false);
                 jLabel11.setVisible(false);
                 jTextField11.setVisible(false);
+                jLabel12.setVisible(false);
+                jTextField12.setVisible(false);
                 break;
             case "Mercado":
                 jLabel5.setText("Custo anual de limpeza");
@@ -576,9 +578,10 @@ public class JanelaCriaEdita extends JFrame {
     }
 
     private class BotaoGuardarActionListener implements ActionListener {
-        private final GerirEmpresas StarThrive;
-        public BotaoGuardarActionListener(GerirEmpresas StarThrive1) {
-            StarThrive=StarThrive1;
+        private final GerirEmpresas thisStarThrive;
+        private final Escritor escritor = new Escritor();
+        public BotaoGuardarActionListener(GerirEmpresas StarThrive) {
+            thisStarThrive = StarThrive;
         }
         /**
          * Método utilizado para criar uma empresa quando o utilizador premir o botão
@@ -594,10 +597,10 @@ public class JanelaCriaEdita extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
-                                if (StarThrive.empresaUnica(jTextField1.getText())) {
-                                    StarThrive.getEmpresas().add(new Cafe(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
+                                if (thisStarThrive.empresaUnica(jTextField1.getText())) {
+                                    thisStarThrive.getEmpresas().add(new Cafe(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -612,10 +615,10 @@ public class JanelaCriaEdita extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
-                                if (StarThrive.empresaUnica(jTextField1.getText())) {
-                                    StarThrive.getEmpresas().add(new Pastelaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
+                                if (thisStarThrive.empresaUnica(jTextField1.getText())) {
+                                    thisStarThrive.getEmpresas().add(new Pastelaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Float.parseFloat(jTextField8.getText()), Float.parseFloat(jTextField9.getText())));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -629,10 +632,10 @@ public class JanelaCriaEdita extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
-                                if (StarThrive.empresaUnica(jTextField1.getText())) {
-                                    StarThrive.getEmpresas().add(new Fastfood(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Float.parseFloat(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
+                                if (thisStarThrive.empresaUnica(jTextField1.getText())) {
+                                    thisStarThrive.getEmpresas().add(new Fastfood(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Float.parseFloat(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -647,10 +650,10 @@ public class JanelaCriaEdita extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
-                                if (StarThrive.empresaUnica(jTextField1.getText())) {
-                                    StarThrive.getEmpresas().add(new Local(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
+                                if (thisStarThrive.empresaUnica(jTextField1.getText())) {
+                                    thisStarThrive.getEmpresas().add(new Local(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Integer.parseInt(jTextField5.getText()), Float.parseFloat(jTextField6.getText()), Float.parseFloat(jTextField7.getText()), Integer.parseInt(jTextField8.getText()), Integer.parseInt(jTextField9.getText()), Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()), Float.parseFloat(jTextField12.getText())));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -665,10 +668,10 @@ public class JanelaCriaEdita extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
-                                if (StarThrive.empresaUnica(jTextField1.getText())) {
-                                    StarThrive.getEmpresas().add(new Frutaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), Integer.parseInt(jTextField6.getText()), Float.parseFloat(jTextField7.getText())));
+                                if (thisStarThrive.empresaUnica(jTextField1.getText())) {
+                                    thisStarThrive.getEmpresas().add(new Frutaria(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), Integer.parseInt(jTextField6.getText()), Float.parseFloat(jTextField7.getText())));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -682,10 +685,10 @@ public class JanelaCriaEdita extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
-                                if (StarThrive.empresaUnica(jTextField1.getText())) {
-                                    StarThrive.getEmpresas().add(new Mercado(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), jTextField6.getText(), Integer.parseInt(jTextField7.getText()), Float.parseFloat(jTextField8.getText())));
+                                if (thisStarThrive.empresaUnica(jTextField1.getText())) {
+                                    thisStarThrive.getEmpresas().add(new Mercado(jTextField1.getText(), jTextField2.getText(), new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())}, Float.parseFloat(jTextField5.getText()), jTextField6.getText(), Integer.parseInt(jTextField7.getText()), Float.parseFloat(jTextField8.getText())));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -701,15 +704,16 @@ public class JanelaCriaEdita extends JFrame {
             } catch (Exception erro) {
                 JOptionPane.showMessageDialog(null, "Erro. Registo não processado");
             }
-            Escritor.guardaDadosDat(StarThrive.getEmpresas());
+            escritor.guardaDadosDat(thisStarThrive.getEmpresas());
         }
     }
 
     private class BotaoAlterarActionListener implements ActionListener {
-        private final GerirEmpresas StarThrive;
+        private final GerirEmpresas thisStarThrive;
+        Escritor escritor = new Escritor();
 
-        public BotaoAlterarActionListener(GerirEmpresas StarThrive1) {
-            StarThrive=StarThrive1;
+        public BotaoAlterarActionListener(GerirEmpresas StarThrive) {
+            thisStarThrive = StarThrive;
         }
 
         /**
@@ -727,7 +731,7 @@ public class JanelaCriaEdita extends JFrame {
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
                                 Cafe cafe = (Cafe) editar;
-                                if (cafe.getNome().equals(jTextField1.getText())||StarThrive.empresaUnica(jTextField1.getText())) {
+                                if (cafe.getNome().equals(jTextField1.getText()) || thisStarThrive.empresaUnica(jTextField1.getText())) {
                                     cafe.setNome(jTextField1.getText());
                                     cafe.setDistrito(jTextField2.getText());
                                     cafe.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
@@ -737,7 +741,7 @@ public class JanelaCriaEdita extends JFrame {
                                     cafe.setCafesMedioDiario(Float.parseFloat(jTextField8.getText()));
                                     cafe.setFaturacaoMediaAnualCafe(Float.parseFloat(jTextField9.getText()));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -752,7 +756,7 @@ public class JanelaCriaEdita extends JFrame {
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
                                 Pastelaria pastelaria = (Pastelaria) editar;
-                                if (pastelaria.getNome().equals(jTextField1.getText())||StarThrive.empresaUnica(jTextField1.getText())) {
+                                if (pastelaria.getNome().equals(jTextField1.getText()) || thisStarThrive.empresaUnica(jTextField1.getText())) {
 
                                     pastelaria.setNome(jTextField1.getText());
                                     pastelaria.setDistrito(jTextField2.getText());
@@ -763,7 +767,7 @@ public class JanelaCriaEdita extends JFrame {
                                     pastelaria.setBolosMedioDiario(Float.parseFloat(jTextField8.getText()));
                                     pastelaria.setFaturacaoMediaAnualBolo(Float.parseFloat(jTextField9.getText()));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -779,7 +783,7 @@ public class JanelaCriaEdita extends JFrame {
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
                                 Fastfood fastfood = (Fastfood) editar;
-                                if (fastfood.getNome().equals(jTextField1.getText())||StarThrive.empresaUnica(jTextField1.getText())) {
+                                if (fastfood.getNome().equals(jTextField1.getText()) || thisStarThrive.empresaUnica(jTextField1.getText())) {
                                     fastfood.setNome(jTextField1.getText());
                                     fastfood.setDistrito(jTextField2.getText());
                                     fastfood.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
@@ -792,7 +796,7 @@ public class JanelaCriaEdita extends JFrame {
                                     fastfood.setClientesMedioDrive(Float.parseFloat(jTextField11.getText()));
                                     fastfood.setFaturacaoMediaClienteDrive(Float.parseFloat(jTextField12.getText()));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -807,7 +811,7 @@ public class JanelaCriaEdita extends JFrame {
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
                                 Local local = (Local) editar;
-                                if (local.getNome().equals(jTextField1.getText())||StarThrive.empresaUnica(jTextField1.getText())) {
+                                if (local.getNome().equals(jTextField1.getText()) || thisStarThrive.empresaUnica(jTextField1.getText())) {
 
                                     local.setNome(jTextField1.getText());
                                     local.setDistrito(jTextField2.getText());
@@ -821,7 +825,7 @@ public class JanelaCriaEdita extends JFrame {
                                     local.setCustoLicencaMesaEsplanada(Float.parseFloat(jTextField11.getText()));
                                     local.setFaturacaoMediaMesaDiario(Float.parseFloat(jTextField12.getText()));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -836,7 +840,7 @@ public class JanelaCriaEdita extends JFrame {
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
                                 Frutaria frutaria = (Frutaria) editar;
-                                if (frutaria.getNome().equals(jTextField1.getText())||StarThrive.empresaUnica(jTextField1.getText())) {
+                                if (frutaria.getNome().equals(jTextField1.getText()) || thisStarThrive.empresaUnica(jTextField1.getText())) {
                                     frutaria.setNome(jTextField1.getText());
                                     frutaria.setDistrito(jTextField2.getText());
                                     frutaria.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
@@ -844,7 +848,7 @@ public class JanelaCriaEdita extends JFrame {
                                     frutaria.setNumeroProdutos(Integer.parseInt(jTextField6.getText()));
                                     frutaria.setFaturacaoMediaAnualProduto(Float.parseFloat(jTextField7.getText()));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -859,7 +863,7 @@ public class JanelaCriaEdita extends JFrame {
                                 botaoSelecionador.setSelectedIndex(0);
                             } else {
                                 Mercado mercado = (Mercado) editar;
-                                if (mercado.getNome().equals(jTextField1.getText())||StarThrive.empresaUnica(jTextField1.getText())) {
+                                if (mercado.getNome().equals(jTextField1.getText()) || thisStarThrive.empresaUnica(jTextField1.getText())) {
                                     mercado.setNome(jTextField1.getText());
                                     mercado.setDistrito(jTextField2.getText());
                                     mercado.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
@@ -868,7 +872,7 @@ public class JanelaCriaEdita extends JFrame {
                                     mercado.setAreaCorredores(Integer.parseInt(jTextField7.getText()));
                                     mercado.setFaturacaoMediaAnualM2(Float.parseFloat(jTextField8.getText()));
                                     JOptionPane.showMessageDialog(null, "Guardado com sucesso");
-                                    janelaMae.atualizarLista(StarThrive);
+                                    janelaMae.atualizarLista(thisStarThrive);
                                     dispose();
                                 }
                                 else{
@@ -884,7 +888,7 @@ public class JanelaCriaEdita extends JFrame {
             } catch (Exception erro) {
                 JOptionPane.showMessageDialog(null, "Erro. Registo não processado");
             }
-            Escritor.guardaDadosDat(StarThrive.getEmpresas());
+            escritor.guardaDadosDat(thisStarThrive.getEmpresas());
         }
     }
 }

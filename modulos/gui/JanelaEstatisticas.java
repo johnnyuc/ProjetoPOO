@@ -12,31 +12,31 @@ public class JanelaEstatisticas extends JFrame {
     /**
      * Container (janela/recipiente) principal.
      */
-    private JPanel painelMae;
+    private final JPanel painelMae = new JPanel();
     /**
      * Container (janela/recipiente) para os cafés.
      */
-    private JScrollPane cafePanel;
+    private final JScrollPane cafePanel = new JScrollPane();
     /**
      * Container (janela/recipiente) para as pastelarias.
      */
-    private JScrollPane pastelariaPanel;
+    private final JScrollPane pastelariaPanel = new JScrollPane();
     /**
      * Container (janela/recipiente) para os restaurantes fast-food.
      */
-    private JScrollPane fastfoodPanel;
+    private final JScrollPane fastfoodPanel = new JScrollPane();
     /**
      * Container (janela/recipiente) para os restaurantes locais.
      */
-    private JScrollPane localPanel;
+    private final JScrollPane localPanel = new JScrollPane();
     /**
      * Container (janela/recipiente) para as frutarias.
      */
-    private JScrollPane frutariaPanel;
+    private final JScrollPane frutariaPanel = new JScrollPane();
     /**
      * Container (janela/recipiente) para os mercados.
      */
-    private JScrollPane mercadoPanel;
+    private final JScrollPane mercadoPanel = new JScrollPane();
 
     /**
      * Construtor utilizado para inicializar os componentes
@@ -52,18 +52,11 @@ public class JanelaEstatisticas extends JFrame {
      */
     private void initComponents(GerirEmpresas StarThrive) {
         this.setResizable(false);
-        painelMae = new JPanel();
-        cafePanel = new JScrollPane();
         JTextArea cafeArea = new JTextArea();
-        pastelariaPanel = new JScrollPane();
         JTextArea pastelariaArea = new JTextArea();
-        fastfoodPanel = new JScrollPane();
         JTextArea fastfoodArea = new JTextArea();
-        localPanel = new JScrollPane();
         JTextArea localArea = new JTextArea();
-        frutariaPanel = new JScrollPane();
         JTextArea frutariaArea = new JTextArea();
-        mercadoPanel = new JScrollPane();
         JTextArea mercadoArea = new JTextArea();
         JMenuBar jMenuBar1 = new JMenuBar();
         JMenu jMenu1 = new JMenu();

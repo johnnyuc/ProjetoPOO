@@ -22,22 +22,26 @@ public class Main {
      */
     // Inicialização do programa
     public static void booting() {
+        Leitor leitor = new Leitor();
+        Escritor escritor = new Escritor();
+
         File f = new File("starthrive.dat");
         File dummy = new File("starthrive.txt");
+
         //Caso não exista um ficheiro .dat, procede-se à leitura do ficheiro .txt
 
         if (f.exists()) {
             System.out.println("Bem-vindo ao StarThrive!");
             System.out.println("A iniciar a base de dados de objetos...");
-            GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosDat());
+            GerirEmpresas StarThrive = new GerirEmpresas(leitor.carregaDadosDat());
             display(StarThrive);
         }
         else {
             if (dummy.exists()) {
                 System.out.println("Bem-vindo ao StarThrive!");
                 System.out.println("A criar a base de dados a partir do arquivo de texto...");
-                GerirEmpresas StarThrive = new GerirEmpresas(Leitor.carregaDadosTxt());
-                Escritor.guardaDadosDat(StarThrive.getEmpresas());
+                GerirEmpresas StarThrive = new GerirEmpresas(leitor.carregaDadosTxt());
+                escritor.guardaDadosDat(StarThrive.getEmpresas());
                 display(StarThrive);
             } else {
                 System.out.println("Nenhum dos arquivos de dados foi encontrado.");
