@@ -21,6 +21,12 @@ public class GerirEmpresas {
     }
 
     // Métodos
+
+    /**
+     * Método utilizado para verificar se já existe alguma empresa com o nome na lista
+     * @param nome o nome a ser procurado
+     * @return se existe ou não uma empresa com o nome procurado
+     */
     public boolean empresaUnica(String nome){
         if(empresas!=null){
             for (Empresa empresa: empresas){

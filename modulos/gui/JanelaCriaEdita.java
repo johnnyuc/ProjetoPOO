@@ -141,6 +141,7 @@ public class JanelaCriaEdita extends JFrame {
     /**
      * Construtor responsável por inicializar a janela de criar
      * @param janelaMae a janela de operações
+     * @param StarThrive lista de empresas a serem geridas
      */
     public JanelaCriaEdita(GerirEmpresas StarThrive, JanelaOperacoes janelaMae) {
         initComponentsCriar(StarThrive);
@@ -153,6 +154,7 @@ public class JanelaCriaEdita extends JFrame {
      * Construtor responsável por inicializar a janela de editar empresas
      * @param janelaMae a janela de operações
      * @param nome nome da empresa a ser editada
+     * @param StarThrive lista de empresas a serem geridas
      */
     public JanelaCriaEdita(GerirEmpresas StarThrive, JanelaOperacoes janelaMae, String nome) {
         initComponentsEditar(StarThrive, nome);
@@ -577,9 +579,21 @@ public class JanelaCriaEdita extends JFrame {
         jTextField12.setText("");
     }
 
+    /**
+     * Classe responsável pelo botão de guardar, para criar uma nova empresa na GUI
+     */
     private class BotaoGuardarActionListener implements ActionListener {
+        /**
+         * Lista de empresas
+         */
         private final GerirEmpresas thisStarThrive;
+        /**
+         * Objeto responsável por guardar as informações num arquivo .dat
+         */
         private final Escritor escritor = new Escritor();
+        /**
+         * Construtor da classe, responsável por inicializar os atributos
+         */
         public BotaoGuardarActionListener(GerirEmpresas StarThrive) {
             thisStarThrive = StarThrive;
         }
@@ -707,10 +721,21 @@ public class JanelaCriaEdita extends JFrame {
             escritor.guardaDadosDat(thisStarThrive.getEmpresas());
         }
     }
-
+    /**
+     * Classe responsável pelo botão para alterar as informações de uma empresa
+     */
     private class BotaoAlterarActionListener implements ActionListener {
+        /**
+         * Lista de empresas
+         */
         private final GerirEmpresas thisStarThrive;
+        /**
+         * Objeto responsável por guardar as informações num ficheiro .dat
+         */
         Escritor escritor = new Escritor();
+        /**
+         *Construtor da classe responsável por inicializar os atributos
+         */
 
         public BotaoAlterarActionListener(GerirEmpresas StarThrive) {
             thisStarThrive = StarThrive;

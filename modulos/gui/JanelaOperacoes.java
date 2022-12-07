@@ -49,6 +49,7 @@ public class JanelaOperacoes extends JFrame {
 
     /**
      * Construtor responsável por inicializar os componentes da janela de operações
+     * @param StarThrive lista de empresas a serem geridas
      */
     public JanelaOperacoes(GerirEmpresas StarThrive) {
         initComponentsOperacoes(StarThrive);

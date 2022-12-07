@@ -63,6 +63,7 @@ public class Mercado extends Mercearia {
 
     /**
      * Métodos de acesso externo à tipologia de mercado
+     * @return O tipo de mercado
      */
     public String getTipoMercado() {
         return tipoMercado;
@@ -70,6 +71,7 @@ public class Mercado extends Mercearia {
 
     /**
      * Método para definir a tipologia de mercado
+     * @param tipoMercado a tipologia do mercado
      */
     public void setTipoMercado(String tipoMercado) {
         this.tipoMercado = tipoMercado;
