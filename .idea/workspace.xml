@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="UML Final">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto POO.drawio" beforeDir="false" />
-    </list>
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Acabado" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +117,7 @@
       <workItem from="1670357753681" duration="1079000" />
       <workItem from="1670375738593" duration="761000" />
       <workItem from="1670441498940" duration="4052000" />
-      <workItem from="1670452374180" duration="338000" />
+      <workItem from="1670452374180" duration="423000" />
     </task>
     <task id="LOCAL-00001" summary="classes, classe empresa e interface empresa">
       <created>1669152200351</created>
@@ -388,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670428188572</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Acabado">
+      <created>1670452782196</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1670452782196</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +410,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Atualizações/Melhoria das classes" />
     <MESSAGE value="Criação da função toString&#10;Criação da classe GerirEmpresas.java" />
     <MESSAGE value="Criação da função GerirEmpresas.imprimirEmpresas&#10;Criação da função GerirEmpresas.adicionarEmpresa&#10;Criação da função GerirEmpresas.apagarEmpresa" />
     <MESSAGE value="Criação da função GerirEmpresas.maiorReceitaAnual" />
@@ -431,6 +434,7 @@
     <MESSAGE value="Javadoc finalizado" />
     <MESSAGE value="Trabalho final" />
     <MESSAGE value="UML Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="UML Final" />
+    <MESSAGE value="Acabado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Acabado" />
   </component>
 </project>
