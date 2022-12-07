@@ -1,5 +1,6 @@
 /Dummy data file
 
+/Atenção ao encoding deste documento. Poderá não carregar corretamente em outros IDEs que não o Intellij IDEA (ex: VSCode)
 /Ficheiro aceita comentários com / no início da linha
 
 
