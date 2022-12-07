@@ -2,7 +2,6 @@
 !define LIGHTGREEN
 !includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
 
-package modulos.dados {
     class Escritor {
     - String baseDados
     ---
@@ -17,9 +16,7 @@ package modulos.dados {
     + carregaDadosDat(): ArrayList<Empresa>
     ---
     }
-}
 
-package modulos.empresas {
     class GerirEmpresas {
     - ArrayList<Empresa> empresas
     ---
@@ -167,9 +164,7 @@ package modulos.empresas {
     + getFaturacaoMediaAnualM2(): float
     + setFaturacaoMediaAnualM2(float faturacaoMediaAnualM2): void
     }
-}
 
-package modulos.gui {
     class JanelaPrincipal {
     - JButton botaoOperacoes
     - JButton botaoEstatisticas
@@ -202,7 +197,7 @@ package modulos.gui {
     + atualizarLista: void
     ---
     }
-    class JanelaCriaEditar {
+    class JanelaCriaEdita {
     - JanelaOperacoes janelaMae
     - Empresa editar
     - JComboBox<String> botaoSelecionador
@@ -262,18 +257,19 @@ package modulos.gui {
     + mercadoActionPerformed: void
     ---
     }
-}
 
-class Main {
+
+    class Main {
     ---
     + main(String[] args): void
     + booting(): void
     + display(GerirEmpresas StarThrive): void
     ---
-}
+    }
 
-Main <--"1" GerirEmpresas
-GerirEmpresas "1"<--"0..1" Empresa
+Main -- "1" GerirEmpresas
+GerirEmpresas "1" -- "0..1" Empresa
+
 Empresa <-- Restauracao
 Empresa <-- Mercearia
 Restauracao <-- Cafe
@@ -284,8 +280,13 @@ Restaurante <-- Local
 Mercearia <-- Frutaria
 Mercearia <-- Mercado
 
-Main <-- modulos.gui
-Main <-- modulos.dados
+Main -- "1" JanelaPrincipal
+JanelaPrincipal "1" -- "0..1" JanelaOperacoes
+JanelaPrincipal "1" -- "0..1" JanelaEstatisticas
+JanelaOperacoes "1" -- "0..1" JanelaCriaEdita
 
+Main -- "1" Leitor
+Main -- "1" Escritor
+JanelaCriaEdita "1" -- "1" Escritor
 
 @enduml
