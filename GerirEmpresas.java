@@ -1,5 +1,3 @@
-package modulos.empresas;
-
 import java.util.*;
 /**
  * Classe responsável por guardar a lista com todas as empresas a serem geridas
@@ -80,7 +78,7 @@ public class GerirEmpresas {
             String nome = "";
             float valor = Float.MIN_VALUE;
             for (Empresa empresa : empresas) {
-                if (empresa.getTipo() == tipoProcurar) {
+                if (empresa.getCategoriaEmpresa() == tipoProcurar) {
                     float receitaTemp = empresa.calcularReceitaAnual();
                     if (receitaTemp > valor) {
                         nome = empresa.getNome();
@@ -103,7 +101,7 @@ public class GerirEmpresas {
             String nome = "";
             float valor = Float.MAX_VALUE;
             for (Empresa empresa : empresas) {
-                if (empresa.getTipo() == tipoProcurar){
+                if (empresa.getCategoriaEmpresa() == tipoProcurar){
                     float despesaTemp = empresa.calcularDespesaAnual();
                     if (despesaTemp < valor) {
                         nome = empresa.getNome();
@@ -125,7 +123,7 @@ public class GerirEmpresas {
             String nome = null;
             float valor = Float.MIN_VALUE;
             for (Empresa empresa : empresas) {
-                if (empresa.getTipo() == tipoProcurar){
+                if (empresa.getCategoriaEmpresa() == tipoProcurar){
                     float lucroTemp = empresa.calcularLucro();
                     if (lucroTemp >= valor) {
                         nome = empresa.getNome();
@@ -154,7 +152,7 @@ public class GerirEmpresas {
                 String nome2= null;
                 float valor2 = Float.MIN_VALUE;
                 for (Empresa empresa : empresas) {
-                    if (empresa.getTipo() == tipoProcurar) {
+                    if (empresa.getCategoriaEmpresa() == tipoProcurar) {
                         float clientesTemp = ((Restauracao)empresa).getClientesMedioDiario();
                         if (clientesTemp >= valor1) {
                             //A empresa que antes estava em primeiro, agora passa a segunda

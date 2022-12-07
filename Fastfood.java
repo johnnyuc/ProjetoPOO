@@ -1,5 +1,3 @@
-package modulos.empresas;
-
 /**
  * Classe que simboliza as empresas do tipo restaurante fast-food
  */
@@ -43,7 +41,7 @@ public class Fastfood extends Restaurante {
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
         this.clientesMedioDrive = clientesMedioDrive;
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
-        this.setTipo(2);
+        this.setCategoriaEmpresa(2);
     }
 
 

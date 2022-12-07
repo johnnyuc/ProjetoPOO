@@ -1,5 +1,3 @@
-package modulos.empresas;
-
 /**
  * Classe que simboliza as empresas do tipo frutaria
  */
@@ -28,7 +26,7 @@ public class Frutaria extends Mercearia {
         super(nome, distrito, coordenadas, custoAnualLimpeza);
         this.numeroProdutos = numeroProdutos;
         this.faturacaoMediaAnualProduto = faturacaoMediaAnualProduto;
-        this.setTipo(4);
+        this.setCategoriaEmpresa(4);
     }
 
 

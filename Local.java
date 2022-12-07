@@ -1,5 +1,3 @@
-package modulos.empresas;
-
 /**
  * Classe que simboliza as empresas do tipo restaurante local
  */
@@ -43,7 +41,7 @@ public class Local extends Restaurante {
         this.mesasEsplanada = mesasEsplanada;
         this.custoLicencaMesaEsplanada = custoLicencaMesaEsplanada;
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
-        this.setTipo(3);
+        this.setCategoriaEmpresa(3);
     }
 
 

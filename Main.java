@@ -1,7 +1,3 @@
-import modulos.gui.*;
-import modulos.dados.*;
-import modulos.empresas.*;
-
 import java.io.*;
 import javax.swing.*;
 

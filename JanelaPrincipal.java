@@ -1,7 +1,3 @@
-package modulos.gui;
-
-import modulos.empresas.*;
-
 import java.awt.*;
 import javax.swing.*;
 

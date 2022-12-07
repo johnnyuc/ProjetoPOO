@@ -1,5 +1,3 @@
-package modulos.empresas;
-
 /**
  * Classe que simboliza as empresas do tipo Mercearia
  */

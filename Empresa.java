@@ -1,5 +1,3 @@
-package modulos.empresas;
-
 /**
  * Classe comum de todas as empresas
  */
@@ -20,7 +18,7 @@ public abstract class Empresa implements java.io.Serializable {
     /**
      * A categoria de empresa
      */
-    private int tipo;
+    private int categoriaEmpresa;
 
 
     /**
@@ -60,15 +58,15 @@ public abstract class Empresa implements java.io.Serializable {
      * Método de acesso externo à categora da empresa
      * @return inteiro que simboliza o tipo da empresa
      */
-    public int getTipo() {
-        return tipo;
+    public int getCategoriaEmpresa() {
+        return categoriaEmpresa;
     }
     /**
      * Método para definir a categoria
-     * @param tipo o tipo da empresa
+     * @param categoriaEmpresa o tipo da empresa
      */
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
+    public void setCategoriaEmpresa(int categoriaEmpresa) {
+        this.categoriaEmpresa = categoriaEmpresa;
     }
 
     /**

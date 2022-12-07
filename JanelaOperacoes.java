@@ -1,8 +1,3 @@
-package modulos.gui;
-
-import modulos.dados.*;
-import modulos.empresas.*;
-
 import javax.swing.*;
 import javax.swing.table.*;
 
@@ -194,7 +189,7 @@ public class JanelaOperacoes extends JFrame {
                 ,"Mercado"};
         for (int i = 0; i < StarThrive.getEmpresas().size(); i++) {
             dados[i][0] = StarThrive.getEmpresas().get(i).getNome();
-            dados[i][1] = tipos[StarThrive.getEmpresas().get(i).getTipo()];
+            dados[i][1] = tipos[StarThrive.getEmpresas().get(i).getCategoriaEmpresa()];
             dados[i][2] = StarThrive.getEmpresas().get(i).getDistrito();
             dados[i][3] = String.format("%.2f €",StarThrive.getEmpresas().get(i).calcularReceitaAnual());
             dados[i][4] = String.format("%.2f €",StarThrive.getEmpresas().get(i).calcularDespesaAnual());

@@ -1,5 +1,3 @@
-package modulos.empresas;
-
 /**
  * Classe que simboliza as empresas do tipo café
  */
@@ -30,7 +28,7 @@ public class Cafe extends Restauracao {
         super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
         this.cafesMedioDiario = cafesMedioDiario;
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
-        this.setTipo(0);
+        this.setCategoriaEmpresa(0);
     }
 
     // Métodos

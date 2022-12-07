@@ -1,6 +1,3 @@
-package modulos.dados;
-import modulos.empresas.*;
-
 import java.io.*;
 import java.util.*;
 

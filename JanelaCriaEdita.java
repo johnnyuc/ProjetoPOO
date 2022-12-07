@@ -1,8 +1,3 @@
-package modulos.gui;
-
-import modulos.dados.*;
-import modulos.empresas.*;
-
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
@@ -205,7 +200,7 @@ public class JanelaCriaEdita extends JFrame {
 
         // Defaults e carregamento de dados
         editar = StarThrive.pesquisarEmpresa(nome);
-        switch (Objects.requireNonNull(editar).getTipo()) {
+        switch (Objects.requireNonNull(editar).getCategoriaEmpresa()) {
             case 0:
                 botaoSelecionador.setSelectedIndex(0);
                 Cafe cafe = (Cafe) editar;

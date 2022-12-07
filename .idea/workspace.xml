@@ -9,12 +9,91 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Bug fixing 3">
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Javadoc finalizado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/Mercado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enunciado_Guidelines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enunciado_NameConventions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enunciado_Projeto.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/dados/Escritor.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/dados/Escritor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/dados/Leitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/dados/Leitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/dados/class-use/Escritor.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/dados/class-use/Escritor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/dados/class-use/Leitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/dados/class-use/Leitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Cafe.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Cafe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Empresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Empresa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Fastfood.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Fastfood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Frutaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Frutaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/GerirEmpresas.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/GerirEmpresas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Local.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Local.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Mercado.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Mercado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Mercearia.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Mercearia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Pastelaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Pastelaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Restauracao.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Restauracao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Restaurante.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/Restaurante.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Cafe.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Cafe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Empresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Empresa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Fastfood.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Fastfood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Frutaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Frutaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/GerirEmpresas.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/GerirEmpresas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Local.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Local.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Mercado.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Mercado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Mercearia.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Mercearia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Pastelaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Pastelaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Restauracao.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Restauracao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Restaurante.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/empresas/class-use/Restaurante.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/gui/JanelaCriaEdita.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/gui/JanelaCriaEdita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/gui/JanelaEstatisticas.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/gui/JanelaEstatisticas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/gui/JanelaOperacoes.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/gui/JanelaOperacoes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/gui/JanelaPrincipal.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/gui/JanelaPrincipal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/gui/class-use/JanelaCriaEdita.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/gui/class-use/JanelaCriaEdita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/gui/class-use/JanelaEstatisticas.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/gui/class-use/JanelaEstatisticas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/gui/class-use/JanelaOperacoes.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/gui/class-use/JanelaOperacoes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/modulos/gui/class-use/JanelaPrincipal.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/modulos/gui/class-use/JanelaPrincipal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/dados/Escritor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Escritor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/dados/Leitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Leitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Fastfood.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fastfood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Frutaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/Frutaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerirEmpresas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mercado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Mercearia.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mercearia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Pastelaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pastelaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restauracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restauracao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/empresas/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/JanelaCriaEdita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaEstatisticas.java" beforeDir="false" afterPath="$PROJECT_DIR$/JanelaEstatisticas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/JanelaOperacoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/JanelaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_Guidelines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_NameConventions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Enunciado_Projeto.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Escritor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/dados/Leitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Cafe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Empresa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Fastfood.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Frutaria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/GerirEmpresas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Local.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Mercado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Mercearia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Pastelaria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Restauracao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/empresas/Restaurante.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/JanelaCriaEdita$BotaoAlterarActionListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/JanelaCriaEdita$BotaoGuardarActionListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/JanelaCriaEdita.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/JanelaEstatisticas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/JanelaOperacoes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/JanelaOperacoes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/modulos/gui/JanelaPrincipal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/starthrive.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoPOO/test.puml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoPOO/test.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starthrive.dat" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +118,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/modulos/empresas/Cafe.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/modulos/empresas/Restauracao.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cafe.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GerirEmpresas.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Restauracao.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -360,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670354744867</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Javadoc finalizado">
+      <created>1670407838409</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670407838409</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="classes, classe empresa e interface empresa" />
     <MESSAGE value="classes" />
     <MESSAGE value="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java" />
     <MESSAGE value="Atualizações/Melhoria das classes" />
@@ -403,6 +488,7 @@
     <MESSAGE value="Projeto Finalizado v1" />
     <MESSAGE value="Bug fixing" />
     <MESSAGE value="Bug fixing 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixing 2" />
+    <MESSAGE value="Javadoc finalizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Javadoc finalizado" />
   </component>
 </project>

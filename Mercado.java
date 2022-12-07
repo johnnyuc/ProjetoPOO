@@ -1,5 +1,3 @@
-package modulos.empresas;
-
 /**
  * Classe que simboliza as empresas do tipo mercado
  */
@@ -35,7 +33,7 @@ public class Mercado extends Mercearia {
         this.tipoMercado = tipoMercado;
         this.areaCorredores = areaCorredores;
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
-        this.setTipo(5);
+        this.setCategoriaEmpresa(5);
     }
 
 
@@ -60,6 +58,7 @@ public class Mercado extends Mercearia {
     }
 
     // Getters and Setters e Overrides
+
 
     /**
      * Métodos de acesso externo à tipologia de mercado
