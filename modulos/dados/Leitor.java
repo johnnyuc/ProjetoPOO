@@ -11,20 +11,6 @@ import java.util.*;
 public class Leitor {
 
     /**
-     * Base de dados dummy para testes
-     * O ficheiro tem nome hardcoded constante no enunciado do projeto
-     * Static, pois é único e hardcoded
-     */
-    private static final String baseDadosTxt = "starthrive.txt";
-
-    /**
-     * Base de dados de (objetos) empresas
-     * Esta base de dados é única e é hardcoded (por isso estática)
-     * Static, pois é único e hardcoded
-     */
-    private static final String baseDados = "starthrive.dat";
-
-    /**
      * Construtor da classe
      */
     public Leitor(){}
@@ -34,9 +20,11 @@ public class Leitor {
      * não exista um ficheiro.dat.
      * @return Uma lista que contém todas as empresas guardadas no ficheiro
      */
-    public static ArrayList<Empresa> carregaDadosTxt() {
+    public ArrayList<Empresa> carregaDadosTxt() {
 
         ArrayList<Empresa> empresas = new ArrayList<>();
+
+        String baseDadosTxt = "starthrive.txt";
         File f = new File(baseDadosTxt);
         String linha;
 
@@ -100,8 +88,10 @@ public class Leitor {
      * Caso não exista um ficheiro.dat, carregar-se-á os dados a partir de um ficheiro.txt
      * @return Uma lista que contém todas as empresas guardadas no ficheiro
      */
-    public static ArrayList<Empresa> carregaDadosDat() {
+    public ArrayList<Empresa> carregaDadosDat() {
         ArrayList<Empresa> empresas = new ArrayList<>();
+
+        String baseDados = "starthrive.dat";
         File f = new File(baseDados);
 
         try {

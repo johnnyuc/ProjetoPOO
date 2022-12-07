@@ -10,12 +10,6 @@ import java.util.*;
 public class Escritor {
 
     /**
-     * Base de dados de (objetos) empresas
-     * Esta base de dados é única e é hardcoded (por isso estática)
-     */
-    private static final String baseDados = "starthrive.dat";
-
-    /**
      * Construtor da classe
      */
     public Escritor(){}
@@ -26,7 +20,9 @@ public class Escritor {
      */
 
 
-    public static void guardaDadosDat(ArrayList<Empresa> empresas) {
+    public void guardaDadosDat(ArrayList<Empresa> empresas) {
+
+        String baseDados = "starthrive.dat";
         File f = new File(baseDados);
 
         try {

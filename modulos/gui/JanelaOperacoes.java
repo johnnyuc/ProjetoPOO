@@ -17,35 +17,35 @@ public class JanelaOperacoes extends JFrame {
     /**
      * Scroll da janela
      */
-    JScrollPane jScrollPane2 = new JScrollPane();
+    private final JScrollPane jScrollPane2 = new JScrollPane();
     /**
      * Tabela com os dados das empresas
      */
-    JTable tabela = new JTable();
+    private final JTable tabela = new JTable();
     /**
      * Botão para criar uma empresa nova
      */
-    JButton botaoCriar = new JButton();
+    private final JButton botaoCriar = new JButton();
     /**
      * Botão para apagar uma empresa
      */
-    JButton botaoRemover = new JButton();
+    private final JButton botaoRemover = new JButton();
     /**
      * Botão para editar uma empresa
      */
-    JButton botaoEditar = new JButton();
+    private final JButton botaoEditar = new JButton();
     /**
      * Botão para pesquisar por uma empresa
      */
-    JButton botaoPesquisar = new JButton();
+    private final JButton botaoPesquisar = new JButton();
     /**
      * Botão para fechar a janela
      */
-    JButton botaoFechar = new JButton();
+    private final JButton botaoFechar = new JButton();
     /**
      * Objeto proveniente do Netbeans que guarda todas as definições de layout da janela
      */
-    GroupLayout layout = new GroupLayout(getContentPane());
+    private final GroupLayout layout = new GroupLayout(getContentPane());
 
     /**
      * Construtor responsável por inicializar os componentes da janela de operações
@@ -64,6 +64,8 @@ public class JanelaOperacoes extends JFrame {
      * Método responsável por inicializar o ecrã de operações
      */
     private void initComponentsOperacoes(GerirEmpresas StarThrive) {
+
+        Escritor escritor = new Escritor();
 
         setTitle("Secção de Operações");
         atualizarLista(StarThrive);
@@ -91,7 +93,7 @@ public class JanelaOperacoes extends JFrame {
                     }
                     atualizarLista(StarThrive);
                 }
-                Escritor.guardaDadosDat(StarThrive.getEmpresas());
+                escritor.guardaDadosDat(StarThrive.getEmpresas());
             } else {
                 JOptionPane.showMessageDialog(null, "Selecione pelo menos uma linha para remover.");
             }

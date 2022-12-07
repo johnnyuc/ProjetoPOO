@@ -13,39 +13,39 @@ public class JanelaPrincipal extends JFrame {
     /**
      * Botão para aceder ao ecrã de operações
      */
-    JButton botaoOperacoes = new JButton();
+    private final JButton botaoOperacoes = new JButton();
     /**
      * Botão para aceder ao ecrão de estatísticas
      */
-    JButton botaoEstatisticas = new JButton();
+    private final JButton botaoEstatisticas = new JButton();
     /**
      * Botão para sair da aplicação
      */
-    JButton botaoSair = new JButton();
+    private final JButton botaoSair = new JButton();
     /**
      * Label para o título da empresa
      */
-    JLabel labelTitulo = new JLabel();
+    private final JLabel labelTitulo = new JLabel();
     /**
      * Label para o ícone da empresa
      */
-    JLabel labelIcone = new JLabel();
+    private final JLabel labelIcone = new JLabel();
     /**
      * Área reservada para o texto de introdução à aplicação
      */
-    JTextArea areaTexto = new JTextArea();
+    private final JTextArea areaTexto = new JTextArea();
     /**
      * Scroll da janela
      */
-    JScrollPane elementoScroll = new JScrollPane();
+    private final JScrollPane elementoScroll = new JScrollPane();
     /**
      * Label de direitos da aplicação
      */
-    JLabel labelDireitos = new JLabel();
+    private final JLabel labelDireitos = new JLabel();
     /**
      * Objeto proveniente do Netbeans que guarda todas as definições de layout da janela
      */
-    GroupLayout layout = new GroupLayout(getContentPane());
+    private final GroupLayout layout = new GroupLayout(getContentPane());
 
     /**
      * Construtor que inicializa os componentes da janela
