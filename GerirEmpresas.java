@@ -1,4 +1,5 @@
 import java.util.*;
+
 /**
  * Classe responsável por guardar a lista com todas as empresas a serem geridas
  */
@@ -8,7 +9,6 @@ public class GerirEmpresas {
      * Lista de empresas
      */
     private ArrayList <Empresa> empresas;
-
 
     /**
      * Construtor da classe, recebe os dados para a inicialização dos atributos
@@ -23,7 +23,7 @@ public class GerirEmpresas {
     /**
      * Método utilizado para verificar se já existe alguma empresa com o nome na lista
      * @param nome o nome a ser procurado
-     * @return se existe ou não uma empresa com o nome procurado
+     * @return booleano para saber se existe ou não uma empresa com o nome procurado
      */
     public boolean empresaUnica(String nome){
         if(empresas!=null){
@@ -54,7 +54,6 @@ public class GerirEmpresas {
 
     /**
      * Método utilizado para apagar uma empresa da lista de gestão de empresas
-     *
      * @param nome Nome da empresa a ser apagada
      */
     public void apagarEmpresa(String nome){
@@ -149,16 +148,16 @@ public class GerirEmpresas {
             if (empresas != null) {
                 String nome1 = null;
                 float valor1 = Float.MIN_VALUE;
-                String nome2= null;
+                String nome2 = null;
                 float valor2 = Float.MIN_VALUE;
                 for (Empresa empresa : empresas) {
                     if (empresa.getCategoriaEmpresa() == tipoProcurar) {
                         float clientesTemp = ((Restauracao)empresa).getClientesMedioDiario();
                         if (clientesTemp >= valor1) {
-                            //A empresa que antes estava em primeiro, agora passa a segunda
+                            // A empresa que antes estava em primeiro, agora passa a segunda
                             nome2= nome1;
                             valor2=valor1;
-                            //Substituem-se os valores da empresa antes em primeiro, pelos novos dados
+                            // Substituem-se os valores da empresa antes em primeiro, pelos novos dados
                             nome1 = empresa.getNome();
                             valor1 = clientesTemp;
                         }
@@ -168,7 +167,7 @@ public class GerirEmpresas {
                         }
                     }
                 }
-                if(nome1!=null&&nome2!=null){
+                if(nome1 != null && nome2 != null){
                        return  "\nMaior capacidade de clientes por dia:" +
                                "\nNome: \"" + nome1 + "\" com capacidade de " + valor1 + " clientes por dia" +
                                "\n\nSegunda maior capacidade de clientes por dia:" +
@@ -181,6 +180,7 @@ public class GerirEmpresas {
         }
         return "";
     }
+
     // Getters and Setters e Overrides
 
     /**

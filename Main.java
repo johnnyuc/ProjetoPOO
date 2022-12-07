@@ -5,6 +5,7 @@ import javax.swing.*;
  * Classe utilizada para a inicialização do programa
  */
 public class Main {
+
     /**
      * Inicialização da aplicação
      * @param args default java
@@ -15,8 +16,8 @@ public class Main {
 
     /**
      * Método utilizado para inicializar o programa
+     * Booting puxa o carregamento dos dados e o display
      */
-    // Inicialização do programa
     public static void booting() {
         Leitor leitor = new Leitor();
         Escritor escritor = new Escritor();
@@ -25,7 +26,6 @@ public class Main {
         File dummy = new File("starthrive.txt");
 
         //Caso não exista um ficheiro .dat, procede-se à leitura do ficheiro .txt
-
         if (f.exists()) {
             System.out.println("Bem-vindo ao StarThrive!");
             System.out.println("A iniciar a base de dados de objetos...");
@@ -48,9 +48,10 @@ public class Main {
 
     /**
      * Método utilizado para inicializar a interface gráfica
+     * Todas as janelas seguirão uma hereditariedade em relação à JanelaPrincipal
+     * É detetada a existência do tema Nimbus. Se não existir será carregado com o default
      * @param StarThrive lista de empresas a serem geridas
      */
-    // Inicialização do ecrã
     public static void display(GerirEmpresas StarThrive) {
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {

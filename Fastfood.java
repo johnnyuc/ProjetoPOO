@@ -7,19 +7,21 @@ public class Fastfood extends Restaurante {
      * O número de mesas no interior
      */
     private int mesasInterior;
+
     /**
      * O valor de faturação média por mesa por dia
      */
     private float faturacaoMediaMesaDiario;
+
     /**
      * O número médio de clientes 'drive-thru' diário
      */
     private float clientesMedioDrive;
+
     /**
      * O valor médio de faturação por cliente de 'drive-thru' (diário)
      */
     private float faturacaoMediaClienteDrive;
-
 
     /**
      *  Construtor da classe, recebe os dados para a inicialização
@@ -43,7 +45,6 @@ public class Fastfood extends Restaurante {
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
         this.setCategoriaEmpresa(2);
     }
-
 
     // Métodos
 
@@ -130,6 +131,7 @@ public class Fastfood extends Restaurante {
     public void setFaturacaoMediaClienteDrive(float faturacaoMediaClienteDrive) {
         this.faturacaoMediaClienteDrive = faturacaoMediaClienteDrive;
     }
+
     /**
      * Método para apresentar todos os atributos de um determinado objeto
      * @return Uma ‘string’ que contém todos os atributos de um determinado objeto

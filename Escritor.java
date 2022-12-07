@@ -11,12 +11,12 @@ public class Escritor {
      */
     public Escritor(){}
 
+    // Métodos
+
     /**
      * Método responsável por guardar os dados num ficheiro .dat
      * @param empresas Lista com todas empresas a serem geridas
      */
-
-
     public void guardaDadosDat(ArrayList<Empresa> empresas) {
 
         String baseDados = "starthrive.dat";

@@ -5,38 +5,47 @@ import javax.swing.table.*;
  * Classe Responsável pelo funcionamento da frame "Operações" da GUI
  */
 public class JanelaOperacoes extends JFrame {
+
     /**
      * Janela de operações
      */
     private final JanelaOperacoes selfInstance;
+
     /**
      * Scroll da janela
      */
     private final JScrollPane jScrollPane2 = new JScrollPane();
+
     /**
      * Tabela com os dados das empresas
      */
     private final JTable tabela = new JTable();
+
     /**
      * Botão para criar uma empresa nova
      */
     private final JButton botaoCriar = new JButton();
+
     /**
      * Botão para apagar uma empresa
      */
     private final JButton botaoRemover = new JButton();
+
     /**
      * Botão para editar uma empresa
      */
     private final JButton botaoEditar = new JButton();
+
     /**
      * Botão para pesquisar por uma empresa
      */
     private final JButton botaoPesquisar = new JButton();
+
     /**
      * Botão para fechar a janela
      */
     private final JButton botaoFechar = new JButton();
+
     /**
      * Objeto proveniente do Netbeans que guarda todas as definições de layout da janela
      */
@@ -55,6 +64,8 @@ public class JanelaOperacoes extends JFrame {
 
         selfInstance = this;
     }
+
+    // Métodos
 
     /**
      * Método responsável por inicializar o ecrã de operações
@@ -177,9 +188,10 @@ public class JanelaOperacoes extends JFrame {
         );
         pack();
     }
+
     /**
      * Método responsável por recolher individualmente os dados de cada empresa e guardá-los
-     * num array multidimensional
+     * num array multidimensional que é devolvido para a construção e atualização da tabela
      */
     private static Object[][] arrayDadosEmpresas(GerirEmpresas StarThrive) {
         Object[][] dados = new Object[StarThrive.getEmpresas().size()][6];

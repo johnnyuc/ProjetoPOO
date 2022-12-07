@@ -8,7 +8,6 @@ public abstract class Restaurante extends Restauracao {
      */
     private int diasFuncionamento;
 
-
     /**
      *  Construtor da classe, recebe os dados para a inicialização dos atributos
      * @param nome O nome da empresa
@@ -23,7 +22,6 @@ public abstract class Restaurante extends Restauracao {
         super(nome, distrito, coordenadas, empregadosMesa, salarioMedioAnual, clientesMedioDiario);
         this.diasFuncionamento = diasFuncionamento;
     }
-
 
     // Getters and Setters e Overrides
 

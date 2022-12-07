@@ -7,19 +7,21 @@ public class Local extends Restaurante {
      * O número de mesas no interior
      */
     private int mesasInterior;
+
     /**
      * O número de mesas no exterior
      */
     private int mesasEsplanada;
+
     /**
      * O custo de licença anual por mesa de esplanada
      */
     private float custoLicencaMesaEsplanada;
+
     /**
      * O valor de faturação média por mesa por dia
      */
     private float faturacaoMediaMesaDiario;
-
 
     /**
      *  Construtor da classe, recebe os dados para a inicialização
@@ -44,8 +46,8 @@ public class Local extends Restaurante {
         this.setCategoriaEmpresa(3);
     }
 
-
     // Métodos
+
     /**
      * Método utilizado para calcular a receita anual de uma determinada empresa a partir dos seus dados,
      *
@@ -128,6 +130,7 @@ public class Local extends Restaurante {
     public void setFaturacaoMediaMesaDiario(float faturacaoMediaMesaDiario) {
         this.faturacaoMediaMesaDiario = faturacaoMediaMesaDiario;
     }
+
     /**
      * Método para apresentar todos os atributos de um determinado objeto
      * @return Uma ‘string’ que contém todos os atributos de um determinado objeto

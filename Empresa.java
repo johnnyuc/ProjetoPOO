@@ -7,19 +7,21 @@ public abstract class Empresa implements java.io.Serializable {
      * O nome da empresa
      * */
     private String nome;
+
     /**
      * O distrito da empresa
      * */
     private String distrito;
+
     /**
      * As coordendas da empresa (latitude e longitude)
      * */
     private float[] coordenadas;
+
     /**
      * A categoria de empresa
      */
     private int categoriaEmpresa;
-
 
     /**
      * Construtor da classe, recebe os dados para a inicialização dos atributos
@@ -32,6 +34,7 @@ public abstract class Empresa implements java.io.Serializable {
         this.distrito = distrito;
         this.coordenadas = coordenadas;
     }
+
     // Métodos
 
     /** Método utilizado para calcular a despesa anual de uma determinada empresa a partir dos seus dados,
@@ -52,8 +55,8 @@ public abstract class Empresa implements java.io.Serializable {
      */
     public float calcularLucro(){return calcularReceitaAnual() - calcularDespesaAnual();}
 
-
     // Getters and Setters e Overrides
+
     /**
      * Método de acesso externo à categora da empresa
      * @return inteiro que simboliza o tipo da empresa

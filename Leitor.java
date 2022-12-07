@@ -11,6 +11,8 @@ public class Leitor {
      */
     public Leitor(){}
 
+    // Métodos
+
     /**
      * Método responsável por carregar os dados preexistentes num ficheiro.txt para serem trabalhados no program caso
      * não exista um ficheiro.dat.

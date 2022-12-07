@@ -7,11 +7,11 @@ public class Pastelaria extends Restauracao {
      * O número médio de bolos vendidos por dia
      */
     private float bolosMedioDiario;
+
     /**
      *  Valor médio de faturação anual por bolo vendido por dia
      */
     private float faturacaoMediaAnualBolo;
-
 
     /**
      * Construtor da classe, recebe os dados para a inicialização dos atributos
@@ -30,7 +30,6 @@ public class Pastelaria extends Restauracao {
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;
         this.setCategoriaEmpresa(1);
     }
-
 
     // Métodos
 
@@ -51,6 +50,8 @@ public class Pastelaria extends Restauracao {
     public float calcularDespesaAnual() {
         return getEmpregadosMesa() * getSalarioMedioAnual();
     }
+
+    // Getters and Setters e Overrides
 
     /**
      * Método para definir o número médio de bolos vendidos por dia
@@ -83,6 +84,7 @@ public class Pastelaria extends Restauracao {
     public void setFaturacaoMediaAnualBolo(float faturacaoMediaAnualBolo) {
         this.faturacaoMediaAnualBolo = faturacaoMediaAnualBolo;
     }
+
     /**
      * Método para apresentar todos os atributos de um determinado objeto
      * @return Uma ‘string’ que contém todos os atributos de um determinado objeto

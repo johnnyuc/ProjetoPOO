@@ -7,15 +7,16 @@ public class Mercado extends Mercearia {
      * Tipo pode ser "mercado", "supermercado", "hipermercado" (usar min, super, hiper)
      */
     String tipoMercado;
+
     /**
      * A área em metros quadrados dos corredores (m^2)
      */
     int areaCorredores;
+
     /**
      * A faturação anual por metro quadrado
      */
     float faturacaoMediaAnualM2;
-
 
     /**
      * Construtor da classe, recebe os dados para a inicialização
@@ -35,7 +36,6 @@ public class Mercado extends Mercearia {
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
         this.setCategoriaEmpresa(5);
     }
-
 
     // Métodos
 
@@ -58,7 +58,6 @@ public class Mercado extends Mercearia {
     }
 
     // Getters and Setters e Overrides
-
 
     /**
      * Métodos de acesso externo à tipologia de mercado
@@ -107,6 +106,7 @@ public class Mercado extends Mercearia {
     public void setFaturacaoMediaAnualM2(float faturacaoMediaAnualM2) {
         this.faturacaoMediaAnualM2 = faturacaoMediaAnualM2;
     }
+
     /**
      * Método para apresentar todos os atributos de um determinado objeto
      * @return Uma ‘string’ que contém todos os atributos de um determinado objeto

@@ -7,11 +7,11 @@ public class Cafe extends Restauracao {
      * O número médio de cafés vendidos por dia
      */
     private float cafesMedioDiario;
+
     /**
      *  Valor médio de faturação anual por café vendido por dia
      */
     private float faturacaoMediaAnualCafe;
-
 
     /**
      * Construtor da classe, recebe os dados para a inicialização dos atributos
@@ -84,6 +84,7 @@ public class Cafe extends Restauracao {
     public void setFaturacaoMediaAnualCafe(float faturacaoMediaAnualCafe) {
         this.faturacaoMediaAnualCafe = faturacaoMediaAnualCafe;
     }
+
     /**
      * Método para apresentar todos os atributos de um determinado objeto
      * @return Uma ‘string’ que contém todos os atributos de um determinado objeto

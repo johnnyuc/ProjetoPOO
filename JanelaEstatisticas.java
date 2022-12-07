@@ -5,34 +5,46 @@ import java.awt.event.*;
  * Classe responsável pelo ecrã das estastícas
  */
 public class JanelaEstatisticas extends JFrame {
+
     /**
      * Container (janela/recipiente) principal.
      */
     private final JPanel painelMae = new JPanel();
+
     /**
      * Container (janela/recipiente) para os cafés.
      */
     private final JScrollPane cafePanel = new JScrollPane();
+
     /**
      * Container (janela/recipiente) para as pastelarias.
      */
     private final JScrollPane pastelariaPanel = new JScrollPane();
+
     /**
      * Container (janela/recipiente) para os restaurantes fast-food.
      */
     private final JScrollPane fastfoodPanel = new JScrollPane();
+
     /**
      * Container (janela/recipiente) para os restaurantes locais.
      */
     private final JScrollPane localPanel = new JScrollPane();
+
     /**
      * Container (janela/recipiente) para as frutarias.
      */
     private final JScrollPane frutariaPanel = new JScrollPane();
+
     /**
      * Container (janela/recipiente) para os mercados.
      */
     private final JScrollPane mercadoPanel = new JScrollPane();
+
+    /**
+     * Objeto proveniente do Netbeans que guarda todas as definições de layout da janela
+     */
+    private final GroupLayout layout = new GroupLayout(getContentPane());
 
     /**
      * Construtor utilizado para inicializar os componentes
@@ -42,8 +54,13 @@ public class JanelaEstatisticas extends JFrame {
         initComponents(StarThrive);
     }
 
+    // Métodos
+
     /**
      * Método efetivamente responsável por inicializar os componentes
+     * Este método funciona com um JPanel-mãe.
+     * Para cada opção selecionada do Menu, a área de texto é mostrada de acordo com a opção.
+     * A área é depois repintada e colocadas as informações sobre a categoria que escolheu.
      * @param StarThrive lista de empresas que se pretende exibir as informações
      */
     private void initComponents(GerirEmpresas StarThrive) {
@@ -137,12 +154,11 @@ public class JanelaEstatisticas extends JFrame {
         jMenu1.add(mercado);
 
         jMenuBar1.add(jMenu1);
-
         setJMenuBar(jMenuBar1);
 
-        GroupLayout layout = new GroupLayout(getContentPane());
         gereLayout(layout);
     }
+
     /**
      * Função proveniente do Netbeans que constrói o layout da janela
      * @param layout Objeto do Netbeans que contém as informações referentes ao layout
@@ -182,28 +198,29 @@ public class JanelaEstatisticas extends JFrame {
         painelMae.repaint();
         painelMae.revalidate();
     }
+
     /**
      * Método para atualizar o ecrã e exibir as informações referente aos restaurantes fast-food
      * @param e evento que indica que a ação foi solicitada pelo utiliar
      */
-
     private void fastfoodActionPerformed(ActionEvent e) {
         painelMae.removeAll();
         painelMae.add(fastfoodPanel);
         painelMae.repaint();
         painelMae.revalidate();
     }
+
     /**
      * Método para atualizar o ecrã e exibir as informações referente aos restaurantes locais
      * @param e evento que indica que a ação foi solicitada pelo utiliar
      */
-
     private void localActionPerformed(ActionEvent e) {
         painelMae.removeAll();
         painelMae.add(localPanel);
         painelMae.repaint();
         painelMae.revalidate();
     }
+
     /**
      * Método para atualizar o ecrã e exibir as informações referente às frutarias
      * @param e evento que indica que a ação foi solicitada pelo utiliar
@@ -214,16 +231,15 @@ public class JanelaEstatisticas extends JFrame {
         painelMae.repaint();
         painelMae.revalidate();
     }
+
     /**
      * Método para atualizar o ecrã e exibir as informações referente aos mercados
      * @param e evento que indica que a ação foi solicitada pelo utilizador
      */
-
     private void mercadoActionPerformed(ActionEvent e) {
         painelMae.removeAll();
         painelMae.add(mercadoPanel);
         painelMae.repaint();
         painelMae.revalidate();
     }
-
 }

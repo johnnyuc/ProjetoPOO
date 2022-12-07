@@ -7,11 +7,11 @@ public class Frutaria extends Mercearia {
      * O número de produtos para venda na frutaria
      */
     private int numeroProdutos;
+
     /**
      * O valor médio de faturação anual por produto
      */
     private float faturacaoMediaAnualProduto;
-
 
     /**
      *  Construtor da classe, recebe os dados para a inicialização
@@ -28,7 +28,6 @@ public class Frutaria extends Mercearia {
         this.faturacaoMediaAnualProduto = faturacaoMediaAnualProduto;
         this.setCategoriaEmpresa(4);
     }
-
 
     // Métodos
 

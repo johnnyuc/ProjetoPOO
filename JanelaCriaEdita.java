@@ -7,126 +7,157 @@ import java.awt.event.*;
  * Classe utilizada para criar novas janelas e editar janelas preexistentes
  */
 public class JanelaCriaEdita extends JFrame {
+
     /**
      * Janela principal de operações
      */
     private final JanelaOperacoes janelaMae;
+
     /**
      * Empresa a ser editada
      */
     private Empresa editar;
+
     /**
      * Botão para o utilizador escolher a opção desejada
      */
     private final JComboBox<String> botaoSelecionador = new JComboBox<>();
+
     /**
      * Área destinada a mostrar as informações
      */
     private final JLabel labelInfo = new JLabel();
+
     /**
      * Área destinada a exibit o nome da empresa
      */
     private final JLabel jLabel1 = new JLabel("Nome da empresa");
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField1 = new JTextField();
+
     /**
      * Área destinada a exibir o distrito da empresa
      */
     private final JLabel jLabel2 = new JLabel("Distrito da empresa");
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField2 = new JTextField();
+
     /**
      * Área destinada a exibir a latitude das coordenadas da empresa
      */
     private final JLabel jLabel3 = new JLabel("Latitude de localização");
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField3 = new JTextField();
+
     /**
      * Área destinada a exibir a longitude das coordenadas da empresa
      */
     private final JLabel jLabel4 = new JLabel("Longitude de localização");
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField4 = new JTextField();
+
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
     private final JLabel jLabel5 = new JLabel();
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField5 = new JTextField();
+
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
     private final JLabel jLabel6 = new JLabel();
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField6 = new JTextField();
+
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
     private final JLabel jLabel7 = new JLabel();
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField7 = new JTextField();
+
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
     private final JLabel jLabel8 = new JLabel();
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField8 = new JTextField();
+
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
     private final JLabel jLabel9 = new JLabel();
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField9 = new JTextField();
+
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
     private final JLabel jLabel10 = new JLabel();
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField10 = new JTextField();
+
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
     private final JLabel jLabel11 = new JLabel();
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField11 = new JTextField();
+
     /**
      * Área destinada a exibir a um texto, imagem, ou ambos.
      */
     private final JLabel jLabel12 = new JLabel();
+
     /**
      * Secção de texto
      */
     private final JTextField jTextField12 = new JTextField();
+
     /**
      * Botão para guardar as informações alteradas
      */
     private final JButton botaoGuardar = new JButton();
+
     /**
      * Botão para fechar a janela
      */
     private final JButton botaoFechar = new JButton();
+
     /**
      * Objeto proveniente do Netbeans utilizado para guardar as informações referentes
      * ao layout da janela
@@ -145,6 +176,7 @@ public class JanelaCriaEdita extends JFrame {
         setIconImage(new ImageIcon("starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
+
     /**
      * Construtor responsável por inicializar a janela de editar empresas
      * @param janelaMae a janela de operações
@@ -158,6 +190,9 @@ public class JanelaCriaEdita extends JFrame {
         setIconImage(new ImageIcon("starthrive.png").getImage());
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
+
+    // Métodos
+
     /**
      * Método responsável por inicializar os componentes(botões, secções de texto, etc.) para se criar uma empresa
      */
@@ -174,8 +209,11 @@ public class JanelaCriaEdita extends JFrame {
         // Defaults
         botaoSelecionador.setSelectedIndex(0);
 
+        // Botão para criar empresa nova
         botaoGuardar.setText("Guardar");
         botaoGuardar.addActionListener(new BotaoGuardarActionListener(StarThrive));
+
+        // Botão para fechar a janela
         botaoFechar.setText("Fechar");
         botaoFechar.addActionListener(e -> dispose());
 
@@ -284,9 +322,12 @@ public class JanelaCriaEdita extends JFrame {
                 break;
         }
 
+        // Botão para guardar as alterações feitas à empresa
         botaoSelecionador.setEnabled(false);
         botaoGuardar.setText("Alterar");
         botaoGuardar.addActionListener(new BotaoAlterarActionListener(StarThrive));
+
+        // Botão para fechar a janela
         botaoFechar.setText("Fechar");
         botaoFechar.addActionListener(e -> dispose());
 
@@ -428,12 +469,12 @@ public class JanelaCriaEdita extends JFrame {
         );
         pack();
     }
+
     /**
      * Método utilizado para alterar os parâmetros de entrada consoante cada categoria de empresa
+     * Edita o parâmetro da ComboBox para disparar um ActionEvent que altera todos os campos e labels da janela
      * @param e evento que indica que a ação foi solicitada pelo utilizador
      */
-
-    // Definição dos parâmetros para cada categoria de empresa
     private void botaoSelecionadorActionPerformed(ActionEvent e) {
         setMinimumSize(new Dimension(520, 300));
         switch (Objects.requireNonNull(botaoSelecionador.getSelectedItem()).toString()) {
@@ -559,7 +600,7 @@ public class JanelaCriaEdita extends JFrame {
                 jLabel12.setVisible(false);
                 jTextField12.setVisible(false);
         }
-        // Limpar os campos de texto
+        // Limpar os campos de texto quando é feita uma mudança na ComboBox
         jTextField1.setText("");
         jTextField2.setText("");
         jTextField3.setText("");
@@ -578,25 +619,28 @@ public class JanelaCriaEdita extends JFrame {
      * Classe responsável pelo botão de guardar, para criar uma nova empresa na GUI
      */
     private class BotaoGuardarActionListener implements ActionListener {
+
         /**
          * Lista de empresas
          */
         private final GerirEmpresas thisStarThrive;
+
         /**
          * Objeto responsável por guardar as informações num arquivo .dat
          */
         private final Escritor escritor = new Escritor();
+
         /**
          * Construtor da classe, responsável por inicializar os atributos
          */
         public BotaoGuardarActionListener(GerirEmpresas StarThrive) {
             thisStarThrive = StarThrive;
         }
+
         /**
          * Método utilizado para criar uma empresa quando o utilizador premir o botão
          * @param e evento que indica que a ação foi solicitada pelo utilizador
          */
-        // Método para criar empresa GUI
         @Override
         public void actionPerformed (ActionEvent e) {
             try {
@@ -716,29 +760,31 @@ public class JanelaCriaEdita extends JFrame {
             escritor.guardaDadosDat(thisStarThrive.getEmpresas());
         }
     }
+
     /**
      * Classe responsável pelo botão para alterar as informações de uma empresa
      */
     private class BotaoAlterarActionListener implements ActionListener {
+
         /**
          * Lista de empresas
          */
         private final GerirEmpresas thisStarThrive;
+
         /**
          * Objeto responsável por guardar as informações num ficheiro .dat
          */
         Escritor escritor = new Escritor();
+
         /**
          *Construtor da classe responsável por inicializar os atributos
          */
-
         public BotaoAlterarActionListener(GerirEmpresas StarThrive) {
             thisStarThrive = StarThrive;
         }
 
         /**
          * Método utilizado para modificar uma empresa quando o utilizador premir o botão
-         *
          * @param e evento que indica que a ação foi solicitada pelo utilizador
          */
         @Override
@@ -770,7 +816,6 @@ public class JanelaCriaEdita extends JFrame {
                             }
                         break;
                     case "Pastelaria":
-
                             if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
                                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                                 botaoSelecionador.setSelectedIndex(0);
@@ -794,10 +839,8 @@ public class JanelaCriaEdita extends JFrame {
                                     JOptionPane.showMessageDialog(null, "Já existe uma empresa com esse nome");
                                 }
                             }
-
                         break;
                     case "Restaurante Fastfood":
-
                             if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("") || jTextField10.getText().equals("") || jTextField11.getText().equals("") || jTextField12.getText().equals("")) {
                                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
                                 botaoSelecionador.setSelectedIndex(0);
@@ -823,7 +866,6 @@ public class JanelaCriaEdita extends JFrame {
                                     JOptionPane.showMessageDialog(null, "Já existe uma empresa com esse nome");
                                 }
                             }
-
                         break;
                     case "Restaurante Local":
                             if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("") || jTextField9.getText().equals("")) {
@@ -832,7 +874,6 @@ public class JanelaCriaEdita extends JFrame {
                             } else {
                                 Local local = (Local) editar;
                                 if (local.getNome().equals(jTextField1.getText()) || thisStarThrive.empresaUnica(jTextField1.getText())) {
-
                                     local.setNome(jTextField1.getText());
                                     local.setDistrito(jTextField2.getText());
                                     local.setCoordenadas(new float[]{Float.parseFloat(jTextField3.getText()), Float.parseFloat(jTextField4.getText())});
@@ -852,7 +893,6 @@ public class JanelaCriaEdita extends JFrame {
                                     JOptionPane.showMessageDialog(null, "Já existe uma empresa com esse nome");
                                 }
                             }
-
                         break;
                     case "Frutaria":
                             if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("")) {
@@ -875,7 +915,6 @@ public class JanelaCriaEdita extends JFrame {
                                     JOptionPane.showMessageDialog(null, "Já existe uma empresa com esse nome");
                                 }
                             }
-
                         break;
                     case "Mercado":
                             if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("") || jTextField6.getText().equals("") || jTextField7.getText().equals("") || jTextField8.getText().equals("")) {
@@ -899,7 +938,6 @@ public class JanelaCriaEdita extends JFrame {
                                     JOptionPane.showMessageDialog(null, "Já existe uma empresa com esse nome");
                                 }
                             }
-
                     default:
                         break;
                 }

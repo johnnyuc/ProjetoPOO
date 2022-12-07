@@ -8,7 +8,6 @@ public abstract class Mercearia extends Empresa {
      */
     private float custoAnualLimpeza;
 
-
     /**
      *  Construtor da classe, recebe os dados para a inicialização
      * @param nome O nome da empresa
@@ -22,6 +21,7 @@ public abstract class Mercearia extends Empresa {
     }
 
     // Getters and Setters e Overrides
+
     /**
      * Métodos de acesso externo ao custo anual de limpeza da mercearia
      * @return o custo anual de limpeza da mercearia
