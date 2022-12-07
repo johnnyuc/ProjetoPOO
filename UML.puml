@@ -1,6 +1,4 @@
 @startuml
-!define LIGHTGREEN
-!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
 
     class Escritor {
     - String baseDados
@@ -261,32 +259,33 @@
 
     class Main {
     ---
-    + main(String[] args): void
-    + booting(): void
-    + display(GerirEmpresas StarThrive): void
+
+    + {static} main(String[] args): void
+    + {static} booting(): void
+    + {static} display(GerirEmpresas StarThrive): void
     ---
     }
 
 Main -- "1" GerirEmpresas
 GerirEmpresas "1" -- "0..1" Empresa
 
-Empresa <-- Restauracao
-Empresa <-- Mercearia
-Restauracao <-- Cafe
-Restauracao <-- Pastelaria
-Restauracao <-- Restaurante
-Restaurante <-- Fastfood
-Restaurante <-- Local
-Mercearia <-- Frutaria
-Mercearia <-- Mercado
+Empresa <-- Restauracao : extends
+Empresa <-- Mercearia : extends
+Restauracao <-- Cafe : extends
+Restauracao <-- Pastelaria : extends
+Restauracao <-- Restaurante : extends
+Restaurante <-- Fastfood : extends
+Restaurante <-- Local : extends
+Mercearia <-- Frutaria : extends
+Mercearia <-- Mercado : extends
 
-Main -- "1" JanelaPrincipal
+Main "1" -- "1" JanelaPrincipal
+Main "1" -- "1" Leitor
+Main "1" -- "1" Escritor
+
 JanelaPrincipal "1" -- "0..1" JanelaOperacoes
 JanelaPrincipal "1" -- "0..1" JanelaEstatisticas
 JanelaOperacoes "1" -- "0..1" JanelaCriaEdita
 
-Main -- "1" Leitor
-Main -- "1" Escritor
-JanelaCriaEdita "1" -- "1" Escritor
 
 @enduml
