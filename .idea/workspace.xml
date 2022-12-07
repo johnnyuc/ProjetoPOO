@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Bug fixing 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/empresas/GerirEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaCriaEdita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaOperacoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/modulos/gui/JanelaPrincipal.java" afterDir="false" />
-    </list>
+    <list default="true" id="0a038784-869a-429d-8d89-88dea9a4efa2" name="Changes" comment="Correção empresas duplicadas" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -360,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670354744867</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Correção empresas duplicadas">
+      <created>1670365919396</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670365919396</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +378,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="classes, classe empresa e interface empresa" />
     <MESSAGE value="classes" />
     <MESSAGE value="Eliminação da InterfaceEmpresa.java&#10;Finalização da Classe TipologiaCafe.java&#10;Remoção do atributo clientes diário da CategoriaRestauracao.java" />
     <MESSAGE value="Atualizações/Melhoria das classes" />
@@ -403,7 +402,8 @@
     <MESSAGE value="Projeto Finalizado v1" />
     <MESSAGE value="Bug fixing" />
     <MESSAGE value="Bug fixing 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixing 2" />
+    <MESSAGE value="Correção empresas duplicadas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção empresas duplicadas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
